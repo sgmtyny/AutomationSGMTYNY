@@ -13,7 +13,7 @@ import helpers.*;
 
 public class PageLogin extends BasePage{
 	
-	BasePage base = new BasePage();
+//	BasePage base = new BasePage();
 	
 	
 	@FindBy(xpath="//*[@id=\"username\"]")
@@ -24,10 +24,7 @@ public class PageLogin extends BasePage{
 	
 	@FindBy(xpath="//*[@id=\"Login\"]")
 	WebElement btnLogin;
-	
-
-	
-	
+		
 	private String url = Hproperties.strUrl;
 	
 	public PageLogin(WebDriver driver) {
@@ -51,21 +48,19 @@ public class PageLogin extends BasePage{
 	public void clickEntrar() {
 		clickEnter();
 	}
-	
-	
-	
-	
+
 	private void inputUser() {
-		base.sendKeys(txUserName, Hproperties.strUser);
+		sendKeys(txUserName, Hproperties.strUser);
 		//txUserName.sendKeys(Hproperties.strUser);
 	}
 	
 	private void inputPsw() {
-		txPassword.sendKeys(Hproperties.strPsw);
+		sendKeys(txPassword,Hproperties.strPsw);
+//		txPassword.sendKeys(Hproperties.strPsw);
 	}
 	
 	private void clickEnter() {
-		btnLogin.click();
+		click(btnLogin);
 	}
 	
 }

@@ -29,8 +29,7 @@ public class Ttemplate {
 		
 		
 		//Invocando el metodo de la primera accion
-		template.metodoPublico();		
-	
+		template.metodoPublico();
 	}	
 }
 
