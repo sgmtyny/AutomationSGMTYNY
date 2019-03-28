@@ -14,7 +14,7 @@ import tests.BaseTest;
  * @date Fecha de creacion con formato dd/mm/aaaa
  * 
  */
-
+//comment test
 
 //Clase con el prefijo "T" identificando que se encuentra en el package "test", seguido del nombre del modulo "template" = "Ttemplate"
 public class Ttemplate {
