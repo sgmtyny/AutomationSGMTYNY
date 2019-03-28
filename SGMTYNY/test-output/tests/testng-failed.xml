@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [tests]">
+  <test name="tests.T_001">
+    <classes>
+      <class name="tests.T_001"/>
+    </classes>
+  </test> <!-- tests.T_001 -->
+</suite> <!-- Failed suite [tests] -->

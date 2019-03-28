@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+	<suite name="suite1">
+		 <test name="openBrowser">
+			 <classes>
+			 	<class name="tests.T_001" />
+			 </classes>
+		 </test>
+	</suite>
