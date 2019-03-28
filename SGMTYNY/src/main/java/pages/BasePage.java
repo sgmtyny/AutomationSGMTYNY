@@ -11,8 +11,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-/**
+import helpers.*;
+;/**
  * @author Diego Mejia
  * @date 27/03/2019
  * 
@@ -21,7 +21,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
 	
-	public final int timeout = 100000;
+	public final int timeout = 30;
 	protected WebDriver driver;
 	private WebDriverWait wait;
 	private Actions action;
@@ -36,7 +36,6 @@ public class BasePage {
 		wait = new WebDriverWait(driver, timeout);
 		action = new Actions(driver);
 	}
-	
 	public BasePage() {
 		// TODO Auto-generated constructor stub
 	}
@@ -51,22 +50,43 @@ public class BasePage {
 		wait.until(ExpectedConditions.visibilityOf(element));
 		
 	}
-	
+	protected void waitForPage() {
+		Boolean BUrl = false;
+		String tempUrl;
+		String page = "home";
+		int i;
+		int j;
+			while(BUrl == false) {
+				tempUrl = driver.getCurrentUrl();
+				i = HCommonHelper.getLenghtUrl(tempUrl);
+			    j = i - page.length();
+				if(tempUrl.matches("[A-Za-z:/._-]{"+j+"}".concat(page))) {
+					wait.until(ExpectedConditions.urlToBe(tempUrl));
+					BUrl = true;
+				}else {
+					BUrl = false;
+				}	
+			}
+	}
 	protected void dragAndDrop(WebElement elementSource,WebElement elementTarget) {
 		action.dragAndDrop(elementSource, elementTarget).build().perform();
 	}
 	
 	protected void sendKeys(WebElement element,String text) {
-		//waitForElement(element);
-		if (element.isDisplayed())
-		{
-			element.sendKeys(text);
-		}		
+		waitForElement(element);
+		element.sendKeys(text);
+				
 	}
 	
 	protected void click(WebElement element) {
 		waitForElement(element);
-		element.click();
+		try {
+
+			element.click();	
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("no fue posible dar click");
+		}
 	}
 	
 	public void selectValue() {

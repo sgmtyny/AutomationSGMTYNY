@@ -2,6 +2,8 @@ package tests;
 import java.io.File;
 import java.io.IOException;
 import org.testng.annotations.Test;
+
+import pages.PageInicio;
 import pages.PageLogin;
 
 import tests.BaseTest;
@@ -16,17 +18,18 @@ import tests.BaseTest;
 public class Tlogin extends BaseTest{
 	
 	@Test
-	public void stepsLogin() throws IOException {
+	public static void stepsLogin() throws IOException {
 		
 		
 		strPaso = "Creando el page login";
 		PageLogin login = new PageLogin(driver);
-		
+		PageInicio inicio = new PageInicio(driver);
 		strPaso = "Invocando metodos a login";
 		login.launchHome();
-		login.inputUsuario();;		
+		login.inputUsuario();	
 		login.inputContrasenia();
-		login.clickEntrar();		
+		login.clickEntrar();
+		inicio.clickReferidos();
 		
 	}	
 }
