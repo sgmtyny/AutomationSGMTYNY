@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="8057" started-at="2019-03-28T21:16:00Z" finished-at="2019-03-28T21:16:08Z">
+  <suite name="Default suite" duration-ms="15245" started-at="2019-03-29T15:36:49Z" finished-at="2019-03-29T15:37:05Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="8057" started-at="2019-03-28T21:16:00Z" finished-at="2019-03-28T21:16:08Z">
-      <class name="tests.Tlogin">
-        <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.Tlogin@63440df3]" name="setDriver" is-config="true" duration-ms="4926" started-at="2019-03-28T21:16:00Z" finished-at="2019-03-28T21:16:05Z">
+    <test name="Default test" duration-ms="15245" started-at="2019-03-29T15:36:49Z" finished-at="2019-03-29T15:37:05Z">
+      <class name="tests.Toportunidades">
+        <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.Toportunidades@63440df3]" name="setDriver" is-config="true" duration-ms="4384" started-at="2019-03-29T15:36:49Z" finished-at="2019-03-29T15:36:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setDriver -->
-        <test-method status="PASS" signature="stepsLogin()[pri:0, instance:tests.Tlogin@63440df3]" name="stepsLogin" duration-ms="3113" started-at="2019-03-28T21:16:05Z" finished-at="2019-03-28T21:16:08Z">
+        <test-method status="PASS" signature="stepsOportunidades()[pri:0, instance:tests.Toportunidades@63440df3]" name="stepsOportunidades" duration-ms="10848" started-at="2019-03-29T15:36:54Z" finished-at="2019-03-29T15:37:05Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- stepsLogin -->
-        <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.Tlogin@63440df3]" name="quitDriver" is-config="true" duration-ms="0" started-at="2019-03-28T21:16:08Z" finished-at="2019-03-28T21:16:08Z">
+        </test-method> <!-- stepsOportunidades -->
+        <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.Toportunidades@63440df3]" name="quitDriver" is-config="true" duration-ms="0" started-at="2019-03-29T15:37:05Z" finished-at="2019-03-29T15:37:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->
-      </class> <!-- tests.Tlogin -->
+      </class> <!-- tests.Toportunidades -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

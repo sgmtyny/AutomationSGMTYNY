@@ -12,6 +12,10 @@ public class PageOportunidades extends BasePage{
 	@FindBy(xpath="//*[@id=\"brandBand_1\"]/div/div[1]/div[4]/div/div/div[1]/div[1]/div[2]/ul")
 	WebElement btnNuevo;
 		
+	public PageOportunidades(WebDriver driver) {
+		super(driver);
+	}
+	
 	@Test
 	public void clickNuevo() {
 		clickNew();

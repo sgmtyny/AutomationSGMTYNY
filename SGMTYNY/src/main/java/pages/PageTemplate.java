@@ -23,16 +23,14 @@ public class PageTemplate {
 	public void metodoPublico() {
 		//Invoca metodo privado que contiene acciones a realizar
 		metodoPrivado();
-	}
-	
+	}	
 	
 	
 	//Metodo privado que contiene las acciones a realizar, invocadas a "base"
 	private void metodoPrivado() {
 		base.sendKeys(txUserName, Hproperties.strUser);
 		
-	}
-	
+	}	
 	
 	
 	

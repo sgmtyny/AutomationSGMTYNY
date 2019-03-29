@@ -16,12 +16,15 @@ public class Toportunidades extends BaseTest{
 		strPaso = "Haciendo login";
 		Tlogin.stepsLogin();
 			
+		strPaso="Entrando a Oportunidades";
+		PageInicio inicio = new PageInicio(driver);
 		
 		strPaso = "Creando el page oportunidades";
-		PageOportunidades oportunidades = new PageOportunidades();	
-		PageOportunidadesNuevo oportunidadesNuev = new PageOportunidadesNuevo();
+		PageOportunidades oportunidades = new PageOportunidades(driver);	
+		PageOportunidadesNuevo oportunidadesNuev = new PageOportunidadesNuevo(driver);
 		
-		oportunidades.clickNuevo();
+		inicio.clickOportunidades();
+	//	oportunidades.clickNuevo();
 		
 		
 	}	

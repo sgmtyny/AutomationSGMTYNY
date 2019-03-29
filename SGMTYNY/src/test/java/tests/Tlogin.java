@@ -23,13 +23,13 @@ public class Tlogin extends BaseTest{
 		
 		strPaso = "Creando el page login";
 		PageLogin login = new PageLogin(driver);
-		PageInicio inicio = new PageInicio(driver);
+	//	PageInicio inicio = new PageInicio(driver);
 		strPaso = "Invocando metodos a login";
 		login.launchHome();
 		login.inputUsuario();	
 		login.inputContrasenia();
 		login.clickEntrar();
-		inicio.clickReferidos();
+		//inicio.clickReferidos();
 		
 	}	
 }
