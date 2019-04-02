@@ -21,7 +21,7 @@ public class BaseTest {
 	
 	public static String strPaso="";
 	String strPath= Hproperties.leerPath();
-	public WebDriver driver;
+	public static WebDriver driver;
 	String driverPath = strPath + "\\Recursos\\Driver\\chromedriver.exe";		
 	
 @BeforeClass

@@ -11,9 +11,8 @@ import helpers.*;
 
 
 
-public class PageLogin extends BasePage{
-	
-//	BasePage base = new BasePage();
+public class PageLogin extends BasePage{	
+
 	
 	
 	@FindBy(xpath="//*[@id=\"username\"]")

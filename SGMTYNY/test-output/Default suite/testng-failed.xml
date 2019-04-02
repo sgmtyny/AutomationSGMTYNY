@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.Tlogin">
+      <class name="tests.TImportar">
         <methods>
+          <include name="stepsToImport"/>
           <include name="setDriver"/>
-          <include name="stepsLogin"/>
           <include name="quitDriver"/>
         </methods>
-      </class> <!-- tests.Tlogin -->
+      </class> <!-- tests.TImportar -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
