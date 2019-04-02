@@ -49,16 +49,26 @@ public class BasePage {
 	protected void waitForElement(WebElement element) {
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
+	protected void refreshPage() {
+		driver.navigate().refresh();
+		try {
+			Thread.sleep(6000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	protected void swithToFrame(WebElement frame) {
+//		refreshPage();
+//		waitForElement(driver.findElement(By.tagName("body").className("desktop")));
 		WebElement body = driver.findElement(By.tagName("body").className("desktop"));
 		List<WebElement> frames = body.findElements(By.tagName("iframe"));
-		List<WebElement> elementsInFrame;
 		for(WebElement f : frames) {
 			if(f.getAttribute("title").equals(frame.getAttribute("title"))) {				
-//						driver.switchTo().frame(f);
-						System.out.println("True");	
-					
-					System.out.println("False");
+					driver.switchTo().frame(f);
+					System.out.println("True");						
+			}else {
+				System.out.println("False");
 			}
 		}
 	}

@@ -25,6 +25,5 @@ public class TNuevoReferido extends BaseTest{
 		inicio.clickReferidos();
 		todosLosReferidos.clickNew();
 		nuevoReferido.typeName();
-		
 	}
 }

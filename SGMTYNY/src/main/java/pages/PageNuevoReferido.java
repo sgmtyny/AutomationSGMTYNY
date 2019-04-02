@@ -18,7 +18,7 @@ public class PageNuevoReferido extends BasePage{
 			typeInputName();
 		}
 		private void typeInputName() {
-//			System.out.println(inputName.isDisplayed());
+			refreshPage();
 			swithToFrame(frame);
 			sendKeys(inputName,"Diego");
 		}

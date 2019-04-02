@@ -24,5 +24,6 @@ public class PageTodosLosReferidos extends BasePage{
 	}
 	private void clickBtnNew() {
 		click(btnNuevo);
+		
 	}	
 }
