@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.TImportar">
+      <class name="tests.TNuevoReferido">
         <methods>
-          <include name="stepsToImport"/>
           <include name="setDriver"/>
+          <include name="AgregarNuevoReferido"/>
           <include name="quitDriver"/>
         </methods>
-      </class> <!-- tests.TImportar -->
+      </class> <!-- tests.TNuevoReferido -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
