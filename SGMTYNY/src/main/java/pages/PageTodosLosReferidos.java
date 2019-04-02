@@ -23,6 +23,6 @@ public class PageTodosLosReferidos extends BasePage{
 		clickBtnNew();
 	}
 	private void clickBtnNew() {
-		click(btnImportar);
+		click(btnNuevo);
 	}	
 }
