@@ -3,24 +3,27 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.testng.annotations.Test;
 
 public class PageOportunidadesNuevo extends BasePage {
 
 	//@FindBy(xpath=".//*[@id=\"OpportunityName\"]")
-	@FindBy(xpath="//*[@id=\"a2n0R0000006uBZQAY-2\"]/div[1]/div/child[4]")
 	
+	//@FindBy(how = How.ID, using = "OpportunityName")
+	
+	@FindBy(xpath=".//*[@id =OpportunityName]")
 	WebElement txOpportunityName;
 
 	public PageOportunidadesNuevo(WebDriver driver) {
 		super(driver);
 	}
-		
+	
 	
 	@Test
 	public void putName()  {
 	   
-		//clickName();
+		clickName();
 		putOpName();
 	}	
 	
@@ -30,6 +33,6 @@ public class PageOportunidadesNuevo extends BasePage {
 	
 	private void putOpName() {
 		//waitForPage();
-		sendKeys(txOpportunityName,"Abraham");		
+		sendKeys(txOpportunityName,"Oportunidad");		
 	}
 }
