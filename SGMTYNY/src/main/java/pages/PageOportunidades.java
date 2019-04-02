@@ -9,7 +9,7 @@ import helpers.*;
 
 public class PageOportunidades extends BasePage{
 
-	@FindBy(xpath="//*[@id=\"brandBand_1\"]/div/div[1]/div[4]/div/div/div[1]/div[1]/div[2]/ul")
+	@FindBy(xpath=".//*[@title=\"Nuevo\"]")
 	WebElement btnNuevo;
 		
 	public PageOportunidades(WebDriver driver) {
@@ -22,6 +22,7 @@ public class PageOportunidades extends BasePage{
 	}	
 	
 	private void clickNew() {
+		waitForPage();
 		click(btnNuevo);		
 	}	
 	
