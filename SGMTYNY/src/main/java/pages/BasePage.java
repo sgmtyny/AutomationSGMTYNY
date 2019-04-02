@@ -1,5 +1,6 @@
 package pages;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -43,12 +44,10 @@ public class BasePage {
 	protected  void moveToElement(WebElement element) {
 		waitForElement(element);
 		action.moveToElement(element).build().perform();
-		
 	}
 	
 	protected void waitForElement(WebElement element) {
 		wait.until(ExpectedConditions.visibilityOf(element));
-		
 	}
 	protected void waitForPage() {
 		Boolean BUrl = false;
@@ -88,11 +87,13 @@ public class BasePage {
 			System.out.println("no fue posible dar click");
 		}
 	}
-	
-	public void selectValue() {
-		
+	public void changeToNewTab() {
+		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tabs.get(tabs.size() - 1)); 
 	}
-	
+	public void getUrl() {
+		System.out.println(driver.getCurrentUrl());
+	}
 	public void findElementByItsValue(List<WebElement> elements,String value) {
 		waitForElement(elements.get(0));
 		for(WebElement e : elements) {

@@ -2,15 +2,26 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite name="Default suite" duration-ms="18836" started-at="2019-04-02T15:19:17Z" finished-at="2019-04-02T15:19:36Z">
+=======
+  <suite name="Default suite" duration-ms="27019" started-at="2019-04-01T22:15:26Z" finished-at="2019-04-01T22:15:53Z">
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
     <groups>
     </groups>
+<<<<<<< HEAD
     <test name="Default test" duration-ms="18836" started-at="2019-04-02T15:19:17Z" finished-at="2019-04-02T15:19:36Z">
       <class name="tests.Toportunidades">
         <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.Toportunidades@63440df3]" name="setDriver" is-config="true" duration-ms="4074" started-at="2019-04-02T15:19:17Z" finished-at="2019-04-02T15:19:21Z">
+=======
+    <test name="Default test" duration-ms="27019" started-at="2019-04-01T22:15:26Z" finished-at="2019-04-01T22:15:53Z">
+      <class name="tests.TImportar">
+        <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.TImportar@63440df3]" name="setDriver" is-config="true" duration-ms="5533" started-at="2019-04-01T22:15:26Z" finished-at="2019-04-01T22:15:32Z">
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setDriver -->
+<<<<<<< HEAD
         <test-method status="FAIL" signature="stepsOportunidades()[pri:0, instance:tests.Toportunidades@63440df3]" name="stepsOportunidades" duration-ms="14747" started-at="2019-04-02T15:19:21Z" finished-at="2019-04-02T15:19:36Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
@@ -84,14 +95,22 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+=======
+        <test-method status="PASS" signature="stepsToImport()[pri:0, instance:tests.TImportar@63440df3]" name="stepsToImport" duration-ms="21459" started-at="2019-04-01T22:15:32Z" finished-at="2019-04-01T22:15:53Z">
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- stepsOportunidades -->
         <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.Toportunidades@63440df3]" name="quitDriver" is-config="true" duration-ms="0" started-at="2019-04-02T15:19:36Z" finished-at="2019-04-02T15:19:36Z">
+=======
+        </test-method> <!-- stepsToImport -->
+        <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.TImportar@63440df3]" name="quitDriver" is-config="true" duration-ms="0" started-at="2019-04-01T22:15:53Z" finished-at="2019-04-01T22:15:53Z">
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->
-      </class> <!-- tests.Toportunidades -->
+      </class> <!-- tests.TImportar -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
