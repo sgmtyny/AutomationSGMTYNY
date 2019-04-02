@@ -85,7 +85,7 @@ public class BasePage {
 	}
 	
 	protected void sendKeys(WebElement element,String text) {
-		waitForElement(element);
+		//waitForElement(element);
 		element.sendKeys(text);
 				
 	}

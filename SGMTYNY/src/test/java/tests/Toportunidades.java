@@ -24,7 +24,8 @@ public class Toportunidades extends BaseTest{
 		PageOportunidadesNuevo oportunidadesNuev = new PageOportunidadesNuevo(driver);
 		
 		inicio.clickOportunidades();
-	//	oportunidades.clickNuevo();
+		oportunidades.clickNuevo();
+		oportunidadesNuev.putName();
 		
 		
 	}	

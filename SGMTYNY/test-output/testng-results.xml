@@ -2,15 +2,36 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite name="Default suite" duration-ms="25885" started-at="2019-04-02T19:19:41Z" finished-at="2019-04-02T19:20:07Z">
+=======
+<<<<<<< HEAD
+  <suite name="Default suite" duration-ms="18836" started-at="2019-04-02T15:19:17Z" finished-at="2019-04-02T15:19:36Z">
+=======
+  <suite name="Default suite" duration-ms="27019" started-at="2019-04-01T22:15:26Z" finished-at="2019-04-01T22:15:53Z">
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
     <groups>
     </groups>
+<<<<<<< HEAD
     <test name="Default test" duration-ms="25885" started-at="2019-04-02T19:19:41Z" finished-at="2019-04-02T19:20:07Z">
       <class name="tests.TNuevoReferido">
         <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.TNuevoReferido@63440df3]" name="setDriver" is-config="true" duration-ms="5325" started-at="2019-04-02T19:19:41Z" finished-at="2019-04-02T19:19:46Z">
+=======
+<<<<<<< HEAD
+    <test name="Default test" duration-ms="18836" started-at="2019-04-02T15:19:17Z" finished-at="2019-04-02T15:19:36Z">
+      <class name="tests.Toportunidades">
+        <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.Toportunidades@63440df3]" name="setDriver" is-config="true" duration-ms="4074" started-at="2019-04-02T15:19:17Z" finished-at="2019-04-02T15:19:21Z">
+=======
+    <test name="Default test" duration-ms="27019" started-at="2019-04-01T22:15:26Z" finished-at="2019-04-01T22:15:53Z">
+      <class name="tests.TImportar">
+        <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.TImportar@63440df3]" name="setDriver" is-config="true" duration-ms="5533" started-at="2019-04-01T22:15:26Z" finished-at="2019-04-01T22:15:32Z">
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setDriver -->
+<<<<<<< HEAD
         <test-method status="FAIL" signature="AgregarNuevoReferido()[pri:0, instance:tests.TNuevoReferido@63440df3]" name="AgregarNuevoReferido" duration-ms="20522" started-at="2019-04-02T19:19:46Z" finished-at="2019-04-02T19:20:07Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
@@ -82,10 +103,99 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+=======
+<<<<<<< HEAD
+        <test-method status="FAIL" signature="stepsOportunidades()[pri:0, instance:tests.Toportunidades@63440df3]" name="stepsOportunidades" duration-ms="14747" started-at="2019-04-02T15:19:21Z" finished-at="2019-04-02T15:19:36Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="a2n0R0000006uBZQAY-2"]/div[1]/div/child[4]"}
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.20 (8e2b610813e167eee3619ac4ce6e42e3ec622017),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 14 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DT39306', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:2276}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=73.0.3683.20 (8e2b610813e167eee3619ac4ce6e42e3ec622017), userDataDir=C:\Users\ABGALI~1\AppData\Local\Temp\scoped_dir14184_16061}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=73.0.3683.86, browserConnectionEnabled=false, proxy=Proxy(), nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 0cac38b378d9125080a8030dfd71ba7d
+*** Element info: {Using=xpath, value=//*[@id="a2n0R0000006uBZQAY-2"]/div[1]/div/child[4]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="a2n0R0000006uBZQAY-2"]/div[1]/div/child[4]"}
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.20 (8e2b610813e167eee3619ac4ce6e42e3ec622017),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 14 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DT39306', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:2276}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=73.0.3683.20 (8e2b610813e167eee3619ac4ce6e42e3ec622017), userDataDir=C:\Users\ABGALI~1\AppData\Local\Temp\scoped_dir14184_16061}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=73.0.3683.86, browserConnectionEnabled=false, proxy=Proxy(), nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 0cac38b378d9125080a8030dfd71ba7d
+*** Element info: {Using=xpath, value=//*[@id="a2n0R0000006uBZQAY-2"]/div[1]/div/child[4]}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy7.sendKeys(Unknown Source)
+at pages.BasePage.sendKeys(BasePage.java:77)
+at pages.PageOportunidadesNuevo.putOpName(PageOportunidadesNuevo.java:33)
+at pages.PageOportunidadesNuevo.putName(PageOportunidadesNuevo.java:24)
+at tests.Toportunidades.stepsOportunidades(Toportunidades.java:28)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+=======
+        <test-method status="PASS" signature="stepsToImport()[pri:0, instance:tests.TImportar@63440df3]" name="stepsToImport" duration-ms="21459" started-at="2019-04-01T22:15:32Z" finished-at="2019-04-01T22:15:53Z">
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- AgregarNuevoReferido -->
         <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.TNuevoReferido@63440df3]" name="quitDriver" is-config="true" duration-ms="0" started-at="2019-04-02T19:20:07Z" finished-at="2019-04-02T19:20:07Z">
+=======
+<<<<<<< HEAD
+        </test-method> <!-- stepsOportunidades -->
+        <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.Toportunidades@63440df3]" name="quitDriver" is-config="true" duration-ms="0" started-at="2019-04-02T15:19:36Z" finished-at="2019-04-02T15:19:36Z">
+=======
+        </test-method> <!-- stepsToImport -->
+        <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.TImportar@63440df3]" name="quitDriver" is-config="true" duration-ms="0" started-at="2019-04-01T22:15:53Z" finished-at="2019-04-01T22:15:53Z">
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->
