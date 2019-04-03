@@ -33,6 +33,8 @@ public class PageNuevoReferido extends BasePage{
 	WebElement inputWorkEmail;
 	@FindBy(xpath = "//*[@id ='OtherEmail']")
 	WebElement inputOtherEmail;
+	@FindBy(xpath = "//*[@id = 'ReferredByAccount']")
+	WebElement inputReferredBy;
 	@FindBy(xpath = "//*[@id ='Description']")
 	WebElement textDescription;
 	@FindBy(xpath = "//*[@id ='Source']")
@@ -41,15 +43,15 @@ public class PageNuevoReferido extends BasePage{
 	WebElement inputDate;
 	@FindBy(xpath = "//*[@id ='PreferredPhoneType']")
 	WebElement selectPrefPhone;
-	@FindBy(xpath = "//*[@id ='DoNotCall']")
+	@FindBy(xpath = "//*[@id='DoNotCall']//following::span")
 	WebElement checkboxCall;
 	@FindBy(xpath = "//*[@id ='PreferredEmailType']")
 	WebElement selectPrefEmail;
-	@FindBy(xpath = "//*[@id ='DoNotEmail']")
+	@FindBy(xpath = "//*[@id ='DoNotEmail']//following::span")
 	WebElement checkboxEmail;
 	@FindBy(xpath = "//*[@id ='ActionType']")
 	WebElement selectActionType;	
-	@FindBy(xpath = "//*[@id ='AddtionalInformation']")
+	@FindBy(xpath = "//*[@id ='AddtionalInformation']//following::span")
 	WebElement checkboxAdditionalInfo;
 	@FindBy(xpath = "//div[contains(text(),'Cancelar')]")
 	WebElement btnCancel;
@@ -160,6 +162,7 @@ public class PageNuevoReferido extends BasePage{
 		}
 		private void selectDropdownSource() {
 			selectFromDropdown(selectSource);
+			sendKeys(inputReferredBy,"J");
 		}
 		private void selectDropdownActionType() {
 			selectFromDropdown(selectActionType);
@@ -171,16 +174,13 @@ public class PageNuevoReferido extends BasePage{
 			selectFromDropdown(selectPrefEmail);
 		}
 		private void clickCheckDontCall() {
-			System.out.println("clickCheckDontCall");
-			click(checkboxCall);
+			check(checkboxCall);
 		}
 		private void clickCheckDontSendEmail() {
-			System.out.println("clickCheckDontSendEmail");
-			click(checkboxEmail);
+			check(checkboxEmail);
 		}
 		private void clickCheckAdditionalInformation() {
-			System.out.println("clickCheckAdditionalInformation");
-			click(checkboxAdditionalInfo);
+			check(checkboxAdditionalInfo);
 		}
 		private void typeDateToContact() {
 			sendKeys(inputDate,"01/01/19");

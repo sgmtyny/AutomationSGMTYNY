@@ -93,9 +93,8 @@ public class BasePage {
 	}
 	
 	protected void sendKeys(WebElement element,String text) {
-		//waitForElement(element);
+		waitForElement(element);
 		element.sendKeys(text);
-				
 	}
 	
 	protected void click(WebElement element) {
@@ -105,6 +104,17 @@ public class BasePage {
 		} catch (Exception e) {
 			// TODO: handle exception
 			System.out.println("no fue posible dar click");
+		}
+	}
+	protected void check(WebElement element) {
+		waitForElement(element);
+		String option = HCommonHelper.randomOptionCheckOrNot();
+		if(option.equals("yes")) {
+			try {
+				element.click();	
+			} catch (Exception e) {
+				System.out.println("no fue posible dar click");
+			}			
 		}
 	}
 	protected void changeToNewTab() {

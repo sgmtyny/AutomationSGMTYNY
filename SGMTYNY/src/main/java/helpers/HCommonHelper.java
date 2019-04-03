@@ -18,6 +18,11 @@ public class HCommonHelper {
 		String[] specialCharacter = {"_",".",""};
 		return names[random.nextInt(names.length)]+specialCharacter[random.nextInt(specialCharacter.length)]+random.nextInt(10)+"@"+emailDomain[random.nextInt(emailDomain.length)]+".com";
 	}
+	public static String randomOptionCheckOrNot() {
+		String[] options = {"yes","no"};
+		random = new Random();
+		return options[random.nextInt(options.length)];
+	}
 	public String getRandomName() {		
 		return null;
 	}
