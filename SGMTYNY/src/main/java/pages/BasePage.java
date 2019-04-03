@@ -59,8 +59,6 @@ public class BasePage {
 		}
 	}
 	protected void swithToFrame(WebElement frame) {
-//		refreshPage();
-//		waitForElement(driver.findElement(By.tagName("body").className("desktop")));
 		WebElement body = driver.findElement(By.tagName("body").className("desktop"));
 		List<WebElement> frames = body.findElements(By.tagName("iframe"));
 		for(WebElement f : frames) {
