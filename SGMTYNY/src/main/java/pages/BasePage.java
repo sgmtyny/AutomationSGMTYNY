@@ -52,7 +52,7 @@ public class BasePage {
 	protected void refreshPage() {
 		driver.navigate().refresh();
 		try {
-			Thread.sleep(6000);
+			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

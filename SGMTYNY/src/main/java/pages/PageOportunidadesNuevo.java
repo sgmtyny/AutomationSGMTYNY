@@ -12,7 +12,10 @@ public class PageOportunidadesNuevo extends BasePage {
 	
 	//@FindBy(how = How.ID, using = "OpportunityName")
 	
-	@FindBy(xpath=".//*[@id =OpportunityName]")
+	@FindBy(xpath = "//iframe[@title = 'accessibility title']")
+	WebElement frame;
+	
+	@FindBy(xpath="//*[@id='OpportunityName']")
 	WebElement txOpportunityName;
 
 	public PageOportunidadesNuevo(WebDriver driver) {
@@ -23,16 +26,14 @@ public class PageOportunidadesNuevo extends BasePage {
 	@Test
 	public void putName()  {
 	   
-		clickName();
 		putOpName();
 	}	
 	
-	private void clickName() {
-		click(txOpportunityName);
-	}
 	
 	private void putOpName() {
 		//waitForPage();
-		sendKeys(txOpportunityName,"Oportunidad");		
+		refreshPage();
+		swithToFrame(frame);
+		sendKeys(txOpportunityName,"Vida");		
 	}
 }
