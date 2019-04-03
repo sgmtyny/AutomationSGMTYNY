@@ -25,5 +25,24 @@ public class TNuevoReferido extends BaseTest{
 		inicio.clickReferidos();
 		todosLosReferidos.clickNew();
 		nuevoReferido.typeName();
+		nuevoReferido.typeFathersName();
+		nuevoReferido.typeMothersName();
+		nuevoReferido.selectSource();
+		nuevoReferido.typeSubSource();
+		nuevoReferido.TypeDate();
+		nuevoReferido.typeMobilePhone();
+		nuevoReferido.typeHomePhone();
+		nuevoReferido.typeWorkPhone();
+		nuevoReferido.typeExt();
+		nuevoReferido.selectPrefPhone();
+		nuevoReferido.checkDontCall();
+		nuevoReferido.typePersonalEmail();
+		nuevoReferido.typeWorkEmail();
+		nuevoReferido.typeOtherEmail();
+		nuevoReferido.selectPrefEmail();
+		nuevoReferido.checkDontSendEmail();
+		nuevoReferido.typeDescription();
+		nuevoReferido.checkAddInformation();
+		nuevoReferido.clickCancel();
 	}
 }

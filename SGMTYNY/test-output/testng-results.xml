@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="34370" started-at="2019-04-02T23:30:28Z" finished-at="2019-04-02T23:31:02Z">
+  <suite name="Default suite" duration-ms="56268" started-at="2019-04-03T18:44:54Z" finished-at="2019-04-03T18:45:50Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="34370" started-at="2019-04-02T23:30:28Z" finished-at="2019-04-02T23:31:02Z">
+    <test name="Default test" duration-ms="56268" started-at="2019-04-03T18:44:54Z" finished-at="2019-04-03T18:45:50Z">
       <class name="tests.TNuevoReferido">
-        <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.TNuevoReferido@63440df3]" name="setDriver" is-config="true" duration-ms="5700" started-at="2019-04-02T23:30:28Z" finished-at="2019-04-02T23:30:33Z">
+        <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.TNuevoReferido@63440df3]" name="setDriver" is-config="true" duration-ms="5658" started-at="2019-04-03T18:44:54Z" finished-at="2019-04-03T18:45:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setDriver -->
-        <test-method status="PASS" signature="AgregarNuevoReferido()[pri:0, instance:tests.TNuevoReferido@63440df3]" name="AgregarNuevoReferido" duration-ms="28638" started-at="2019-04-02T23:30:33Z" finished-at="2019-04-02T23:31:02Z">
+        <test-method status="PASS" signature="AgregarNuevoReferido()[pri:0, instance:tests.TNuevoReferido@63440df3]" name="AgregarNuevoReferido" duration-ms="50575" started-at="2019-04-03T18:45:00Z" finished-at="2019-04-03T18:45:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AgregarNuevoReferido -->
-        <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.TNuevoReferido@63440df3]" name="quitDriver" is-config="true" duration-ms="0" started-at="2019-04-02T23:31:02Z" finished-at="2019-04-02T23:31:02Z">
+        <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.TNuevoReferido@63440df3]" name="quitDriver" is-config="true" duration-ms="0" started-at="2019-04-03T18:45:50Z" finished-at="2019-04-03T18:45:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->

@@ -101,21 +101,20 @@ public class BasePage {
 	protected void click(WebElement element) {
 		waitForElement(element);
 		try {
-
 			element.click();	
 		} catch (Exception e) {
 			// TODO: handle exception
 			System.out.println("no fue posible dar click");
 		}
 	}
-	public void changeToNewTab() {
+	protected void changeToNewTab() {
 		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(tabs.get(tabs.size() - 1)); 
 	}
 	public void getUrl() {
 		System.out.println(driver.getCurrentUrl());
 	}
-	public void findElementByItsValue(List<WebElement> elements,String value) {
+	protected void findElementByItsValue(List<WebElement> elements,String value) {
 		waitForElement(elements.get(0));
 		for(WebElement e : elements) {
 			if (e.getAttribute("value").equals(value)) {
@@ -134,7 +133,7 @@ public class BasePage {
 		}
 	}
 	
-	public void selectGroupOfElements(List<WebElement> elements,String[] values) {
+	protected void selectGroupOfElements(List<WebElement> elements,String[] values) {
 		int i = 0;
 		waitForElement(elements.get(i));
 		while( i < elements.size()) {
@@ -149,20 +148,25 @@ public class BasePage {
 		}		
 	}
 	
-	public void navbarNavigateTo(String[] elementsNames) {
+	protected void navbarNavigateTo(String[] elementsNames) {
 		for(String elementName : elementsNames ) {
 			element = driver.findElement(By.xpath("//span[contains(text(),'"+elementName+"')]"));
 			moveToElement(element);
 		}
 		element.click();
 	}
-	
-	public void selectFromDropdown(WebElement element,String text) {
-	    dropdown = new Select(element);
-				dropdown.selectByVisibleText(text);
+	protected void selectFromDropdown(WebElement element) {
+		int optionsInSelect;
+		int randomNumber;
+		dropdown = new Select(element);
+		optionsInSelect = dropdown.getOptions().size();
+		randomNumber = 	HCommonHelper.getRandomNumberInRange(optionsInSelect);
+		while(randomNumber == 0) {
+			randomNumber = 	HCommonHelper.getRandomNumberInRange(optionsInSelect);
+		}
+		dropdown.selectByIndex(randomNumber);
 	}
-	
-	public void selectFromMultipleDropdown(WebElement element,String[] text) {
+	protected void selectFromMultipleDropdown(WebElement element,String[] text) {
 		dropdown = new Select(element);
 		int i = 0;
 		elements = dropdown.getOptions();
