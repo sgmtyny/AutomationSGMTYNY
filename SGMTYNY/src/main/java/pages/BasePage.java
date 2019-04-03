@@ -163,7 +163,7 @@ public class BasePage {
 		}
 		dropdown.selectByIndex(randomNumber);
 	}
-<<<<<<< HEAD
+
 	
 	public void downEnter(WebElement element)
 	{
@@ -171,10 +171,8 @@ public class BasePage {
 		element.sendKeys(Keys.ENTER);
 	}
 	
-	public void selectFromMultipleDropdown(WebElement element,String[] text) {
-=======
+
 	protected void selectFromMultipleDropdown(WebElement element,String[] text) {
->>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
 		dropdown = new Select(element);
 		int i = 0;
 		elements = dropdown.getOptions();

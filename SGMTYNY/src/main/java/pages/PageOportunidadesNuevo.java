@@ -29,6 +29,25 @@ public class PageOportunidadesNuevo extends BasePage {
 	@FindBy(xpath="//*[@id=\"ExpectedClosingDate\"]")
 	WebElement listDate;
 	
+	@FindBy(xpath="//*[@id=\"Source\"]")
+	WebElement listSource;
+	
+	@FindBy(xpath="//*[@id=\"NextActivity\"]")
+	WebElement listActivity;
+	
+	@FindBy(xpath="//*[@id=\"ActivityDate\"]")
+	WebElement listDateAct;
+	
+	@FindBy(xpath="//*[@id=\"Productofinterest\"]")
+	WebElement listInteres;
+	
+	@FindBy(xpath="//*[@id=\"Notes\"]")
+	WebElement txNotes;
+	
+	@FindBy(xpath="//*[@id=\"New Opportunity_nextBtn\"]")
+	WebElement btnAbrir;
+	
+	
 	String strDate = HCommonHelper.selectDate();
 	
 	
@@ -58,6 +77,35 @@ public class PageOportunidadesNuevo extends BasePage {
 		selectDat();
 	}
 	
+	public void selectSource()
+	{
+		selectSou();
+	}
+	
+	public void selectActivity()
+	{
+		selectAct();
+	}
+	
+	public void selectActivityDat()
+	{
+		selectActDat();
+	}
+	
+	public void selectInteres()
+	{
+		selectInte();
+	}
+	
+	public void inputNotes()
+	{
+		inputNot();
+	}
+	
+	public void clickOpen()
+	{
+		clickOp();
+	}
 	
 	private void putOpName() {
 		refreshPage();
@@ -76,6 +124,31 @@ public class PageOportunidadesNuevo extends BasePage {
 	}
 	
 	private void selectDat() {
-				
+		sendKeys(listDate,strDate);
+	}
+	
+	private void selectSou() {
+		sendKeys(listSource,"Cliente");
+	}
+	
+	private void selectAct() {
+		sendKeys(listActivity,"Llamada");
+	}
+	
+	private void selectActDat() {
+		sendKeys(listDateAct,strDate);
+	}
+	
+	private void selectInte() {
+		sendKeys(listInteres,"Alfa Medical");
+	}
+	
+	private void inputNot() {
+		sendKeys(txNotes,"Notas");
+	}
+	
+	private void clickOp() {
+		HCommonHelper.waiter("low");
+		click(btnAbrir);
 	}
 }

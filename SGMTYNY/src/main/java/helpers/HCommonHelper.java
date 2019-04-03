@@ -31,7 +31,6 @@ public class HCommonHelper {
 		Date date = new Date();
 		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 		strDate = dateFormat.format(date);
-		strDate = strDate.replace("/", "-");
 		return strDate;
 	}
 	
@@ -44,12 +43,11 @@ public class HCommonHelper {
 			}else if (strTime == "medium") {
 				intTime=3000;
 			}else if(strTime == "high") {
-				intTime=5000;
+				intTime=6000;
 			}			
 		Thread.sleep(intTime);		
 			
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -57,7 +55,32 @@ public class HCommonHelper {
 	
 	public static String selectDate()
 	{
-		String strDate="";
+		int intNum = getRandomNumberInRange(29);
+		
+		String strDate=getDate();			
+		String strDay = strDate.substring(0,2);
+		String strMonth = strDate.substring(3,5);
+		String strYear = strDate.substring(6,10);
+		int intDay = Integer.parseInt(strDay);
+		int intMonth = Integer.parseInt(strMonth);
+		int intYear = Integer.parseInt(strYear);
+		
+		if(intMonth > 11) {
+			intMonth = 1;
+			intYear = intYear + 1;
+		}		
+		if (intDay > 26) {
+			intDay = intDay + 1;
+			intMonth = intMonth + 1;
+		}	
+		
+		if(intDay > 10) {
+			strDay = "0" + String.valueOf(intDay);
+		}else if(intMonth > 10) {
+			strMonth = "0" +  String.valueOf(intMonth);
+		}
+		
+		strDate = strDay + "-" + strMonth + "-" + String.valueOf(intYear);
 		
 		return strDate;
 	}

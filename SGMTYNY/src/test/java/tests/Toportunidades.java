@@ -29,6 +29,13 @@ public class Toportunidades extends BaseTest{
 		oportunidadesNuev.putNameRelation();
 		oportunidadesNuev.selectStage();
 		oportunidadesNuev.selectDate();
+		oportunidadesNuev.selectSource();
+		oportunidadesNuev.selectActivity();
+		oportunidadesNuev.selectActivityDat();
+		oportunidadesNuev.selectInteres();
+		oportunidadesNuev.inputNotes();
+		oportunidadesNuev.clickOpen();
+		
 		
 	}	
 }
