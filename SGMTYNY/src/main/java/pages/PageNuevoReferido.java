@@ -3,6 +3,8 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import helpers.HCommonHelper;
 	/*
 	 * KEEP ON WORKING ON THIS CLASS
 	 */
@@ -49,6 +51,8 @@ public class PageNuevoReferido extends BasePage{
 	WebElement selectActionType;	
 	@FindBy(xpath = "//*[@id ='AddtionalInformation']")
 	WebElement checkboxAdditionalInfo;
+	@FindBy(xpath = "//div[contains(text(),'Cancelar')]")
+	WebElement btnCancel;
 	
 		public PageNuevoReferido(WebDriver driver) {
 			super(driver);
@@ -58,6 +62,63 @@ public class PageNuevoReferido extends BasePage{
 		}
 		public void typeFathersName() {
 			typeInputFathersName();
+		}
+		public void typeMothersName() {
+			typeInputMothersName();
+		}
+		public void selectSource() {
+			selectDropdownSource();
+		}
+		public void typeSubSource() {
+			typeInputSubSource();
+		}
+		public void selectActionType() {
+			selectDropdownActionType();
+		}
+		public void TypeDate() {
+			typeDateToContact();
+		}
+		public void typeMobilePhone(){
+			typeInputMobilePhone();
+		}
+		public void typeWorkPhone(){
+			typeInputWorkPhone();
+		}
+		public void typeHomePhone(){
+			typeInputHomePhone();
+		}
+		public void typeExt(){
+			typeInputExt();
+		}
+		public void selectPrefPhone(){
+			selectPreferredPhoneType();
+		}
+		public void checkDontCall() {
+			clickCheckDontCall();
+		}
+		public void typePersonalEmail(){
+			typeInputPersonalEmail();
+		}
+		public void typeWorkEmail(){
+			typeInputWorkEmail();
+		}
+		public void typeOtherEmail(){
+			typeInputOtherEmail();
+		}
+		public void selectPrefEmail(){
+			selectPreferredEmailType();
+		}		
+		public void checkDontSendEmail() {
+			clickCheckDontSendEmail();
+		}
+		public void typeDescription() {
+			typeTextDescription();
+		}
+		public void checkAddInformation() {
+			clickCheckAdditionalInformation();
+		}
+		public void clickCancel() {
+			clickButtonCancel();
 		}
 		private void typeInputName() {
 			refreshPage();
@@ -83,24 +144,48 @@ public class PageNuevoReferido extends BasePage{
 			sendKeys(inputWorkPhone,"4444444444");
 		}
 		private void typeInputExt() {
-			sendKeys(inputExt,"4444444444");
+			sendKeys(inputExt,"123456");
 		}
 		private void typeInputPersonalEmail() {
-			sendKeys(inputPersonalEmail,"4444444444");
+			sendKeys(inputPersonalEmail, HCommonHelper.getRandomEmail());
 		}
 		private void typeInputWorkEmail() {
-			sendKeys(inputWorkEmail,"4444444444");
+			sendKeys(inputWorkEmail,HCommonHelper.getRandomEmail());
 		}		
 		private void typeInputOtherEmail() {
-			sendKeys(inputOtherEmail,"4444444444");
+			sendKeys(inputOtherEmail,HCommonHelper.getRandomEmail());
 		}
 		private void typeTextDescription() {
 			sendKeys(textDescription,"4444444444");
 		}
 		private void selectDropdownSource() {
-			selectFromDropdown(selectSource,"Cliente");
+			selectFromDropdown(selectSource);
 		}
 		private void selectDropdownActionType() {
-			selectFromDropdown(selectActionType,"Llamada");
-		}		
+			selectFromDropdown(selectActionType);
+		}
+		private void selectPreferredPhoneType() {
+			selectFromDropdown(selectPrefPhone);
+		}
+		private void selectPreferredEmailType() {
+			selectFromDropdown(selectPrefEmail);
+		}
+		private void clickCheckDontCall() {
+			System.out.println("clickCheckDontCall");
+			click(checkboxCall);
+		}
+		private void clickCheckDontSendEmail() {
+			System.out.println("clickCheckDontSendEmail");
+			click(checkboxEmail);
+		}
+		private void clickCheckAdditionalInformation() {
+			System.out.println("clickCheckAdditionalInformation");
+			click(checkboxAdditionalInfo);
+		}
+		private void typeDateToContact() {
+			sendKeys(inputDate,"01/01/19");
+		}
+		private void clickButtonCancel() {
+			click(btnCancel);
+		}
 }

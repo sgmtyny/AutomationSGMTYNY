@@ -3,13 +3,25 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="tests.Toportunidades">
+=======
+      <class name="tests.TNuevoReferido">
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
         <methods>
           <include name="setDriver"/>
+<<<<<<< HEAD
           <include name="stepsOportunidades"/>
+=======
+          <include name="AgregarNuevoReferido"/>
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
           <include name="quitDriver"/>
         </methods>
+<<<<<<< HEAD
       </class> <!-- tests.Toportunidades -->
+=======
+      </class> <!-- tests.TNuevoReferido -->
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
