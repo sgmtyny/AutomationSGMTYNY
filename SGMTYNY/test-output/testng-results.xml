@@ -2,15 +2,26 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite name="Default suite" duration-ms="69188" started-at="2019-04-03T23:17:07Z" finished-at="2019-04-03T23:18:16Z">
+=======
+  <suite name="Default suite" duration-ms="38431" started-at="2019-04-03T23:15:15Z" finished-at="2019-04-03T23:15:53Z">
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
     <groups>
     </groups>
+<<<<<<< HEAD
     <test name="Default test" duration-ms="69188" started-at="2019-04-03T23:17:07Z" finished-at="2019-04-03T23:18:16Z">
       <class name="tests.TNuevoReferido">
         <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.TNuevoReferido@63440df3]" name="setDriver" is-config="true" duration-ms="5500" started-at="2019-04-03T23:17:07Z" finished-at="2019-04-03T23:17:13Z">
+=======
+    <test name="Default test" duration-ms="38431" started-at="2019-04-03T23:15:15Z" finished-at="2019-04-03T23:15:53Z">
+      <class name="tests.Toportunidades">
+        <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.Toportunidades@63440df3]" name="setDriver" is-config="true" duration-ms="4191" started-at="2019-04-03T23:15:15Z" finished-at="2019-04-03T23:15:19Z">
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setDriver -->
+<<<<<<< HEAD
         <test-method status="FAIL" signature="AgregarNuevoReferido()[pri:0, instance:tests.TNuevoReferido@63440df3]" name="AgregarNuevoReferido" duration-ms="63661" started-at="2019-04-03T23:17:13Z" finished-at="2019-04-03T23:18:16Z">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
@@ -83,14 +94,26 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.TimeoutException -->
+=======
+        <test-method status="PASS" signature="stepsOportunidades()[pri:0, instance:tests.Toportunidades@63440df3]" name="stepsOportunidades" duration-ms="34225" started-at="2019-04-03T23:15:19Z" finished-at="2019-04-03T23:15:53Z">
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- AgregarNuevoReferido -->
         <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.TNuevoReferido@63440df3]" name="quitDriver" is-config="true" duration-ms="1" started-at="2019-04-03T23:18:16Z" finished-at="2019-04-03T23:18:16Z">
+=======
+        </test-method> <!-- stepsOportunidades -->
+        <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.Toportunidades@63440df3]" name="quitDriver" is-config="true" duration-ms="0" started-at="2019-04-03T23:15:53Z" finished-at="2019-04-03T23:15:53Z">
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->
+<<<<<<< HEAD
       </class> <!-- tests.TNuevoReferido -->
+=======
+      </class> <!-- tests.Toportunidades -->
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
