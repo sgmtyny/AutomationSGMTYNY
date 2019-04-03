@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -51,12 +52,8 @@ public class BasePage {
 	}
 	protected void refreshPage() {
 		driver.navigate().refresh();
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		HCommonHelper.waiter("high");
+		
 	}
 	protected void swithToFrame(WebElement frame) {
 		WebElement body = driver.findElement(By.tagName("body").className("desktop"));
@@ -160,6 +157,12 @@ public class BasePage {
 	public void selectFromDropdown(WebElement element,String text) {
 	    dropdown = new Select(element);
 				dropdown.selectByVisibleText(text);
+	}
+	
+	public void downEnter(WebElement element)
+	{
+		element.sendKeys(Keys.DOWN);
+		element.sendKeys(Keys.ENTER);
 	}
 	
 	public void selectFromMultipleDropdown(WebElement element,String[] text) {
