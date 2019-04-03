@@ -2,24 +2,67 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite name="Default suite" duration-ms="56268" started-at="2019-04-03T18:44:54Z" finished-at="2019-04-03T18:45:50Z">
+=======
+<<<<<<< HEAD
+  <suite name="Default suite" duration-ms="22771" started-at="2019-04-03T14:58:36Z" finished-at="2019-04-03T14:58:59Z">
+=======
+  <suite name="Default suite" duration-ms="34370" started-at="2019-04-02T23:30:28Z" finished-at="2019-04-02T23:31:02Z">
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
     <groups>
     </groups>
+<<<<<<< HEAD
     <test name="Default test" duration-ms="56268" started-at="2019-04-03T18:44:54Z" finished-at="2019-04-03T18:45:50Z">
+=======
+<<<<<<< HEAD
+    <test name="Default test" duration-ms="22771" started-at="2019-04-03T14:58:36Z" finished-at="2019-04-03T14:58:59Z">
+      <class name="tests.Toportunidades">
+        <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.Toportunidades@63440df3]" name="setDriver" is-config="true" duration-ms="4354" started-at="2019-04-03T14:58:36Z" finished-at="2019-04-03T14:58:40Z">
+=======
+    <test name="Default test" duration-ms="34370" started-at="2019-04-02T23:30:28Z" finished-at="2019-04-02T23:31:02Z">
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
       <class name="tests.TNuevoReferido">
+<<<<<<< HEAD
         <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.TNuevoReferido@63440df3]" name="setDriver" is-config="true" duration-ms="5658" started-at="2019-04-03T18:44:54Z" finished-at="2019-04-03T18:45:00Z">
+=======
+        <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.TNuevoReferido@63440df3]" name="setDriver" is-config="true" duration-ms="5700" started-at="2019-04-02T23:30:28Z" finished-at="2019-04-02T23:30:33Z">
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setDriver -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="AgregarNuevoReferido()[pri:0, instance:tests.TNuevoReferido@63440df3]" name="AgregarNuevoReferido" duration-ms="50575" started-at="2019-04-03T18:45:00Z" finished-at="2019-04-03T18:45:50Z">
+=======
+<<<<<<< HEAD
+        <test-method status="PASS" signature="stepsOportunidades()[pri:0, instance:tests.Toportunidades@63440df3]" name="stepsOportunidades" duration-ms="18404" started-at="2019-04-03T14:58:40Z" finished-at="2019-04-03T14:58:59Z">
+=======
+        <test-method status="PASS" signature="AgregarNuevoReferido()[pri:0, instance:tests.TNuevoReferido@63440df3]" name="AgregarNuevoReferido" duration-ms="28638" started-at="2019-04-02T23:30:33Z" finished-at="2019-04-02T23:31:02Z">
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
+        </test-method> <!-- stepsOportunidades -->
+        <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.Toportunidades@63440df3]" name="quitDriver" is-config="true" duration-ms="0" started-at="2019-04-03T14:58:59Z" finished-at="2019-04-03T14:58:59Z">
+=======
         </test-method> <!-- AgregarNuevoReferido -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.TNuevoReferido@63440df3]" name="quitDriver" is-config="true" duration-ms="0" started-at="2019-04-03T18:45:50Z" finished-at="2019-04-03T18:45:50Z">
+=======
+        <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.TNuevoReferido@63440df3]" name="quitDriver" is-config="true" duration-ms="0" started-at="2019-04-02T23:31:02Z" finished-at="2019-04-02T23:31:02Z">
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->
+<<<<<<< HEAD
+      </class> <!-- tests.Toportunidades -->
+=======
       </class> <!-- tests.TNuevoReferido -->
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

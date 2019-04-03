@@ -25,6 +25,7 @@ public class TNuevoReferido extends BaseTest{
 		inicio.clickReferidos();
 		todosLosReferidos.clickNew();
 		nuevoReferido.typeName();
+<<<<<<< HEAD
 		nuevoReferido.typeFathersName();
 		nuevoReferido.typeMothersName();
 		nuevoReferido.selectSource();
@@ -44,5 +45,8 @@ public class TNuevoReferido extends BaseTest{
 		nuevoReferido.typeDescription();
 		nuevoReferido.checkAddInformation();
 		nuevoReferido.clickCancel();
+=======
+	    
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
 	}
 }
