@@ -24,17 +24,12 @@ public class TNuevoReferido extends BaseTest{
 		strPaso = "Invocando metodos para importar";
 		inicio.clickReferidos();
 		todosLosReferidos.clickNew();
-<<<<<<< HEAD
 		nuevoReferido.typeName();
-=======
-		nuevoReferido.typeName();
-
->>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
 		nuevoReferido.typeFathersName();
 		nuevoReferido.typeMothersName();
 		nuevoReferido.selectSource();
 		nuevoReferido.typeSubSource();
-		nuevoReferido.TypeDate();
+		nuevoReferido.typeDate();
 		nuevoReferido.typeMobilePhone();
 		nuevoReferido.typeHomePhone();
 		nuevoReferido.typeWorkPhone();
@@ -48,11 +43,6 @@ public class TNuevoReferido extends BaseTest{
 		nuevoReferido.checkDontSendEmail();
 		nuevoReferido.typeDescription();
 		nuevoReferido.checkAddInformation();
-		nuevoReferido.clickCancel();
-<<<<<<< HEAD
-=======
-
-	    
->>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
+//		nuevoReferido.clickCancel();
 	}
 }

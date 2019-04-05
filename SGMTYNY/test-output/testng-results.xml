@@ -2,40 +2,40 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-<<<<<<< HEAD
-  <suite name="Default suite" duration-ms="69188" started-at="2019-04-03T23:17:07Z" finished-at="2019-04-03T23:18:16Z">
-=======
-  <suite name="Default suite" duration-ms="38431" started-at="2019-04-03T23:15:15Z" finished-at="2019-04-03T23:15:53Z">
->>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
+  <suite name="Default suite" duration-ms="58349" started-at="2019-04-05T23:21:50Z" finished-at="2019-04-05T23:22:49Z">
     <groups>
     </groups>
-<<<<<<< HEAD
-    <test name="Default test" duration-ms="69188" started-at="2019-04-03T23:17:07Z" finished-at="2019-04-03T23:18:16Z">
-      <class name="tests.TNuevoReferido">
-        <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.TNuevoReferido@63440df3]" name="setDriver" is-config="true" duration-ms="5500" started-at="2019-04-03T23:17:07Z" finished-at="2019-04-03T23:17:13Z">
-=======
-    <test name="Default test" duration-ms="38431" started-at="2019-04-03T23:15:15Z" finished-at="2019-04-03T23:15:53Z">
-      <class name="tests.Toportunidades">
-        <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.Toportunidades@63440df3]" name="setDriver" is-config="true" duration-ms="4191" started-at="2019-04-03T23:15:15Z" finished-at="2019-04-03T23:15:19Z">
->>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
+    <test name="Default test" duration-ms="58349" started-at="2019-04-05T23:21:50Z" finished-at="2019-04-05T23:22:49Z">
+      <class name="tests.TCambiarPropietario">
+        <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.TCambiarPropietario@63440df3]" name="setDriver" is-config="true" duration-ms="5134" started-at="2019-04-05T23:21:50Z" finished-at="2019-04-05T23:21:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setDriver -->
-<<<<<<< HEAD
-        <test-method status="FAIL" signature="AgregarNuevoReferido()[pri:0, instance:tests.TNuevoReferido@63440df3]" name="AgregarNuevoReferido" duration-ms="63661" started-at="2019-04-03T23:17:13Z" finished-at="2019-04-03T23:18:16Z">
+        <test-method status="FAIL" signature="stepsToChangeOwner()[pri:0, instance:tests.TCambiarPropietario@63440df3]" name="stepsToChangeOwner" duration-ms="53186" started-at="2019-04-05T23:21:55Z" finished-at="2019-04-05T23:22:49Z">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[@id = 'ReferredByAccount']' (tried for 30 second(s) with 500 MILLISECONDS interval)]]>
+              <![CDATA[Expected condition failed: waiting for visibility of all [] (tried for 10 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DT39538', ip: '10.49.234.184', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:51135}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=73.0.3683.20 (8e2b610813e167eee3619ac4ce6e42e3ec622017), userDataDir=C:\Users\DIEGOM~1\AppData\Local\Temp\scoped_dir9972_23819}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=73.0.3683.86, browserConnectionEnabled=false, proxy=Proxy(), nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 21541413fc04136818f11f85c7db28e0]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[@id = 'ReferredByAccount']' (tried for 30 second(s) with 500 MILLISECONDS interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 10 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DT39538', ip: '10.49.234.184', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:51135}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=73.0.3683.20 (8e2b610813e167eee3619ac4ce6e42e3ec622017), userDataDir=C:\Users\DIEGOM~1\AppData\Local\Temp\scoped_dir9972_23819}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=73.0.3683.86, browserConnectionEnabled=false, proxy=Proxy(), nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 21541413fc04136818f11f85c7db28e0
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-at pages.BasePage.waitForElement(BasePage.java:50)
-at pages.BasePage.sendKeys(BasePage.java:96)
-at pages.PageNuevoReferido.selectDropdownSource(PageNuevoReferido.java:165)
-at pages.PageNuevoReferido.selectSource(PageNuevoReferido.java:72)
-at tests.TNuevoReferido.AgregarNuevoReferido(TNuevoReferido.java:30)
+at pages.BasePage.waitForElements(BasePage.java:60)
+at pages.BasePage.selectOptionWithException(BasePage.java:142)
+at pages.PageTodosLosReferidos.selectRandomRecord(PageTodosLosReferidos.java:50)
+at pages.PageTodosLosReferidos.selectRecord(PageTodosLosReferidos.java:47)
+at pages.PageTodosLosReferidos.clickCambiarPropietario(PageTodosLosReferidos.java:53)
+at tests.TCambiarPropietario.stepsToChangeOwner(TCambiarPropietario.java:31)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -61,59 +61,17 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id = 'ReferredByAccount']"}
-  (Session info: chrome=73.0.3683.86)
-  (Driver info: chromedriver=73.0.3683.20 (8e2b610813e167eee3619ac4ce6e42e3ec622017),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 26 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'DT39538', ip: '10.49.234.184', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:52435}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=73.0.3683.20 (8e2b610813e167eee3619ac4ce6e42e3ec622017), userDataDir=C:\Users\DIEGOM~1\AppData\Local\Temp\scoped_dir3108_2879}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=73.0.3683.86, browserConnectionEnabled=false, proxy=Proxy(), nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: ca7cc605ccaed6474d4fed86e9d707bf
-*** Element info: {Using=xpath, value=//*[@id = 'ReferredByAccount']}
-at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy7.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:302)
-at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:44)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:288)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:285)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-... 30 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.TimeoutException -->
-=======
-        <test-method status="PASS" signature="stepsOportunidades()[pri:0, instance:tests.Toportunidades@63440df3]" name="stepsOportunidades" duration-ms="34225" started-at="2019-04-03T23:15:19Z" finished-at="2019-04-03T23:15:53Z">
->>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
           <reporter-output>
           </reporter-output>
-<<<<<<< HEAD
-        </test-method> <!-- AgregarNuevoReferido -->
-        <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.TNuevoReferido@63440df3]" name="quitDriver" is-config="true" duration-ms="1" started-at="2019-04-03T23:18:16Z" finished-at="2019-04-03T23:18:16Z">
-=======
-        </test-method> <!-- stepsOportunidades -->
-        <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.Toportunidades@63440df3]" name="quitDriver" is-config="true" duration-ms="0" started-at="2019-04-03T23:15:53Z" finished-at="2019-04-03T23:15:53Z">
->>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
+        </test-method> <!-- stepsToChangeOwner -->
+        <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.TCambiarPropietario@63440df3]" name="quitDriver" is-config="true" duration-ms="1" started-at="2019-04-05T23:22:49Z" finished-at="2019-04-05T23:22:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->
-<<<<<<< HEAD
-      </class> <!-- tests.TNuevoReferido -->
-=======
-      </class> <!-- tests.Toportunidades -->
->>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
+      </class> <!-- tests.TCambiarPropietario -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

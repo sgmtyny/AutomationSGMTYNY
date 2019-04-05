@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -55,6 +57,32 @@ public class PageNuevoReferido extends BasePage{
 	WebElement checkboxAdditionalInfo;
 	@FindBy(xpath = "//div[contains(text(),'Cancelar')]")
 	WebElement btnCancel;
+	@FindBy(xpath = "//*[@id=\"NewLead_nextBtn\"]")
+	WebElement btnFirstSaveLead;
+	@FindBy(xpath = "//*[@id=\"AdditionalInformation_nextBtn\"]")
+	WebElement btnFinalSaveLead;	
+	@FindBy(xpath = "//*[@id=\"BirthDate\"]")
+	WebElement inputBirthDate;
+	@FindBy(xpath = "//*[@id ='RelationshipDetails']")
+	WebElement selectRelationshipDetails;
+	@FindBy(xpath = "//*[@id ='EmploymentStatus']")
+	WebElement selectEmploymentStatus;
+	@FindBy(xpath = "//*[@id ='NoOfDependents']")
+	WebElement inputNoOfDependents;
+	@FindBy(xpath = "//*[@id ='Employer']")
+	WebElement inputEmployer;
+	@FindBy(xpath = "//*[@id ='Occupation']")
+	WebElement inputOccupation;
+	@FindBy(xpath = "//*[@id ='Title']")
+	WebElement inputTitle;
+	@FindBy(xpath = "//*[@id ='MonthlyIncomeApprox']")
+	WebElement inputMonthlyIncomeApprox;
+	@FindBy(xpath = "//*[@id ='Gender']/following-sibling::span")
+	List<WebElement> radioButtonGender;
+	@FindBy(xpath = "//*[@id ='Smoke']/following-sibling::span")
+	List<WebElement> radioButtonSmoke;
+	@FindBy(xpath = "//*[@id ='MainInterests']/following-sibling::span")
+	List<WebElement> radioButtonMainInterests;
 	
 		public PageNuevoReferido(WebDriver driver) {
 			super(driver);
@@ -77,7 +105,7 @@ public class PageNuevoReferido extends BasePage{
 		public void selectActionType() {
 			selectDropdownActionType();
 		}
-		public void TypeDate() {
+		public void typeDate() {
 			typeDateToContact();
 		}
 		public void typeMobilePhone(){
@@ -118,23 +146,43 @@ public class PageNuevoReferido extends BasePage{
 		}
 		public void checkAddInformation() {
 			clickCheckAdditionalInformation();
+			if (verifyElementSelected(checkboxAdditionalInfo,"AddtionalInformation")){
+				clickFirstSaveLead();
+				typeBirthDate();
+				selectGender();
+				selectSmoke();
+				selectRelationshipStatus();
+				selectEmploymentStatus();
+				typeNumberOfDependents();
+				typeEmployer();
+				typeOccupation();
+				typeTitle();
+				typeMonthlyIncomeApprox();
+				selectMainInterest();
+				clickFinalSaveLead();
+			}else {
+				clickFirstSaveLead();
+			}
 		}
 		public void clickCancel() {
 			clickButtonCancel();
 		}
+		public void clickFirstSaveLead() {
+			clickFirstButtonSaveLead();
+		}
 		private void typeInputName() {
 			refreshPage();
 			swithToFrame(frame);
-			sendKeys(inputName,"Diego");
+			sendKeys(inputName,"Juan");
 		}
 		private void typeInputFathersName() {
-			sendKeys(inputFathersname,"Diego");
+			sendKeys(inputFathersname,"Perez");
 		}
 		private void typeInputMothersName() {
-			sendKeys(inputMothersname,"Diego");
+			sendKeys(inputMothersname,"Perez");
 		}
 		private void typeInputSubSource() {
-			sendKeys(inputSubSource,"Diego");
+			sendKeys(inputSubSource,"sub source");
 		}
 		private void typeInputMobilePhone() {
 			sendKeys(inputMobilePhone,"4444444444");
@@ -158,11 +206,13 @@ public class PageNuevoReferido extends BasePage{
 			sendKeys(inputOtherEmail,HCommonHelper.getRandomEmail());
 		}
 		private void typeTextDescription() {
-			sendKeys(textDescription,"4444444444");
+			sendKeys(textDescription,"Description...");
 		}
 		private void selectDropdownSource() {
 			selectFromDropdown(selectSource);
-			sendKeys(inputReferredBy,"J");
+			sendKeys(inputReferredBy,"Juan Perez Gomez");
+			HCommonHelper.waiter("low");
+			downEnter(inputReferredBy);
 		}
 		private void selectDropdownActionType() {
 			selectFromDropdown(selectActionType);
@@ -174,18 +224,96 @@ public class PageNuevoReferido extends BasePage{
 			selectFromDropdown(selectPrefEmail);
 		}
 		private void clickCheckDontCall() {
-			check(checkboxCall);
+			checkOptionalYesOrNot(checkboxCall);
 		}
 		private void clickCheckDontSendEmail() {
-			check(checkboxEmail);
+			checkOptionalYesOrNot(checkboxEmail);
 		}
 		private void clickCheckAdditionalInformation() {
-			check(checkboxAdditionalInfo);
+			checkOptionalYesOrNot(checkboxAdditionalInfo);
 		}
 		private void typeDateToContact() {
-			sendKeys(inputDate,"01/01/19");
+			sendKeys(inputDate,HCommonHelper.selectDate());
 		}
 		private void clickButtonCancel() {
 			click(btnCancel);
 		}
+		private void clickFirstButtonSaveLead() {
+			click(btnFirstSaveLead);
+		}		
+		private void clickFinalButtonSaveLead() {
+			click(btnFinalSaveLead);
+		}
+		public void clickFinalSaveLead() {
+			clickFinalButtonSaveLead();
+		}
+		//Additional information
+		public void typeBirthDate() {
+			typeInputBirthDate();
+		}
+		public void selectGender() {
+			selectRadioGender();
+		}
+		public void selectSmoke() {
+			selectRadioSmoke();
+		}
+		public void selectRelationshipStatus() {
+			selectDropdownRelationshipStatus();
+		}
+		public void selectEmploymentStatus() {
+			selectDropdownEmploymentStatus();
+		}
+		public void typeNumberOfDependents() {
+			typeInputNumberOfDependents();
+		}
+		public void typeEmployer() {
+			typeInputEmployer();
+		}
+		public void typeOccupation() {
+			typeInputOccupation();
+		}
+		public void typeTitle() {
+			typeInputTitle();
+		}
+		public void typeMonthlyIncomeApprox() {
+			typeInputMonthlyIncomeApprox();
+		}
+		public void selectMainInterest() {
+			selectRadioMainInterest();
+		}
+		private void typeInputBirthDate() {
+			sendKeys(inputBirthDate,HCommonHelper.selectDate());
+		}
+		private void selectDropdownRelationshipStatus() {
+			selectFromDropdown(selectRelationshipDetails);
+		}
+		private void selectDropdownEmploymentStatus() {
+			selectFromDropdown(selectEmploymentStatus);
+		}
+		private void typeInputNumberOfDependents() {
+			sendKeys(inputNoOfDependents,"3");
+		}
+		private void typeInputEmployer() {
+			sendKeys(inputEmployer,"employer");
+		}
+		private void typeInputOccupation() {
+			sendKeys(inputOccupation,"carp");
+			HCommonHelper.waiter("low");
+			downEnter(inputOccupation);
+		}
+		private void typeInputTitle() {
+			sendKeys(inputTitle,"developer");
+		}
+		private void typeInputMonthlyIncomeApprox() {
+			sendKeys(inputMonthlyIncomeApprox,"20000");
+		}
+		private void selectRadioGender() {
+			selectOption(radioButtonGender);
+		}
+		private void selectRadioSmoke() {
+			selectOption(radioButtonSmoke);
+		}
+		private void selectRadioMainInterest() {
+			selectOption(radioButtonMainInterests);
+		}		
 }

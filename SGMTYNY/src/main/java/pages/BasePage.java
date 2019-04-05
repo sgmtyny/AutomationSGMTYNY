@@ -23,7 +23,7 @@ import helpers.*;
 
 public class BasePage {
 	
-	public final int timeout = 30;
+	public final int timeout = 10;
 	protected WebDriver driver;
 	private WebDriverWait wait;
 	private Actions action;
@@ -46,14 +46,22 @@ public class BasePage {
 		waitForElement(element);
 		action.moveToElement(element).build().perform();
 	}
-	
+	/*
+	 * work on this method
+	 * 
+	 * */
+	protected void waitForFrame(WebElement element) {
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(element));
+	}
 	protected void waitForElement(WebElement element) {
 		wait.until(ExpectedConditions.visibilityOf(element));
+	}
+	protected void waitForElements(List<WebElement> elements) {
+		wait.until(ExpectedConditions.visibilityOfAllElements(elements));
 	}
 	protected void refreshPage() {
 		driver.navigate().refresh();
 		HCommonHelper.waiter("high");
-		
 	}
 	protected void swithToFrame(WebElement frame) {
 		WebElement body = driver.findElement(By.tagName("body").className("desktop"));
@@ -62,7 +70,7 @@ public class BasePage {
 			if(f.getAttribute("title").equals(frame.getAttribute("title"))) {				
 					driver.switchTo().frame(f);
 					System.out.println("True");						
-			}else {
+			}else{
 				System.out.println("False");
 			}
 		}
@@ -88,30 +96,68 @@ public class BasePage {
 	protected void dragAndDrop(WebElement elementSource,WebElement elementTarget) {
 		action.dragAndDrop(elementSource, elementTarget).build().perform();
 	}
-	
 	protected void sendKeys(WebElement element,String text) {
-		waitForElement(element);
-		element.sendKeys(text);
-	}
-	
-	protected void click(WebElement element) {
-		waitForElement(element);
 		try {
+			waitForElement(element);
+			element.sendKeys(text);
+		}catch(Exception e) {
+			System.out.println("It was not possible to locate element");	
+		}
+	}
+	protected void click(WebElement element) {
+		try {
+			waitForElement(element);
 			element.click();	
 		} catch (Exception e) {
 			// TODO: handle exception
 			System.out.println("no fue posible dar click");
 		}
 	}
-	protected void check(WebElement element) {
-		waitForElement(element);
-		String option = HCommonHelper.randomOptionCheckOrNot();
-		if(option.equals("yes")) {
-			try {
-				element.click();	
-			} catch (Exception e) {
-				System.out.println("no fue posible dar click");
+	protected void checkOptionalYesOrNot(WebElement element) {
+			String option = HCommonHelper.randomOptionCheckOrNot();
+			if(option.equals("yes")) {
+				try {
+					waitForElement(element);
+					element.click();
+				} catch (Exception e) {
+					System.out.println("no fue posible dar click");
+				}			
+			}	
+	}
+	protected boolean verifyElementSelected(WebElement element,String attribute) {
+		WebElement parentElement;
+		parentElement = element.findElement(By.xpath(".."));
+		return parentElement.findElement(By.id(attribute)).isSelected();
+	}
+	protected void selectOption(List<WebElement> elements) {
+		int option;
+		waitForElements(elements);
+		System.out.println("Number of elements "+elements.size());
+		option = HCommonHelper.getRandomNumberInRange(elements.size());
+		System.out.println("Random Option "+option);
+		click(elements.get(option));
+	}
+	protected void selectOptionWithException(List<WebElement> elements,int exceptionElement) {
+		int option;
+		waitForElements(elements);
+		System.out.println("Number of elements "+elements.size());
+		option = HCommonHelper.getRandomNumberInRange(elements.size());
+		while(option == exceptionElement) {
+			option = HCommonHelper.getRandomNumberInRange(elements.size());
+		}
+		System.out.println("Random Option "+option);
+		click(elements.get(option));		
+	}
+	protected boolean waitForMessageToAppear(WebElement element) {
+		try {
+			waitForElement(element);
+			if(element.isDisplayed()) {
+				return true;
+			}else{
+				return false;
 			}			
+		}catch(Exception e) {
+			return false;
 		}
 	}
 	protected void changeToNewTab() {
@@ -154,7 +200,6 @@ public class BasePage {
 			i++;
 		}		
 	}
-	
 	protected void navbarNavigateTo(String[] elementsNames) {
 		for(String elementName : elementsNames ) {
 			element = driver.findElement(By.xpath("//span[contains(text(),'"+elementName+"')]"));
@@ -173,15 +218,16 @@ public class BasePage {
 		}
 		dropdown.selectByIndex(randomNumber);
 	}
-
-	
 	public void downEnter(WebElement element)
 	{
-		element.sendKeys(Keys.DOWN);
-		element.sendKeys(Keys.ENTER);
-	}
-	
+		try {
+			element.sendKeys(Keys.DOWN);
+			element.sendKeys(Keys.ENTER);			
+		}catch(Exception e) {
+			
+		}
 
+	}
 	protected void selectFromMultipleDropdown(WebElement element,String[] text) {
 		dropdown = new Select(element);
 		int i = 0;

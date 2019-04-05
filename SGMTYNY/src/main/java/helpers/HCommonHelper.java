@@ -19,12 +19,13 @@ public class HCommonHelper {
 		String[] emailDomain = {"hotmail","gmail","yahoo"};
 		String[] names = {"Iniesta","Ronaldinho","Ronaldo","Zlatan","Griezmann","Neymar","Beckham","Mbappe"};
 		String[] specialCharacter = {"_",".",""};
-		return names[random.nextInt(names.length)]+specialCharacter[random.nextInt(specialCharacter.length)]+random.nextInt(10)+"@"+emailDomain[random.nextInt(emailDomain.length)]+".com";
+		return names[getRandomNumberInRange(names.length)]+specialCharacter[getRandomNumberInRange(specialCharacter.length)]+getRandomNumberInRange(10)+"@"+emailDomain[getRandomNumberInRange(emailDomain.length)]+".com";
 	}
 	public static String randomOptionCheckOrNot() {
-		String[] options = {"yes","no"};
 		random = new Random();
-		return options[random.nextInt(options.length)];
+		String[] options = {"yes","no"};
+		return options[getRandomNumberInRange(options.length)];
+//		return "yes";
 	}
 	public String getRandomName() {		
 		return null;

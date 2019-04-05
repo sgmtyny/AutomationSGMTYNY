@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.Toportunidades">
+      <class name="tests.TCambiarPropietario">
         <methods>
           <include name="setDriver"/>
-          <include name="stepsOportunidades"/>
+          <include name="stepsToChangeOwner"/>
           <include name="quitDriver"/>
         </methods>
-      </class> <!-- tests.Toportunidades -->
+      </class> <!-- tests.TCambiarPropietario -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
