@@ -10,7 +10,7 @@ import helpers.HCommonHelper;
 	/*
 	 * KEEP ON WORKING ON THIS CLASS
 	 */
-public class PageNuevoReferido extends BasePage{
+public class PageReferidoNuevo extends BasePage{
 	@FindBy(xpath = "//iframe[@title = 'accessibility title']")
 	WebElement frame;
 	@FindBy(xpath = "//*[@id ='Name']")
@@ -84,7 +84,7 @@ public class PageNuevoReferido extends BasePage{
 	@FindBy(xpath = "//*[@id ='MainInterests']/following-sibling::span")
 	List<WebElement> radioButtonMainInterests;
 	
-		public PageNuevoReferido(WebDriver driver) {
+		public PageReferidoNuevo(WebDriver driver) {
 			super(driver);
 		}
 		public void typeName() {

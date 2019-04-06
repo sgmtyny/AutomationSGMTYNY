@@ -9,7 +9,7 @@ import pages.PageReferidoCambiarEstado;
 import pages.PageReferidoCambiarPropietario;
 import pages.PageTodosLosReferidos;
 
-public class TCambiarPropietario extends BaseTest{
+public class TReferidoCambiarPropietario extends BaseTest{
 	
 	/*
 	 * KEEP ON WORKING IN THIS SECTION

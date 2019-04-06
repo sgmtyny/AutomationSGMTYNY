@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class PageTodosLosReferidos extends BasePage{
+public class PageReferidoTodos extends BasePage{
 	@FindBy(xpath = "//div[@title = \"Importar\"]")
 	WebElement btnImportar;
 	@FindBy(xpath = "//div[@title = \"Nuevo\"]")
@@ -20,7 +20,7 @@ public class PageTodosLosReferidos extends BasePage{
 	@FindBy(xpath = "//div[@title = 'Cambiar propietario']")
 	WebElement btnCambiarPropietario;	
 	
-	public PageTodosLosReferidos(WebDriver driver) {
+	public PageReferidoTodos(WebDriver driver) {
 		super(driver);
 	}
 	public void clickImport(){

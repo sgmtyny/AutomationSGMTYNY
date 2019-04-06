@@ -2,18 +2,18 @@ package tests;
 
 import org.testng.annotations.Test;
 
-import pages.PageReferidosImportar;
+import pages.PageReferidoImportar;
 import pages.PageInicio;
 import pages.PageLogin;
-import pages.PageReferidosNuevo;
-import pages.PageReferidosTodos;
+import pages.PageReferidoNuevo;
+import pages.PageReferidoTodos;
 
 public class TReferidoNuevo extends BaseTest{
 
 	@Test
 	public void AgregarNuevoReferido() {
-		PageReferidosNuevo nuevoReferido = new PageReferidosNuevo(driver);
-		PageReferidosTodos todosLosReferidos = new PageReferidosTodos(driver);
+		PageReferidoNuevo nuevoReferido = new PageReferidoNuevo(driver);
+		PageReferidoTodos todosLosReferidos = new PageReferidoTodos(driver);
 		PageLogin login = new PageLogin(driver);
 		PageInicio inicio = new PageInicio(driver);
 		strPaso = "Invocando metodos a login";
@@ -25,12 +25,11 @@ public class TReferidoNuevo extends BaseTest{
 		inicio.clickReferidos();
 		todosLosReferidos.clickNew();
 		nuevoReferido.typeName();
-
 		nuevoReferido.typeFathersName();
 		nuevoReferido.typeMothersName();
 		nuevoReferido.selectSource();
 		nuevoReferido.typeSubSource();
-		nuevoReferido.TypeDate();
+		nuevoReferido.typeDate();
 		nuevoReferido.typeMobilePhone();
 		nuevoReferido.typeHomePhone();
 		nuevoReferido.typeWorkPhone();
@@ -44,8 +43,7 @@ public class TReferidoNuevo extends BaseTest{
 		nuevoReferido.checkDontSendEmail();
 		nuevoReferido.typeDescription();
 		nuevoReferido.checkAddInformation();
-		nuevoReferido.clickCancel();
-
-	    
+//		nuevoReferido.clickCancel();
 	}
 }
+

@@ -10,7 +10,7 @@ import pages.PageLogin;
 import pages.PageReferidoCambiarEstado;
 import pages.PageTodosLosReferidos;
 
-public class TCambiarEstado extends BaseTest{
+public class TReferidoCambiarEstado extends BaseTest{
 	@Test
 	public void stepsToChangeStatus() {
 		PageTodosLosReferidos todosLosReferidos = new PageTodosLosReferidos(driver);

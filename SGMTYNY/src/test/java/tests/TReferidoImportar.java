@@ -2,20 +2,20 @@ package tests;
 
 import org.testng.annotations.Test;
 
-import pages.PageReferidosImportar;
+import pages.PageReferidoImportar;
 import pages.PageInicio;
 import pages.PageLogin;
-import pages.PageReferidosTodos;
+import pages.PageReferidoTodos;
 
 public class TReferidoImportar extends BaseTest{
 	
 	@Test
 	public void stepsToImport() {
-		PageReferidosTodos todosLosReferidos = new PageReferidosTodos(driver);
+		PageReferidoTodos todosLosReferidos = new PageReferidoTodos(driver);
 		strPaso = "Creando el page login";
 		PageLogin login = new PageLogin(driver);
 		PageInicio inicio = new PageInicio(driver);
-		PageReferidosImportar importar = new PageReferidosImportar(driver);
+		PageReferidoImportar importar = new PageReferidoImportar(driver);
 		strPaso = "Invocando metodos a login";
 		login.launchHome();
 		login.inputUsuario();	
