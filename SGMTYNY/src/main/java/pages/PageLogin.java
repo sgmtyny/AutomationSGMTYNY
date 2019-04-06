@@ -12,9 +12,6 @@ import helpers.*;
 
 
 public class PageLogin extends BasePage{	
-
-	
-	
 	@FindBy(xpath="//*[@id=\"username\"]")
 	WebElement txUserName;
 	
