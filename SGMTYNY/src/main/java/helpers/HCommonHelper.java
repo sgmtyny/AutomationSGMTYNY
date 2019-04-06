@@ -1,9 +1,13 @@
 package helpers;
+import java.io.IOException;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import java.util.Random;
+
+import helpers.ExcelFile;
 
 public class HCommonHelper {
 	private static Random random;
@@ -85,4 +89,38 @@ public class HCommonHelper {
 		return strDate;
 	}
 	
+	public static String readExcelForOportunityID() 
+	{
+		String strID="";
+		String strArchivo="OportunidadesID.xlsx";
+		String strHoja="Status";		
+		String[][] strContenidoCelda;
+		try {
+			strContenidoCelda = ExcelFile.readExcel(strArchivo,strHoja);
+			for(int i=0; i<ExcelFile.intRows; i++)
+			{			
+					if(strContenidoCelda[i][1].equals("Activo"))
+					{
+						strID=strContenidoCelda[i][0];
+						System.out.println(strID);
+						break;					
+					}			
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		return strID;
+	}	
+	
+	public static String mexicosStates() {
+		String strState="";
+		int intState=0;
+		String[] strStates = {"AGUASCALIENTES","BAJA CALIFORNIA","BAJA CALIFORNIA SUR","CAMPECHE", "COAHUILA", "COLIMA", "CHIAPAS", "CHIHUAHUA", "CIUDAD DE MEXICO", "DURANGO", "GUANAJUATO", "GUERRERO", "HIDALGO", "JALISCO", "MEXICO", "MICHOACAN", "MORELOS", "NAYARIT", "NUEVO LEON", "OAXACA", "PUEBLA", "QUERETARO", "QUINTANA ROO", "SAN LUIS POTOSI", "SINALOA", "SONORA","TABASCO","TAMAULIPAS","TLAXCALA","VERACRUZ","YUCATAN","ZACATECAS"};
+		intState = getRandomNumberInRange(31);
+		strState = strStates[intState];
+		return strState;		
+	}
 }

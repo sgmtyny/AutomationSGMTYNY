@@ -4,12 +4,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class PageTodosLosReferidos extends BasePage{
+public class PageReferidosTodos extends BasePage{
 	@FindBy(xpath = "//div[@title = \"Importar\"]")
 	WebElement btnImportar;
 	@FindBy(xpath = "//div[@title = \"Nuevo\"]")
 	WebElement btnNuevo;	
-	public PageTodosLosReferidos(WebDriver driver) {
+	public PageReferidosTodos(WebDriver driver) {
 		super(driver);
 	}
 	public void clickImport(){

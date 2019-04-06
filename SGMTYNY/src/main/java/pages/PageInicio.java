@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import helpers.HCommonHelper;
+
 public class PageInicio extends BasePage{
 	@FindBy(xpath="//*[@data-id=\"Lead\"]")
 	WebElement btnReferidos;

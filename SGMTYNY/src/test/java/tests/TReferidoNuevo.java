@@ -2,18 +2,18 @@ package tests;
 
 import org.testng.annotations.Test;
 
-import pages.PageImportar;
+import pages.PageReferidosImportar;
 import pages.PageInicio;
 import pages.PageLogin;
-import pages.PageNuevoReferido;
-import pages.PageTodosLosReferidos;
+import pages.PageReferidosNuevo;
+import pages.PageReferidosTodos;
 
-public class TNuevoReferido extends BaseTest{
+public class TReferidoNuevo extends BaseTest{
 
 	@Test
 	public void AgregarNuevoReferido() {
-		PageNuevoReferido nuevoReferido = new PageNuevoReferido(driver);
-		PageTodosLosReferidos todosLosReferidos = new PageTodosLosReferidos(driver);
+		PageReferidosNuevo nuevoReferido = new PageReferidosNuevo(driver);
+		PageReferidosTodos todosLosReferidos = new PageReferidosTodos(driver);
 		PageLogin login = new PageLogin(driver);
 		PageInicio inicio = new PageInicio(driver);
 		strPaso = "Invocando metodos a login";

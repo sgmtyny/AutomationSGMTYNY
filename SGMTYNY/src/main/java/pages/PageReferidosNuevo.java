@@ -8,7 +8,7 @@ import helpers.HCommonHelper;
 	/*
 	 * KEEP ON WORKING ON THIS CLASS
 	 */
-public class PageNuevoReferido extends BasePage{
+public class PageReferidosNuevo extends BasePage{
 	@FindBy(xpath = "//iframe[@title = 'accessibility title']")
 	WebElement frame;
 	@FindBy(xpath = "//*[@id ='Name']")
@@ -54,7 +54,7 @@ public class PageNuevoReferido extends BasePage{
 	@FindBy(xpath = "//div[contains(text(),'Cancelar')]")
 	WebElement btnCancel;
 	
-		public PageNuevoReferido(WebDriver driver) {
+		public PageReferidosNuevo(WebDriver driver) {
 			super(driver);
 		}
 		public void typeName() {

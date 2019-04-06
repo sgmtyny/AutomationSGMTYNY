@@ -24,7 +24,7 @@ import helpers.*;
 public class BasePage {
 	
 	public final int timeout = 30;
-	protected WebDriver driver;
+	protected static WebDriver driver;
 	private WebDriverWait wait;
 	private Actions action;
 	private List<WebElement> elements;
@@ -41,6 +41,13 @@ public class BasePage {
 	public BasePage() {
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+	public static WebElement getElementByXpathContainsText(String xpath)
+    {
+		return driver.findElement(By.xpath(xpath));
+    }
+	
 
 	protected  void moveToElement(WebElement element) {
 		waitForElement(element);
@@ -90,7 +97,7 @@ public class BasePage {
 	}
 	
 	protected void sendKeys(WebElement element,String text) {
-		//waitForElement(element);
+		//waitForElement(element); **No descomentar, por que cuando se descomenta, no funciona oportunidades nuevo :(
 		element.sendKeys(text);
 				
 	}

@@ -10,9 +10,6 @@ import helpers.HCommonHelper;
 
 public class PageOportunidadesNuevo extends BasePage {
 
-	//@FindBy(xpath=".//*[@id=\"OpportunityName\"]")
-	
-	//@FindBy(how = How.ID, using = "OpportunityName")
 	
 	@FindBy(xpath = "//iframe[@title = 'accessibility title']")
 	WebElement frame;
@@ -119,7 +116,8 @@ public class PageOportunidadesNuevo extends BasePage {
 		downEnter(txtRelationName);
 	}
 	
-	private void selectSta() {
+	private void selectSta() {		
+		HCommonHelper.waiter("low");
 		sendKeys(listStage,"Diseño");
 	}
 	

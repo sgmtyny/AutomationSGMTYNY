@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 
 import helpers.Hproperties;
 
-public class PageImportar extends BasePage{
+public class PageReferidosImportar extends BasePage{
 	
 	@FindBy(linkText = "Referidos")
 	WebElement lknReferidos;
@@ -27,7 +27,7 @@ public class PageImportar extends BasePage{
 
 	private String path = Hproperties.leerPath();
 	
-	public PageImportar(WebDriver driver) {
+	public PageReferidosImportar(WebDriver driver) {
 		super(driver);
 	}
 	public void clickReferidos() {

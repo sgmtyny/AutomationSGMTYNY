@@ -1,6 +1,12 @@
 package tests;
 
 import java.io.IOException;
+
+import org.testng.annotations.Test;
+
+import pages.PageInicio;
+import pages.PageOportunidades;
+
 import org.testng.annotations.Test;
 import pages.PageLogin;
 import pages.*;
@@ -8,10 +14,10 @@ import pages.*;
 import java.io.File;
 import tests.BaseTest;
 
-public class Toportunidades extends BaseTest{
-	
+public class TOportunidadesANF  extends BaseTest{
+
 	@Test
-	public void stepsOportunidades() throws IOException  {
+	public void stepsOportunidadesANF() throws IOException  {
 		
 		strPaso = "Haciendo login";
 		Tlogin.stepsLogin();
@@ -24,18 +30,7 @@ public class Toportunidades extends BaseTest{
 		PageOportunidadesNuevo oportunidadesNuev = new PageOportunidadesNuevo(driver);
 		
 		inicio.clickOportunidades();
-		oportunidades.clickNuevo();
-		oportunidadesNuev.putName();
-		oportunidadesNuev.putNameRelation();
-		oportunidadesNuev.selectStage();
-		oportunidadesNuev.selectDate();
-		oportunidadesNuev.selectSource();
-		oportunidadesNuev.selectActivity();
-		oportunidadesNuev.selectActivityDat();
-		oportunidadesNuev.selectInteres();
-		oportunidadesNuev.inputNotes();
-		oportunidadesNuev.clickOpen();
-		
+				
 		
 	}	
 }
