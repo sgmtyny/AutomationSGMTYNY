@@ -159,9 +159,9 @@ public class PageReferidoNuevo extends BasePage{
 				typeTitle();
 				typeMonthlyIncomeApprox();
 				selectMainInterest();
-				clickFinalSaveLead();
+//				clickFinalSaveLead();
 			}else {
-				clickFirstSaveLead();
+//				clickFirstSaveLead();
 			}
 		}
 		public void clickCancel() {
@@ -169,6 +169,9 @@ public class PageReferidoNuevo extends BasePage{
 		}
 		public void clickFirstSaveLead() {
 			clickFirstButtonSaveLead();
+		}
+		public void typeReferredBy() {
+			typeInputReferredBy();
 		}
 		private void typeInputName() {
 			refreshPage();
@@ -210,6 +213,11 @@ public class PageReferidoNuevo extends BasePage{
 		}
 		private void selectDropdownSource() {
 			selectFromDropdown(selectSource);
+			if(isElementUnhidden(inputReferredBy)) {
+				typeReferredBy();
+			}
+		}
+		private void typeInputReferredBy() {
 			sendKeys(inputReferredBy,"Juan Perez Gomez");
 			HCommonHelper.waiter("low");
 			downEnter(inputReferredBy);
