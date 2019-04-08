@@ -196,6 +196,7 @@ public class PageOportunidadesConfigurarProducto extends BasePage{
 	
 	private void ingre()
 	{
+		txtIngreso.clear();		
 		sendKeys(txtIngreso,String.valueOf(HCommonHelper.getRandomNumberInRange(11000000, 60000000)));
 	}
 	
@@ -242,6 +243,7 @@ public class PageOportunidadesConfigurarProducto extends BasePage{
 
 	private void planSelect()
 	{
+		HCommonHelper.waiter("medium");
 		click(btnPlanSelect);
 	}
 	

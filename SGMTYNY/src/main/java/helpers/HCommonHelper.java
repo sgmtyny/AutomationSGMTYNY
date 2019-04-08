@@ -15,7 +15,7 @@ public class HCommonHelper {
 		return url.length();
 	}
 	public static int getRandomNumberInRange(int start, int limit) {
-		return (start + (int) Math.round(Math.random() * (limit - limit)));
+		return (start + (int) Math.round(Math.random() * (limit - start)));
 	}
 	public static String getRandomEmail() {
 		random = new Random();
@@ -141,5 +141,21 @@ public class HCommonHelper {
 		return strPostalCode;
 	}
 	
+	public static String oportunidad()
+	{
+		String strOportunidad = "";
+		String[] strOportunidadArr = {"Vida", "GMM", "Retiro", "Ahorro"};
+		int intOportunidad = getRandomNumberInRange(0,3);
+		strOportunidad = strOportunidadArr[intOportunidad];
+		return strOportunidad;
+	}
 	
+	public static String etapa()
+	{
+		String strEtapa = "";
+		String[] strEtapaArr = {"Necesidad","Diseño", "Propuesta", "Solicitud Inicial"};
+		int intEtapa = getRandomNumberInRange(0,3);
+		strEtapa = strEtapaArr[intEtapa];
+		return strEtapa;
+	}
 }
