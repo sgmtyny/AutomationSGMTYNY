@@ -6,6 +6,7 @@ import java.io.File;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 
 import helpers.*;
@@ -28,10 +29,11 @@ public class BaseTest {
 public void setDriver() {
 	strPaso="Invocando el metodo que lee el properties";
 	Hproperties.leerProperties();
-	
+	ChromeOptions options = new ChromeOptions();
+	options.addArguments("--disable-notifications");
 	strPaso="Invocando el web driver";
 	System.setProperty("webdriver.chrome.driver", driverPath);
-	this.driver = new ChromeDriver();
+	this.driver = new ChromeDriver(options);
 	this.driver.manage().window().maximize();
 }
 

@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import helpers.HCommonHelper;
+
 public class PageReferidoTodos extends BasePage{
 	@FindBy(xpath = "//div[@title = \"Importar\"]")
 	WebElement btnImportar;
@@ -15,9 +17,9 @@ public class PageReferidoTodos extends BasePage{
 	WebElement btnCambiarEstado;
 	@FindBy(xpath = "//input[@type = 'checkbox']/following-sibling::span[@class = 'slds-checkbox--faux']")
 	List<WebElement> records;
-	@FindBy(xpath = "//div[@title = 'Mostrar 2 acciones más']")
+	@FindBy(xpath = "//a[@title = 'Mostrar 2 acciones más']")
 	WebElement arrowDown;
-	@FindBy(xpath = "//div[@title = 'Cambiar propietario']")
+	@FindBy(xpath = "//a[@title = 'Cambiar propietario']")
 	WebElement btnCambiarPropietario;	
 	
 	public PageReferidoTodos(WebDriver driver) {
@@ -57,6 +59,7 @@ public class PageReferidoTodos extends BasePage{
 		click(btnCambiarPropietario);
 	} 
 	public void clickArrowDown() {
+//		HCommonHelper.waiter("high");
 		click(arrowDown);
 	}
 }

@@ -64,7 +64,11 @@ public class BasePage {
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	protected void waitForElements(List<WebElement> elements) {
+		try {
 		wait.until(ExpectedConditions.visibilityOfAllElements(elements));
+		}catch(Exception e) {
+//			System.out.println(e);
+		}
 	}
 	protected void refreshPage() {
 		driver.navigate().refresh();
@@ -138,20 +142,16 @@ public class BasePage {
 	protected void selectOption(List<WebElement> elements) {
 		int option;
 		waitForElements(elements);
-		System.out.println("Number of elements "+elements.size());
-		option = HCommonHelper.getRandomNumberInRange(0,elements.size());
-		System.out.println("Random Option "+option);
+		option = HCommonHelper.getRandomNumberInRange(0,elements.size()-1);
 		click(elements.get(option));
 	}
 	protected void selectOptionWithException(List<WebElement> elements,int exceptionElement) {
 		int option;
 		waitForElements(elements);
-		System.out.println("Number of elements "+elements.size());
-		option = HCommonHelper.getRandomNumberInRange(0,elements.size());
-		while(option == exceptionElement) {
-			option = HCommonHelper.getRandomNumberInRange(0,elements.size());
+		do{
+			option = HCommonHelper.getRandomNumberInRange(0,elements.size() - 1);
 		}
-		System.out.println("Random Option "+option);
+		while(option == exceptionElement);
 		click(elements.get(option));		
 	}
 	protected boolean waitForMessageToAppear(WebElement element) {
@@ -218,11 +218,19 @@ public class BasePage {
 		int randomNumber;
 		dropdown = new Select(element);
 		optionsInSelect = dropdown.getOptions().size();
-		randomNumber = 	HCommonHelper.getRandomNumberInRange(0,optionsInSelect);
-		while(randomNumber == 0) {
-			randomNumber = 	HCommonHelper.getRandomNumberInRange(0,optionsInSelect);
+		do {
+			randomNumber = 	HCommonHelper.getRandomNumberInRange(0,optionsInSelect - 1);
 		}
+		while(randomNumber == 0);
 		dropdown.selectByIndex(randomNumber);
+	}
+	protected boolean isElementUnhidden(WebElement element) {
+		try {
+			waitForElement(element);
+			return true;
+		}catch(Exception e) {
+			return false;
+		}
 	}
 	public static void downEnter(WebElement element)
 	{

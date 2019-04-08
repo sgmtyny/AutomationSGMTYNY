@@ -11,7 +11,7 @@ import pages.PageReferidoTodos;
 public class TReferidoNuevo extends BaseTest{
 
 	@Test
-	public void AgregarNuevoReferido() {
+	public void stepsToAddNewLead() {
 		PageReferidoNuevo nuevoReferido = new PageReferidoNuevo(driver);
 		PageReferidoTodos todosLosReferidos = new PageReferidoTodos(driver);
 		PageLogin login = new PageLogin(driver);

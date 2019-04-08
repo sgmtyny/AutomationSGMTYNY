@@ -2,24 +2,43 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite name="Default suite" duration-ms="63205" started-at="2019-04-08T20:11:38Z" finished-at="2019-04-08T20:12:41Z">
+=======
+  <suite name="Default suite" duration-ms="23129" started-at="2019-04-08T20:12:09Z" finished-at="2019-04-08T20:12:32Z">
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
     <groups>
     </groups>
+<<<<<<< HEAD
     <test name="Default test" duration-ms="63205" started-at="2019-04-08T20:11:38Z" finished-at="2019-04-08T20:12:41Z">
       <class name="tests.TOportunidadesConfigurarProducto">
         <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.TOportunidadesConfigurarProducto@63440df3]" name="setDriver" is-config="true" duration-ms="4198" started-at="2019-04-08T20:11:38Z" finished-at="2019-04-08T20:11:42Z">
+=======
+    <test name="Default test" duration-ms="23129" started-at="2019-04-08T20:12:09Z" finished-at="2019-04-08T20:12:32Z">
+      <class name="tests.TReferidoCambiarPropietario">
+        <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.TReferidoCambiarPropietario@63440df3]" name="setDriver" is-config="true" duration-ms="5576" started-at="2019-04-08T20:12:09Z" finished-at="2019-04-08T20:12:15Z">
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setDriver -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="stepsOportunidadesConfigurarProducto()[pri:0, instance:tests.TOportunidadesConfigurarProducto@63440df3]" name="stepsOportunidadesConfigurarProducto" duration-ms="58995" started-at="2019-04-08T20:11:42Z" finished-at="2019-04-08T20:12:41Z">
+=======
+        <test-method status="PASS" signature="stepsToChangeOwner()[pri:0, instance:tests.TReferidoCambiarPropietario@63440df3]" name="stepsToChangeOwner" duration-ms="17494" started-at="2019-04-08T20:12:15Z" finished-at="2019-04-08T20:12:32Z">
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- stepsOportunidadesConfigurarProducto -->
         <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.TOportunidadesConfigurarProducto@63440df3]" name="quitDriver" is-config="true" duration-ms="0" started-at="2019-04-08T20:12:41Z" finished-at="2019-04-08T20:12:41Z">
+=======
+        </test-method> <!-- stepsToChangeOwner -->
+        <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.TReferidoCambiarPropietario@63440df3]" name="quitDriver" is-config="true" duration-ms="1" started-at="2019-04-08T20:12:32Z" finished-at="2019-04-08T20:12:32Z">
+>>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->
-      </class> <!-- tests.TOportunidadesConfigurarProducto -->
+      </class> <!-- tests.TReferidoCambiarPropietario -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

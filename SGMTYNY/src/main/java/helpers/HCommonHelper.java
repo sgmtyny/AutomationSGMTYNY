@@ -22,12 +22,12 @@ public class HCommonHelper {
 		String[] emailDomain = {"hotmail","gmail","yahoo"};
 		String[] names = {"Iniesta","Ronaldinho","Ronaldo","Zlatan","Griezmann","Neymar","Beckham","Mbappe"};
 		String[] specialCharacter = {"_",".",""};
-		return names[getRandomNumberInRange(0,names.length)]+specialCharacter[getRandomNumberInRange(0,specialCharacter.length)]+getRandomNumberInRange(0,10)+"@"+emailDomain[getRandomNumberInRange(0,emailDomain.length)]+".com";
+		return names[getRandomNumberInRange(0,names.length - 1)]+specialCharacter[getRandomNumberInRange(0,specialCharacter.length- 1)]+getRandomNumberInRange(0,10)+"@"+emailDomain[getRandomNumberInRange(0,emailDomain.length- 1)]+".com";
 	}
 	public static String randomOptionCheckOrNot() {
 		random = new Random();
 		String[] options = {"yes","no"};
-		return options[getRandomNumberInRange(0,options.length)];
+		return options[getRandomNumberInRange(0,options.length- 1)];
 //		return "yes";
 	}
 	public String getRandomName() {		

@@ -32,11 +32,12 @@ public class TReferidoCambiarPropietario extends BaseTest{
 		strPaso = "Invocando metodos para importar";
 		inicio.clickReferidos();
 		todosLosReferidos.clickArrowDown();
+		/*
 		todosLosReferidos.clickCambiarPropietario();
 		cambiarPropietario.typeSearch();
 		cambiarPropietario.checkSendEmail();
 		cambiarPropietario.clickEnviar();
-		
+		*/
 		
 	}
 }
