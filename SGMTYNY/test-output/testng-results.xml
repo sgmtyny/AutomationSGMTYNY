@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="66896" started-at="2019-04-08T04:55:05Z" finished-at="2019-04-08T04:56:11Z">
+  <suite name="Default suite" duration-ms="23129" started-at="2019-04-08T20:12:09Z" finished-at="2019-04-08T20:12:32Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="66896" started-at="2019-04-08T04:55:05Z" finished-at="2019-04-08T04:56:11Z">
-      <class name="tests.TOportunidadesConfigurarProducto">
-        <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.TOportunidadesConfigurarProducto@63440df3]" name="setDriver" is-config="true" duration-ms="4222" started-at="2019-04-08T04:55:05Z" finished-at="2019-04-08T04:55:09Z">
+    <test name="Default test" duration-ms="23129" started-at="2019-04-08T20:12:09Z" finished-at="2019-04-08T20:12:32Z">
+      <class name="tests.TReferidoCambiarPropietario">
+        <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.TReferidoCambiarPropietario@63440df3]" name="setDriver" is-config="true" duration-ms="5576" started-at="2019-04-08T20:12:09Z" finished-at="2019-04-08T20:12:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setDriver -->
-        <test-method status="PASS" signature="stepsOportunidadesConfigurarProducto()[pri:0, instance:tests.TOportunidadesConfigurarProducto@63440df3]" name="stepsOportunidadesConfigurarProducto" duration-ms="62663" started-at="2019-04-08T04:55:09Z" finished-at="2019-04-08T04:56:11Z">
+        <test-method status="PASS" signature="stepsToChangeOwner()[pri:0, instance:tests.TReferidoCambiarPropietario@63440df3]" name="stepsToChangeOwner" duration-ms="17494" started-at="2019-04-08T20:12:15Z" finished-at="2019-04-08T20:12:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- stepsOportunidadesConfigurarProducto -->
-        <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.TOportunidadesConfigurarProducto@63440df3]" name="quitDriver" is-config="true" duration-ms="0" started-at="2019-04-08T04:56:11Z" finished-at="2019-04-08T04:56:11Z">
+        </test-method> <!-- stepsToChangeOwner -->
+        <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.TReferidoCambiarPropietario@63440df3]" name="quitDriver" is-config="true" duration-ms="1" started-at="2019-04-08T20:12:32Z" finished-at="2019-04-08T20:12:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->
-      </class> <!-- tests.TOportunidadesConfigurarProducto -->
+      </class> <!-- tests.TReferidoCambiarPropietario -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
