@@ -23,14 +23,9 @@ import helpers.*;
 
 public class BasePage {
 	
-<<<<<<< HEAD
 	public final int timeout = 30;
-	protected static WebDriver driver;
-=======
-	public final int timeout = 10;
-	protected WebDriver driver;
->>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
-	private WebDriverWait wait;
+	protected static WebDriver driver;	
+	private static WebDriverWait wait;
 	private Actions action;
 	private List<WebElement> elements;
 	private WebElement element;
@@ -65,7 +60,7 @@ public class BasePage {
 	protected void waitForFrame(WebElement element) {
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(element));
 	}
-	protected void waitForElement(WebElement element) {
+	protected static void waitForElement(WebElement element) {
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	protected void waitForElements(List<WebElement> elements) {
@@ -109,24 +104,13 @@ public class BasePage {
 		action.dragAndDrop(elementSource, elementTarget).build().perform();
 	}
 	protected void sendKeys(WebElement element,String text) {
-<<<<<<< HEAD
+
 		//waitForElement(element); **No descomentar, por que cuando se descomenta, no funciona oportunidades nuevo :(
 		element.sendKeys(text);
 				
-	}
-	
-	protected void click(WebElement element) {
-		waitForElement(element);
-=======
->>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
-		try {
-			waitForElement(element);
-			element.sendKeys(text);
-		}catch(Exception e) {
-			System.out.println("It was not possible to locate element");	
-		}
-	}
-	protected void click(WebElement element) {
+	}	
+
+	protected static void click(WebElement element) {
 		try {
 			waitForElement(element);
 			element.click();	
@@ -135,7 +119,7 @@ public class BasePage {
 			System.out.println("no fue posible dar click");
 		}
 	}
-	protected void checkOptionalYesOrNot(WebElement element) {
+	protected static void checkOptionalYesOrNot(WebElement element) {
 			String option = HCommonHelper.randomOptionCheckOrNot();
 			if(option.equals("yes")) {
 				try {
@@ -155,7 +139,7 @@ public class BasePage {
 		int option;
 		waitForElements(elements);
 		System.out.println("Number of elements "+elements.size());
-		option = HCommonHelper.getRandomNumberInRange(elements.size());
+		option = HCommonHelper.getRandomNumberInRange(0,elements.size());
 		System.out.println("Random Option "+option);
 		click(elements.get(option));
 	}
@@ -163,9 +147,9 @@ public class BasePage {
 		int option;
 		waitForElements(elements);
 		System.out.println("Number of elements "+elements.size());
-		option = HCommonHelper.getRandomNumberInRange(elements.size());
+		option = HCommonHelper.getRandomNumberInRange(0,elements.size());
 		while(option == exceptionElement) {
-			option = HCommonHelper.getRandomNumberInRange(elements.size());
+			option = HCommonHelper.getRandomNumberInRange(0,elements.size());
 		}
 		System.out.println("Random Option "+option);
 		click(elements.get(option));		
@@ -234,13 +218,13 @@ public class BasePage {
 		int randomNumber;
 		dropdown = new Select(element);
 		optionsInSelect = dropdown.getOptions().size();
-		randomNumber = 	HCommonHelper.getRandomNumberInRange(optionsInSelect);
+		randomNumber = 	HCommonHelper.getRandomNumberInRange(0,optionsInSelect);
 		while(randomNumber == 0) {
-			randomNumber = 	HCommonHelper.getRandomNumberInRange(optionsInSelect);
+			randomNumber = 	HCommonHelper.getRandomNumberInRange(0,optionsInSelect);
 		}
 		dropdown.selectByIndex(randomNumber);
 	}
-	public void downEnter(WebElement element)
+	public static void downEnter(WebElement element)
 	{
 		try {
 			element.sendKeys(Keys.DOWN);

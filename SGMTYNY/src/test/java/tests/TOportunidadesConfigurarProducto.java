@@ -30,6 +30,11 @@ public class TOportunidadesConfigurarProducto  extends BaseTest{
 		oportunidades.clickOportunidad();
 		oportunidades.clickConfigurarProducto();
 		configurarProducto.informacionPersonal();
+		configurarProducto.selecProducto();
+		configurarProducto.selecPlan();
+		configurarProducto.selecPersona();
+		configurarProducto.configuracion();
+		configurarProducto.prima();
 		
 		
 		

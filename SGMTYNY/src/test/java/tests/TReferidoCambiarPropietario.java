@@ -2,12 +2,14 @@ package tests;
 
 import org.testng.annotations.Test;
 
-import pages.PageImportar;
+
 import pages.PageInicio;
 import pages.PageLogin;
 import pages.PageReferidoCambiarEstado;
 import pages.PageReferidoCambiarPropietario;
-import pages.PageTodosLosReferidos;
+import pages.PageReferidoImportar;
+import pages.PageReferidoTodos;
+
 
 public class TReferidoCambiarPropietario extends BaseTest{
 	
@@ -16,13 +18,13 @@ public class TReferidoCambiarPropietario extends BaseTest{
 	 */
 	@Test
 	public void stepsToChangeOwner() {
-		PageTodosLosReferidos todosLosReferidos = new PageTodosLosReferidos(driver);
-		PageReferidoCambiarPropietario cambiarPropietario = new PageReferidoCambiarPropietario(driver);
+		PageReferidoTodos todosLosReferidos = new PageReferidoTodos(driver);
+		PageReferidoCambiarEstado cambiarEstado = new PageReferidoCambiarEstado(driver);
 		strPaso = "Creando el page login";
 		PageLogin login = new PageLogin(driver);
 		PageInicio inicio = new PageInicio(driver);
-		PageImportar importar = new PageImportar(driver);
-		strPaso = "Invocando metodos a login";
+		PageReferidoImportar importar = new PageReferidoImportar(driver);
+		PageReferidoCambiarPropietario cambiarPropietario = new PageReferidoCambiarPropietario(driver);
 		login.launchHome();
 		login.inputUsuario();	
 		login.inputContrasenia();

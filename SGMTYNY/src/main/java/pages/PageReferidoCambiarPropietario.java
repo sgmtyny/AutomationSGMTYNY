@@ -10,10 +10,13 @@ import helpers.HCommonHelper;
  */
 public class PageReferidoCambiarPropietario extends BasePage{
 	@FindBy(xpath = "//input[@title='Buscar Personas']")
+	
 	WebElement inputSearch;
 	@FindBy(xpath = "//input[@name='SendEmail']")
+	
 	WebElement checkboxSendEmail;
 	@FindBy(xpath = "//div[@class = 'modal-footer slds-modal__footer']/descendant::span[contains(text(),'Enviar')")
+	
 	WebElement btnEnviar;
 	public PageReferidoCambiarPropietario(WebDriver driver) {
 		super(driver);
@@ -35,7 +38,7 @@ public class PageReferidoCambiarPropietario extends BasePage{
 	public void clickEnviar() {
 		clickBtnEnviar();
 	}
-	private void clickBtnEnviar() {
+	private  void clickBtnEnviar() {
 		click(btnEnviar);
 	}
 }

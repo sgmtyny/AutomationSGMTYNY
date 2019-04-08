@@ -1,169 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-<<<<<<< HEAD
-  <suite name="Default suite" duration-ms="44289" started-at="2019-04-06T03:14:13Z" finished-at="2019-04-06T03:14:58Z">
-=======
-  <suite name="Default suite" duration-ms="58349" started-at="2019-04-05T23:21:50Z" finished-at="2019-04-05T23:22:49Z">
->>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
+  <suite name="Default suite" duration-ms="66896" started-at="2019-04-08T04:55:05Z" finished-at="2019-04-08T04:56:11Z">
     <groups>
     </groups>
-<<<<<<< HEAD
-    <test name="Default test" duration-ms="44289" started-at="2019-04-06T03:14:13Z" finished-at="2019-04-06T03:14:58Z">
+    <test name="Default test" duration-ms="66896" started-at="2019-04-08T04:55:05Z" finished-at="2019-04-08T04:56:11Z">
       <class name="tests.TOportunidadesConfigurarProducto">
-        <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.TOportunidadesConfigurarProducto@77f99a05]" name="setDriver" is-config="true" duration-ms="5509" started-at="2019-04-06T03:14:13Z" finished-at="2019-04-06T03:14:19Z">
-=======
-    <test name="Default test" duration-ms="58349" started-at="2019-04-05T23:21:50Z" finished-at="2019-04-05T23:22:49Z">
-      <class name="tests.TCambiarPropietario">
-        <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.TCambiarPropietario@63440df3]" name="setDriver" is-config="true" duration-ms="5134" started-at="2019-04-05T23:21:50Z" finished-at="2019-04-05T23:21:55Z">
->>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
+        <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.TOportunidadesConfigurarProducto@63440df3]" name="setDriver" is-config="true" duration-ms="4222" started-at="2019-04-08T04:55:05Z" finished-at="2019-04-08T04:55:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setDriver -->
-<<<<<<< HEAD
-        <test-method status="FAIL" signature="stepsOportunidadesConfigurarProducto()[pri:0, instance:tests.TOportunidadesConfigurarProducto@77f99a05]" name="stepsOportunidadesConfigurarProducto" duration-ms="38754" started-at="2019-04-06T03:14:19Z" finished-at="2019-04-06T03:14:58Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@data-recordid='0060R000008iMgYQAU']"}
-  (Session info: chrome=73.0.3683.86)
-  (Driver info: chromedriver=73.0.3683.20 (8e2b610813e167eee3619ac4ce6e42e3ec622017),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 22 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'DT39306', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1812}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=73.0.3683.20 (8e2b610813e167eee3619ac4ce6e42e3ec622017), userDataDir=C:\Users\ABGALI~1\AppData\Local\Temp\scoped_dir17812_26513}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=73.0.3683.86, browserConnectionEnabled=false, proxy=Proxy(), nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 476e46e5594cd86435f1346a2e5dac0b
-*** Element info: {Using=xpath, value=//*[@data-recordid='0060R000008iMgYQAU']}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@data-recordid='0060R000008iMgYQAU']"}
-  (Session info: chrome=73.0.3683.86)
-  (Driver info: chromedriver=73.0.3683.20 (8e2b610813e167eee3619ac4ce6e42e3ec622017),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 22 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'DT39306', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1812}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=73.0.3683.20 (8e2b610813e167eee3619ac4ce6e42e3ec622017), userDataDir=C:\Users\ABGALI~1\AppData\Local\Temp\scoped_dir17812_26513}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=73.0.3683.86, browserConnectionEnabled=false, proxy=Proxy(), nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 476e46e5594cd86435f1346a2e5dac0b
-*** Element info: {Using=xpath, value=//*[@data-recordid='0060R000008iMgYQAU']}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
-at pages.BasePage.getElementByXpathContainsText(BasePage.java:48)
-at pages.PageOportunidades.clickOport(PageOportunidades.java:63)
-at pages.PageOportunidades.clickOportunidad(PageOportunidades.java:39)
-at tests.TOportunidadesConfigurarProducto.stepsOportunidadesConfigurarProducto(TOportunidadesConfigurarProducto.java:30)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-=======
-        <test-method status="FAIL" signature="stepsToChangeOwner()[pri:0, instance:tests.TCambiarPropietario@63440df3]" name="stepsToChangeOwner" duration-ms="53186" started-at="2019-04-05T23:21:55Z" finished-at="2019-04-05T23:22:49Z">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of all [] (tried for 10 second(s) with 500 MILLISECONDS interval)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'DT39538', ip: '10.49.234.184', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:51135}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=73.0.3683.20 (8e2b610813e167eee3619ac4ce6e42e3ec622017), userDataDir=C:\Users\DIEGOM~1\AppData\Local\Temp\scoped_dir9972_23819}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=73.0.3683.86, browserConnectionEnabled=false, proxy=Proxy(), nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 21541413fc04136818f11f85c7db28e0]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 10 second(s) with 500 MILLISECONDS interval)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'DT39538', ip: '10.49.234.184', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:51135}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=73.0.3683.20 (8e2b610813e167eee3619ac4ce6e42e3ec622017), userDataDir=C:\Users\DIEGOM~1\AppData\Local\Temp\scoped_dir9972_23819}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=73.0.3683.86, browserConnectionEnabled=false, proxy=Proxy(), nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 21541413fc04136818f11f85c7db28e0
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-at pages.BasePage.waitForElements(BasePage.java:60)
-at pages.BasePage.selectOptionWithException(BasePage.java:142)
-at pages.PageTodosLosReferidos.selectRandomRecord(PageTodosLosReferidos.java:50)
-at pages.PageTodosLosReferidos.selectRecord(PageTodosLosReferidos.java:47)
-at pages.PageTodosLosReferidos.clickCambiarPropietario(PageTodosLosReferidos.java:53)
-at tests.TCambiarPropietario.stepsToChangeOwner(TCambiarPropietario.java:31)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
->>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
+        <test-method status="PASS" signature="stepsOportunidadesConfigurarProducto()[pri:0, instance:tests.TOportunidadesConfigurarProducto@63440df3]" name="stepsOportunidadesConfigurarProducto" duration-ms="62663" started-at="2019-04-08T04:55:09Z" finished-at="2019-04-08T04:56:11Z">
           <reporter-output>
           </reporter-output>
-<<<<<<< HEAD
         </test-method> <!-- stepsOportunidadesConfigurarProducto -->
-        <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.TOportunidadesConfigurarProducto@77f99a05]" name="quitDriver" is-config="true" duration-ms="1" started-at="2019-04-06T03:14:58Z" finished-at="2019-04-06T03:14:58Z">
-=======
-        </test-method> <!-- stepsToChangeOwner -->
-        <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.TCambiarPropietario@63440df3]" name="quitDriver" is-config="true" duration-ms="1" started-at="2019-04-05T23:22:49Z" finished-at="2019-04-05T23:22:49Z">
->>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
+        <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.TOportunidadesConfigurarProducto@63440df3]" name="quitDriver" is-config="true" duration-ms="0" started-at="2019-04-08T04:56:11Z" finished-at="2019-04-08T04:56:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->
-<<<<<<< HEAD
       </class> <!-- tests.TOportunidadesConfigurarProducto -->
-=======
-      </class> <!-- tests.TCambiarPropietario -->
->>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

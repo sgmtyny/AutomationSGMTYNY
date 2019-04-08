@@ -56,7 +56,7 @@ public class PageOportunidades extends BasePage{
 	
 	private void clickOport() 	
 	{
-		HCommonHelper.waiter("medium");
+	//	HCommonHelper.waiter("medium");
 		refreshPage();
 		HCommonHelper.waiter("medium");
 		swithToFrame(frame);		

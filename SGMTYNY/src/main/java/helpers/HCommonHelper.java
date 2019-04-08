@@ -14,21 +14,20 @@ public class HCommonHelper {
 	public static int getLenghtUrl(String url) {
 		return url.length();
 	}
-	public static int getRandomNumberInRange(int limit) {
-		random = new Random();
-		return random.nextInt(limit);
+	public static int getRandomNumberInRange(int start, int limit) {
+		return (start + (int) Math.round(Math.random() * (limit - limit)));
 	}
 	public static String getRandomEmail() {
 		random = new Random();
 		String[] emailDomain = {"hotmail","gmail","yahoo"};
 		String[] names = {"Iniesta","Ronaldinho","Ronaldo","Zlatan","Griezmann","Neymar","Beckham","Mbappe"};
 		String[] specialCharacter = {"_",".",""};
-		return names[getRandomNumberInRange(names.length)]+specialCharacter[getRandomNumberInRange(specialCharacter.length)]+getRandomNumberInRange(10)+"@"+emailDomain[getRandomNumberInRange(emailDomain.length)]+".com";
+		return names[getRandomNumberInRange(0,names.length)]+specialCharacter[getRandomNumberInRange(0,specialCharacter.length)]+getRandomNumberInRange(0,10)+"@"+emailDomain[getRandomNumberInRange(0,emailDomain.length)]+".com";
 	}
 	public static String randomOptionCheckOrNot() {
 		random = new Random();
 		String[] options = {"yes","no"};
-		return options[getRandomNumberInRange(options.length)];
+		return options[getRandomNumberInRange(0,options.length)];
 //		return "yes";
 	}
 	public String getRandomName() {		
@@ -65,7 +64,7 @@ public class HCommonHelper {
 	
 	public static String selectDate()
 	{
-		int intNum = getRandomNumberInRange(29);
+		int intNum = getRandomNumberInRange(0,29);
 		
 		String strDate=getDate();			
 		String strDay = strDate.substring(0,2);
@@ -121,12 +120,26 @@ public class HCommonHelper {
 		return strID;
 	}	
 	
+	public static int baseEn() {
+		int select = getRandomNumberInRange(0,2);
+		return select;
+	}
+	
+	
 	public static String mexicosStates() {
 		String strState="";
 		int intState=0;
 		String[] strStates = {"AGUASCALIENTES","BAJA CALIFORNIA","BAJA CALIFORNIA SUR","CAMPECHE", "COAHUILA", "COLIMA", "CHIAPAS", "CHIHUAHUA", "CIUDAD DE MEXICO", "DURANGO", "GUANAJUATO", "GUERRERO", "HIDALGO", "JALISCO", "MEXICO", "MICHOACAN", "MORELOS", "NAYARIT", "NUEVO LEON", "OAXACA", "PUEBLA", "QUERETARO", "QUINTANA ROO", "SAN LUIS POTOSI", "SINALOA", "SONORA","TABASCO","TAMAULIPAS","TLAXCALA","VERACRUZ","YUCATAN","ZACATECAS"};
-		intState = getRandomNumberInRange(31);
+		intState = getRandomNumberInRange(0,31);
 		strState = strStates[intState];
 		return strState;		
 	}
+	
+	public static String postalCode() {
+		String strPostalCode="";
+		strPostalCode = String.valueOf(getRandomNumberInRange(11111, 99999));
+		return strPostalCode;
+	}
+	
+	
 }
