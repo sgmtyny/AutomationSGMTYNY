@@ -9,17 +9,16 @@ import pages.PageReferidoCambiarEstado;
 import pages.PageReferidoCambiarPropietario;
 import pages.PageReferidoImportar;
 import pages.PageReferidoTodos;
-
+/**
+ * @author Diego Mejía
+ * @date  05/04/2019
+ */
 
 public class TReferidoCambiarPropietario extends BaseTest{
-	
-	/*
-	 * KEEP ON WORKING IN THIS SECTION
-	 */
+
 	@Test
 	public void stepsToChangeOwner() {
 		PageReferidoTodos todosLosReferidos = new PageReferidoTodos(driver);
-		PageReferidoCambiarEstado cambiarEstado = new PageReferidoCambiarEstado(driver);
 		strPaso = "Creando el page login";
 		PageLogin login = new PageLogin(driver);
 		PageInicio inicio = new PageInicio(driver);
@@ -32,12 +31,9 @@ public class TReferidoCambiarPropietario extends BaseTest{
 		strPaso = "Invocando metodos para importar";
 		inicio.clickReferidos();
 		todosLosReferidos.clickArrowDown();
-		/*
 		todosLosReferidos.clickCambiarPropietario();
 		cambiarPropietario.typeSearch();
 		cambiarPropietario.checkSendEmail();
-		cambiarPropietario.clickEnviar();
-		*/
-		
+		cambiarPropietario.clickEnviar();	
 	}
 }

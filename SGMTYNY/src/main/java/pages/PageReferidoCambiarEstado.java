@@ -5,7 +5,10 @@ import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
+/**
+ * @author Diego Mejía
+ * @date  05/04/2019
+ */
 public class PageReferidoCambiarEstado extends BasePage{
 	@FindBy(xpath = "//a[@class = 'select']")
 	WebElement selectStatus;

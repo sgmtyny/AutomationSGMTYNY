@@ -6,7 +6,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import helpers.Hproperties;
-
+/**
+ * @author Diego Mejía
+ * @date  29/03/2019
+ */
 public class PageReferidoImportar extends BasePage{
 	
 	@FindBy(linkText = "Referidos")

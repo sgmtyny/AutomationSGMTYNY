@@ -8,7 +8,10 @@ import java.util.Date;
 import java.util.Random;
 
 import helpers.ExcelFile;
-
+/**
+ * @author Diego Mejía
+ * @author Abraham Galindo
+ */
 public class HCommonHelper {
 	private static Random random;
 	public static int getLenghtUrl(String url) {

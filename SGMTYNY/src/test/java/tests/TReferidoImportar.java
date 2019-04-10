@@ -6,7 +6,10 @@ import pages.PageReferidoImportar;
 import pages.PageInicio;
 import pages.PageLogin;
 import pages.PageReferidoTodos;
-
+/**
+ * @author Diego Mejía
+ * @date  29/03/2019
+ */
 public class TReferidoImportar extends BaseTest{
 	
 	@Test

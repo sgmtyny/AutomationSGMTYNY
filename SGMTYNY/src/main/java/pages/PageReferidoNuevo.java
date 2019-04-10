@@ -7,9 +7,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import helpers.HCommonHelper;
-	/*
-	 * KEEP ON WORKING ON THIS CLASS
-	 */
+/**
+ * @author Diego Mejía
+ * @date  03/04/2019
+ */
 public class PageReferidoNuevo extends BasePage{
 	@FindBy(xpath = "//iframe[@title = 'accessibility title']")
 	WebElement frame;
@@ -159,9 +160,9 @@ public class PageReferidoNuevo extends BasePage{
 				typeTitle();
 				typeMonthlyIncomeApprox();
 				selectMainInterest();
-//				clickFinalSaveLead();
+				clickFinalSaveLead();
 			}else {
-//				clickFirstSaveLead();
+				clickFirstSaveLead();
 			}
 		}
 		public void clickCancel() {
