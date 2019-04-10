@@ -2,31 +2,31 @@ package tests;
 
 import org.testng.annotations.Test;
 
-import pages.PageReferidoImportar;
 import pages.PageInicio;
 import pages.PageLogin;
 import pages.PageReferidoNuevo;
 import pages.PageReferidoTodos;
 /**
- * @author Diego Mejía
- * @date  03/04/2019
- */
-public class TReferidoNuevo extends BaseTest{
+ * @author Diego Mejia
+ * @date 09/04/2019
+ * 
+ * */
+public class TReferidoNuevo1 extends BaseTest{
 
 	@Test
 	public void stepsToAddNewLead() {
-		PageReferidoNuevo nuevoReferido = new PageReferidoNuevo(driver);
-		PageReferidoTodos todosLosReferidos = new PageReferidoTodos(driver);
 		PageLogin login = new PageLogin(driver);
 		PageInicio inicio = new PageInicio(driver);
+		PageReferidoNuevo nuevoReferido = new PageReferidoNuevo(driver);
 		strPaso = "Invocando metodos a login";
 		login.launchHome();
 		login.inputUsuario();	
 		login.inputContrasenia();
 		login.clickEntrar();
 		strPaso = "Invocando metodos para importar";
-		inicio.clickReferidos();
-		todosLosReferidos.clickNew();
+		inicio.clickArrowDownReferidos();
+		inicio.clickAgregarNuevoReferido();
+		/*
 		nuevoReferido.typeName();
 		nuevoReferido.typeFathersName();
 		nuevoReferido.typeMothersName();
@@ -48,6 +48,8 @@ public class TReferidoNuevo extends BaseTest{
 		nuevoReferido.typeDescription();
 		nuevoReferido.checkAddInformation();
 //		nuevoReferido.clickCancel();
+	*/
 	}
+	
+	
 }
-

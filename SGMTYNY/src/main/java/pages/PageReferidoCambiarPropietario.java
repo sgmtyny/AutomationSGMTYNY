@@ -5,8 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import helpers.HCommonHelper;
-/*
- * KEEP ON WORKING IN THIS SECTION
+/**
+ * @author Diego Mejía
+ * @date  05/04/2019
  */
 public class PageReferidoCambiarPropietario extends BasePage{
 	@FindBy(xpath = "//input[@title='Buscar Personas']")
@@ -15,8 +16,7 @@ public class PageReferidoCambiarPropietario extends BasePage{
 	@FindBy(xpath = "//input[@name='SendEmail']")
 	
 	WebElement checkboxSendEmail;
-	@FindBy(xpath = "//div[@class = 'modal-footer slds-modal__footer']/descendant::span[contains(text(),'Enviar')")
-	
+	@FindBy(xpath = "//div[@class = 'modal-footer slds-modal__footer']/descendant::span[contains(text(),'Enviar')]")
 	WebElement btnEnviar;
 	public PageReferidoCambiarPropietario(WebDriver driver) {
 		super(driver);

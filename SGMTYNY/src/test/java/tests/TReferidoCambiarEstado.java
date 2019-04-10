@@ -9,7 +9,10 @@ import pages.PageInicio;
 import pages.PageLogin;
 import pages.PageReferidoCambiarEstado;
 import pages.PageReferidoTodos;
-
+/**
+ * @author Diego Mejía
+ * @date  05/04/2019
+ */
 public class TReferidoCambiarEstado extends BaseTest{
 	@Test
 	public void stepsToChangeStatus() {

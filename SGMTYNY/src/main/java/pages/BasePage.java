@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -30,33 +31,31 @@ public class BasePage {
 	private List<WebElement> elements;
 	private WebElement element;
 	private Select dropdown;
-	
+	public static JavascriptExecutor js;
 	//Constructor
 	public BasePage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		wait = new WebDriverWait(driver, timeout);
 		action = new Actions(driver);
+		this.js = (JavascriptExecutor) driver;
 	}
 	public BasePage() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	
 	public static WebElement getElementByXpathContainsText(String xpath)
     {
 		return driver.findElement(By.xpath(xpath));
     }
-	
-
 	protected  void moveToElement(WebElement element) {
 		waitForElement(element);
 		action.moveToElement(element).build().perform();
 	}
-	/*
+	/**
+	 *
 	 * work on this method
 	 * 
-	 * */
+	 **/
 	protected void waitForFrame(WebElement element) {
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(element));
 	}
@@ -64,11 +63,7 @@ public class BasePage {
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	protected void waitForElements(List<WebElement> elements) {
-		try {
 		wait.until(ExpectedConditions.visibilityOfAllElements(elements));
-		}catch(Exception e) {
-//			System.out.println(e);
-		}
 	}
 	protected void refreshPage() {
 		driver.navigate().refresh();
@@ -108,20 +103,22 @@ public class BasePage {
 		action.dragAndDrop(elementSource, elementTarget).build().perform();
 	}
 	protected void sendKeys(WebElement element,String text) {
-
 		//waitForElement(element); **No descomentar, por que cuando se descomenta, no funciona oportunidades nuevo :(
-		element.sendKeys(text);
-				
+		element.sendKeys(text);	
 	}	
 
 	protected static void click(WebElement element) {
 		try {
 			waitForElement(element);
 			element.click();	
-		} catch (Exception e) {
+		}catch (Exception e) {
 			// TODO: handle exception
-			System.out.println("no fue posible dar click");
+			System.out.println("no fue posible dar click" + e);	
 		}
+	}
+	protected void clickJs(WebElement element) {
+		HCommonHelper.waiter("low");
+		js.executeScript("arguments[0].click();", element);
 	}
 	protected static void checkOptionalYesOrNot(WebElement element) {
 			String option = HCommonHelper.randomOptionCheckOrNot();

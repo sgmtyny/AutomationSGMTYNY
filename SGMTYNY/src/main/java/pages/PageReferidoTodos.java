@@ -7,7 +7,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import helpers.HCommonHelper;
-
+/**
+ * @author Diego Mejía
+ * @date  29/03/2019
+ */
 public class PageReferidoTodos extends BasePage{
 	@FindBy(xpath = "//div[@title = \"Importar\"]")
 	WebElement btnImportar;
@@ -52,14 +55,13 @@ public class PageReferidoTodos extends BasePage{
 		selectOptionWithException(records,0);
 	}
 	public void clickCambiarPropietario() {
-		selectRecord();
 		clickBtnCambiarPropietario();
 	} 
 	private void clickBtnCambiarPropietario() {
 		click(btnCambiarPropietario);
 	} 
 	public void clickArrowDown() {
-//		HCommonHelper.waiter("high");
+		selectRecord();
 		click(arrowDown);
 	}
 }
