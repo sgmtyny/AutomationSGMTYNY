@@ -48,6 +48,7 @@ public class PageInicio extends BasePage{
 	}
 	
 	private void clickOpor() {
+		HCommonHelper.waiter("medium");
 		waitForPage();		
 		click(btnOportunidades);
 	}

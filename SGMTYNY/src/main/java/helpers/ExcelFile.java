@@ -86,25 +86,25 @@ public class ExcelFile {
 		else {System.out.println("No existe");}
 	return strContenidoCelda;
 	}
-	public void writeOnExcel(String fileName) throws IOException {
+	public void writeOnExcel(String fileName, String sheetName) throws IOException {
 		file = new File(path + fileName);
 		if(file.exists()){
 			fileInputStream = new FileInputStream(file);
 			book = new XSSFWorkbook(fileInputStream);
-			actualDate = dateFormat.format(date);
-			System.out.println("Actual date-time: " + actualDate);
-			System.out.println(book.getNumberOfSheets());
+			//actualDate = dateFormat.format(date);
+//			System.out.println("Actual date-time: " + actualDate);
+//			System.out.println(book.getNumberOfSheets());
 			
-			sheet = book.createSheet("T_"+actualDate);
+			sheet = book.getSheet(sheetName);//.createSheet("T_"+actualDate);
 			
-			Object[][] datatypes = {
+			/*Object[][] datatypes = {
 					{"Datatype","Type", "Size(in bytes)"},
 					{"int","primitive",2},
 					{"String", "Non-Primitive", "No fixed size"},
 					{"float", "Primitive", 4}
-			};
+			};*/
 			System.out.println("Creating excel sheet...");
-			int rowNumber=0;
+		/*	int rowNumber=0;
 			for (Object[] datatype: datatypes) {
 				Row row = sheet.createRow(rowNumber++);
 				int colNumber = 0;
@@ -117,7 +117,7 @@ public class ExcelFile {
 						cell.setCellValue((Integer)field);
 					}
 				}
-			}
+			}*/
 			FileOutputStream outputStream = new FileOutputStream(file);
 			book.write(outputStream);
 			System.out.println(book.getNumberOfSheets());

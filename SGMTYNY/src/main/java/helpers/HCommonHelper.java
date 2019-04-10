@@ -144,5 +144,21 @@ public class HCommonHelper {
 		return strPostalCode;
 	}
 	
+	public static String oportunidad()
+	{
+		String strOportunidad = "";
+		String[] strOportunidadArr = {"Vida", "GMM", "Retiro", "Ahorro"};
+		int intOportunidad = getRandomNumberInRange(0,3);
+		strOportunidad = strOportunidadArr[intOportunidad];
+		return strOportunidad;
+	}
 	
+	public static String etapa()
+	{
+		String strEtapa = "";
+		String[] strEtapaArr = {"Necesidad","Diseño", "Propuesta", "Solicitud Inicial"};
+		int intEtapa = getRandomNumberInRange(0,3);
+		strEtapa = strEtapaArr[intEtapa];
+		return strEtapa;
+	}
 }

@@ -107,7 +107,8 @@ public class PageOportunidadesNuevo extends BasePage {
 	private void putOpName() {
 		refreshPage();
 		swithToFrame(frame);
-		sendKeys(txOpportunityName,"Vida");		
+		sendKeys(txOpportunityName,HCommonHelper.oportunidad());	
+		
 	}
 	
 	private void putOpNameRe() {			
@@ -118,7 +119,7 @@ public class PageOportunidadesNuevo extends BasePage {
 	
 	private void selectSta() {		
 		HCommonHelper.waiter("low");
-		sendKeys(listStage,"Diseño");
+		sendKeys(listStage,HCommonHelper.etapa());
 	}
 	
 	private void selectDat() {
