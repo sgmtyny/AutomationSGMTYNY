@@ -17,6 +17,14 @@ public class HCommonHelper {
 	public static int getLenghtUrl(String url) {
 		return url.length();
 	}
+	
+	public void finalizeObjects(Object[] objects) {
+		for(Object object: objects) {
+			System.out.println(object.getClass());
+			object = null;
+		}
+		objects = null;
+	}
 	public static int getRandomNumberInRange(int start, int limit) {
 		return (start + (int) Math.round(Math.random() * (limit - start)));
 	}

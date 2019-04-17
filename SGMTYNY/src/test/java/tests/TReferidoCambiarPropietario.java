@@ -18,10 +18,10 @@ public class TReferidoCambiarPropietario extends BaseTest{
 
 	@Test
 	public void stepsToChangeOwner() {
-		PageReferidoTodos todosLosReferidos = new PageReferidoTodos(driver);
 		strPaso = "Creando el page login";
 		PageLogin login = new PageLogin(driver);
 		PageInicio inicio = new PageInicio(driver);
+		PageReferidoTodos todosLosReferidos = new PageReferidoTodos(driver);
 		PageReferidoImportar importar = new PageReferidoImportar(driver);
 		PageReferidoCambiarPropietario cambiarPropietario = new PageReferidoCambiarPropietario(driver);
 		login.launchHome();

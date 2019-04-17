@@ -16,12 +16,13 @@ import pages.PageReferidoTodos;
 public class TReferidoCambiarEstado extends BaseTest{
 	@Test
 	public void stepsToChangeStatus() {
-		PageReferidoTodos todosLosReferidos = new PageReferidoTodos(driver);
-		PageReferidoCambiarEstado cambiarEstado = new PageReferidoCambiarEstado(driver);
+		//Instatiation
 		strPaso = "Creando el page login";
 		PageLogin login = new PageLogin(driver);
 		PageInicio inicio = new PageInicio(driver);
+		PageReferidoTodos todosLosReferidos = new PageReferidoTodos(driver);
 		PageReferidoImportar importar = new PageReferidoImportar(driver);
+		PageReferidoCambiarEstado cambiarEstado = new PageReferidoCambiarEstado(driver);
 		strPaso = "Invocando metodos a login";
 		login.launchHome();
 		login.inputUsuario();	

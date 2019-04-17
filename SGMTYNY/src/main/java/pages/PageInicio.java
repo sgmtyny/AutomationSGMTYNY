@@ -18,11 +18,28 @@ public class PageInicio extends BasePage{
 	WebElement btnNuevoReferido;
 	@FindBy(xpath="//*[@data-id='0KD0R000000DgvPWAS']")
 	WebElement btnAsesores;
+	@FindBy(xpath = "//*[@data-id=\"report\"]")
+	WebElement btnReportes;
+	@FindBy(xpath = "//*[@data-id=\"Dashboard\"]")
+	WebElement btnTableros;	
 	
 	public PageInicio(WebDriver driver) {
 		super(driver);
 	}
-	
+	public void clickTableros() {
+		clickTab();
+	}
+	private void clickTab() {
+		waitForPage();
+		click(btnTableros);
+	}	
+	public void clickReportes() {
+		clickReport();
+	}
+	private void clickReport() {
+		waitForPage();
+		click(btnReportes);
+	}
 	public void clickReferidos() {
 		clickRef();		
 	}
@@ -46,7 +63,6 @@ public class PageInicio extends BasePage{
 		waitForPage();
 		click(btnReferidos);
 	}
-	
 	private void clickOpor() {
 		HCommonHelper.waiter("medium");
 		waitForPage();		

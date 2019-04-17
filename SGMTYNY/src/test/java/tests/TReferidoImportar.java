@@ -14,11 +14,12 @@ public class TReferidoImportar extends BaseTest{
 	
 	@Test
 	public void stepsToImport() {
-		PageReferidoTodos todosLosReferidos = new PageReferidoTodos(driver);
-		strPaso = "Creando el page login";
+		//Instatiation
 		PageLogin login = new PageLogin(driver);
 		PageInicio inicio = new PageInicio(driver);
+		PageReferidoTodos todosLosReferidos = new PageReferidoTodos(driver);
 		PageReferidoImportar importar = new PageReferidoImportar(driver);
+		strPaso = "Creando el page login";
 		strPaso = "Invocando metodos a login";
 		login.launchHome();
 		login.inputUsuario();	
