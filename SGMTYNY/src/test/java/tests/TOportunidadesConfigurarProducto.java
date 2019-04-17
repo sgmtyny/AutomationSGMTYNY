@@ -32,9 +32,9 @@ public class TOportunidadesConfigurarProducto  extends BaseTest{
 		configurarProducto.informacionPersonal();
 		configurarProducto.selecProducto();
 		configurarProducto.selecPlan();
-		configurarProducto.selecPersona();
+		/*configurarProducto.selecPersona();
 		configurarProducto.configuracion();
-		configurarProducto.prima();
+		configurarProducto.prima();*/
 		
 		
 		

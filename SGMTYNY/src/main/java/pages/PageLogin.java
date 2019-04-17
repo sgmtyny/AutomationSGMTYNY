@@ -23,14 +23,32 @@ public class PageLogin extends BasePage{
 		
 	private String url = Hproperties.strUrl;
 	
+			
+	
 	public PageLogin(WebDriver driver) {
 		super(driver);
 	}
+	
+	public void hacerLogin() {
+		try 
+		{
+			
+			inputUser();
+			inputPsw();
+			clickEnter();
+			
+		}
+		catch(Exception e)
+		{
+			
+		}
+	}
+	
 	public void launchHome() {
 		driver.get(url);
 	}
 		
-	
+		
 	
 	@Test
 	public void inputUsuario() {
@@ -47,16 +65,14 @@ public class PageLogin extends BasePage{
 
 	private void inputUser() {
 		sendKeys(txUserName, Hproperties.strUser);
-		//txUserName.sendKeys(Hproperties.strUser);
 	}
 	
 	private void inputPsw() {
 		sendKeys(txPassword,Hproperties.strPsw);
-//		txPassword.sendKeys(Hproperties.strPsw);
 	}
 	
 	private void clickEnter() {
 		click(btnLogin);
-	}
+	}	
 	
 }
