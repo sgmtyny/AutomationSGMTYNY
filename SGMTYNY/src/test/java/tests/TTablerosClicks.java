@@ -18,10 +18,9 @@ public class TTablerosClicks extends BaseTest{
 		login.inputContrasenia();
 		login.clickEntrar();
 		inicio.clickTableros();
-//		tableros.clickAllTheFavorites();
+		tableros.clickAllTheFavorites();
 		tableros.clickRecent();
 		tableros.clickCreatedByMe();
-//		tableros.clickPublicDashboards();
 		tableros.clickPrivateDashboards();
 		tableros.clickAllTheDashboards();
 		tableros.clickAllTheFolders();

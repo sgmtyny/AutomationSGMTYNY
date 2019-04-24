@@ -17,7 +17,7 @@ public class TReportesClicks extends BaseTest{
 		login.inputContrasenia();
 		login.clickEntrar();
 		inicio.clickReportes();
-//		reportes.clickAllTheFavorites();
+		reportes.clickAllTheFavorites();
 		reportes.clickRecent();
 		reportes.clickCreatedByMe();
 		reportes.clickPublicReports();
