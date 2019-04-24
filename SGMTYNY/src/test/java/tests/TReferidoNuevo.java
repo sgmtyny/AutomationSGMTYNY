@@ -15,10 +15,11 @@ public class TReferidoNuevo extends BaseTest{
 
 	@Test
 	public void stepsToAddNewLead() {
-		PageReferidoNuevo nuevoReferido = new PageReferidoNuevo(driver);
-		PageReferidoTodos todosLosReferidos = new PageReferidoTodos(driver);
+		//Instatiation
 		PageLogin login = new PageLogin(driver);
 		PageInicio inicio = new PageInicio(driver);
+		PageReferidoTodos todosLosReferidos = new PageReferidoTodos(driver);
+		PageReferidoNuevo nuevoReferido = new PageReferidoNuevo(driver);
 		strPaso = "Invocando metodos a login";
 		login.launchHome();
 		login.inputUsuario();	
@@ -26,6 +27,7 @@ public class TReferidoNuevo extends BaseTest{
 		login.clickEntrar();
 		strPaso = "Invocando metodos para importar";
 		inicio.clickReferidos();
+		
 		todosLosReferidos.clickNew();
 		nuevoReferido.typeName();
 		nuevoReferido.typeFathersName();
@@ -48,6 +50,7 @@ public class TReferidoNuevo extends BaseTest{
 		nuevoReferido.typeDescription();
 		nuevoReferido.checkAddInformation();
 //		nuevoReferido.clickCancel();
+	
 	}
 }
 
