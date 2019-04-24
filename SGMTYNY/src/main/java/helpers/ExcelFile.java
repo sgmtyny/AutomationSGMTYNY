@@ -24,6 +24,7 @@ public class ExcelFile {
 	
 	static String StrPath = Hproperties.leerPath();
 	static String[][] strContenidoCelda;
+	static String clase="";
 	static int intRows=0;
 	static int intColum=0;
 	//static String strContenidoCelda = "";
@@ -55,6 +56,16 @@ public class ExcelFile {
 			}	
 		}
 		return existance;
+	}
+	
+	public static boolean existeArchivo(String fileName) 
+	{
+		boolean exist=false;
+		file = new File(path + fileName);
+		if(file.exists()){
+			exist=true;
+		}		
+		return exist;
 	}
 	
 	public static String[][] readExcel(String fileName,String sheetName) throws IOException {

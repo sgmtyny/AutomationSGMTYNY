@@ -22,6 +22,8 @@ public class PageLogin extends BasePage{
 	WebElement btnLogin;
 		
 	private String url = Hproperties.strUrl;
+	public int pasos = 0;
+	public String[] paso = {};
 	
 			
 	
@@ -46,23 +48,35 @@ public class PageLogin extends BasePage{
 	
 	public void launchHome() {
 		driver.get(url);
+		paso[pasos] = "Ingresando Usuario";
+		pasos = pasos ++;
+		
 	}
 		
 		
 	
 	@Test
 	public void inputUsuario() {
+		paso[pasos] = "Ingresando Usuario";
+		pasos = pasos ++;
 		inputUser();
 	}
 	
 	public void inputContrasenia() {
+		paso[pasos] = "Ingresando Contraseña";
+		pasos = pasos ++;
 		inputPsw();
 	}
 	
 	public void clickEntrar() {
+		paso[pasos] = "Dando click a Entrar";
+		pasos = pasos ++;
 		clickEnter();
 	}
 
+	
+	
+	
 	private void inputUser() {
 		sendKeys(txUserName, Hproperties.strUser);
 	}

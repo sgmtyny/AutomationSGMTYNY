@@ -20,22 +20,22 @@ public class Tlogin extends BaseTest{
 	
 	@Test
 	public static void stepsLogin() throws IOException {
-		try {
+	try {			
 		
-		
-		strPaso = "Creando el page login";
+		//strPaso = "Creando el page login";
 		PageLogin login = new PageLogin(driver);
 		
 		
-		strPaso = "Llamando el reporte";
-		HReporte reporte = new HReporte();
+		String paso[] = login.paso;
+		int pasos = login.pasos;
 		
 		
-		strPaso = "Invocando metodos a login";
 		login.launchHome();
 		login.inputUsuario();	
 		login.inputContrasenia();
 		login.clickEntrar();
+		HReporte.crearHTML("Tlogin", paso, pasos);
+		
 		}
 		
 		catch (Exception e) {

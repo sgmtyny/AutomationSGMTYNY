@@ -24,6 +24,12 @@ public class PageOportunidades extends BasePage{
 	@FindBy(xpath="//*[@title=\"Configurar Producto\"]")
 	WebElement btnConfigurar;
 	
+	@FindBy(xpath="//*[@title=\"Solicitud\"]")
+	WebElement btnSolicitud;
+	
+	@FindBy(xpath= "//*[text() = 'Datos del solicitante']")
+	WebElement btnDatosSolicitante;
+	
 	public PageOportunidades(WebDriver driver) {
 		super(driver);
 	}
@@ -39,6 +45,17 @@ public class PageOportunidades extends BasePage{
 		clickOport();
 	}
 	
+	public void clickSolicitud()
+	{
+		clickSolici();
+	}
+	
+	public void clickDatosDelSolicitante()
+	{
+		clickDatSoli();
+	}
+	
+	
 	public void clickConfigurarProducto() 
 	{
 		clickConfi();
@@ -46,6 +63,17 @@ public class PageOportunidades extends BasePage{
 	
 	
 	
+	
+	private void clickDatSoli()
+	{
+		HCommonHelper.waiter("medium");
+		click(btnDatosSolicitante);
+	}
+	
+	private void clickSolici()
+	{
+		click(btnSolicitud);
+	}
 	
 	
 	private void clickNew() 
