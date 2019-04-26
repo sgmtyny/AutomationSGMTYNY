@@ -1,8 +1,12 @@
 package helpers;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Base64;
 import java.util.Date;
 
 import java.util.Random;
@@ -183,4 +187,39 @@ public class HCommonHelper {
 		strEtapa = strEtapaArr[intEtapa];
 		return strEtapa;
 	}
+	public static void deleteFile(File file,String fileName) {
+		if(file.delete()) {
+			System.out.println(fileName + " was deleted sucessfully");
+		}else {
+			System.out.println(fileName + " was not deleted");
+		}
+	}
+	public static String encodeImgToBase64(File file) {
+		String fileName = "";
+		String imageString = "";
+		String htmlimg="";
+		   if(file.exists()){
+			    try {
+					FileInputStream fis = new FileInputStream(file);
+					byte imageData[] = new byte[(int)file.length()];
+					try { 
+						fis.read(imageData);
+						imageString = Base64.getEncoder().encodeToString(imageData);
+						htmlimg = "<img src=\"data:image/png;base64,"+imageString+"\">";
+						fis.close();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				} catch (FileNotFoundException e) {
+					e.printStackTrace();
+				}
+			    fileName = file.getName();
+			    deleteFile(file,fileName);
+			    return htmlimg;
+		    }else {
+		    	System.out.println("Sorry, The File doesn't exist!");
+		    	return null;
+		    }		
+	}
+	
 }
