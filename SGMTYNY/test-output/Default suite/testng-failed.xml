@@ -3,25 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="tests.TOportunidadesConfigurarProducto">
-=======
-      <class name="tests.TTablerosClicks">
->>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
+      <class name="tests.TOportunidadesNuevo">
         <methods>
           <include name="setDriver"/>
-<<<<<<< HEAD
-          <include name="stepsOportunidadesConfigurarProducto"/>
-=======
-          <include name="stepsToClickOnDashboardsHyperlinks"/>
->>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
+          <include name="stepsOportunidades"/>
           <include name="quitDriver"/>
         </methods>
-<<<<<<< HEAD
-      </class> <!-- tests.TOportunidadesConfigurarProducto -->
-=======
-      </class> <!-- tests.TTablerosClicks -->
->>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
+      </class> <!-- tests.TOportunidadesNuevo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

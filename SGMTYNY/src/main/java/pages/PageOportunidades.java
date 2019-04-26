@@ -2,6 +2,7 @@ package pages;
 
 import java.io.IOException;
 import java.sql.Driver;
+import java.util.ArrayList;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -29,6 +30,10 @@ public class PageOportunidades extends BasePage{
 	
 	@FindBy(xpath= "//*[text() = 'Datos del solicitante']")
 	WebElement btnDatosSolicitante;
+	
+	
+	public ArrayList<String> paso = new ArrayList();
+	public ArrayList<String> status = new ArrayList();	
 	
 	public PageOportunidades(WebDriver driver) {
 		super(driver);
@@ -64,38 +69,76 @@ public class PageOportunidades extends BasePage{
 	
 	
 	
+	
+	
+	
+	
 	private void clickDatSoli()
 	{
-		HCommonHelper.waiter("medium");
-		click(btnDatosSolicitante);
+		try {
+			paso.add("Click Datos solicitante");
+			HCommonHelper.waiter("medium");
+			click(btnDatosSolicitante);
+			status.add("OK");			
+		}
+		catch (Exception e) {
+			status.add("FAILED");
+	    }			
 	}
 	
 	private void clickSolici()
 	{
-		click(btnSolicitud);
+		try {
+			paso.add("Click en solicitud");			
+			click(btnSolicitud);
+			status.add("OK");			
+		}
+		catch (Exception e) {
+			status.add("FAILED");
+	    }			
 	}
 	
 	
 	private void clickNew() 
 	{
-		waitForPage();
-		click(btnNuevo);		
+		try {
+			paso.add("Click en nueva solicitud");			
+			waitForPage();
+			click(btnNuevo);
+			status.add("OK");			
+		}
+		catch (Exception e) {
+			status.add("FAILED");
+	    }					
 	}	
 	
 	private void clickOport() 	
 	{
-		HCommonHelper.waiter("high");
-		refreshPage();
-		HCommonHelper.waiter("high");
-		swithToFrame(frame);		
-		WebElement linkOportunidad = getElementByXpathContainsText(strMyXPath);			
-		click(linkOportunidad);
-		
+		try {
+			paso.add("Click en Oportunidad");			
+			HCommonHelper.waiter("high");
+			refreshPage();
+			HCommonHelper.waiter("high");
+			swithToFrame(frame);		
+			WebElement linkOportunidad = getElementByXpathContainsText(strMyXPath);			
+			click(linkOportunidad);
+			status.add("OK");			
+		}
+		catch (Exception e) {
+			status.add("FAILED");
+	    }			
 	}
 	
 	private void clickConfi() {
 		
-		click(btnConfigurar);
+		try {
+			paso.add("Click en configurar oportunidad");			
+			click(btnConfigurar);
+			status.add("OK");			
+		}
+		catch (Exception e) {
+			status.add("FAILED");
+	    }			
 	}
 	
 }

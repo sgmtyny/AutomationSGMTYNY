@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import helpers.HCommonHelper;
+import helpers.HOportunidadesSolicitudHelper;
 
 public class PageOportunidadesSolicitudDatosSolicitante extends BasePage {
 	@FindBy(xpath = "//iframe[@title = 'accessibility title']")
@@ -13,7 +14,7 @@ public class PageOportunidadesSolicitudDatosSolicitante extends BasePage {
 	WebElement lnkDatosPSolicitante;	
 	@FindBy(xpath ="//*[@id=\"DateofbirthConstitution\"]")
 	WebElement txtFecha;
-	@FindBy(xpath ="//*[@id=\"CountryofbirthConstitution\"]")	
+	@FindBy(xpath ="//*[@id=\"CountryofbirthConstitution\"]/option[158]")
 	WebElement txtPais;
 	@FindBy(xpath ="//*[@id=\"Nationality\"]")
 	WebElement txtNacionalidad;
@@ -23,6 +24,9 @@ public class PageOportunidadesSolicitudDatosSolicitante extends BasePage {
 	WebElement txtDescripcion;
 	
 	
+	String strNPais = HOportunidadesSolicitudHelper.getPais();
+	
+	
 	public PageOportunidadesSolicitudDatosSolicitante(WebDriver driver) {
 		super(driver);
 	}
@@ -30,7 +34,7 @@ public class PageOportunidadesSolicitudDatosSolicitante extends BasePage {
 	public void DatosPersonalesSolicitante()
 	{
 		clickDatosSolicitante();
-		setFecha();
+		//setFecha();
 		setPais();
 		setNacionalidad();
 		setOcupacion();
@@ -50,11 +54,13 @@ public class PageOportunidadesSolicitudDatosSolicitante extends BasePage {
 	private void setNacionalidad()
 	{	HCommonHelper.waiter("low");
 		//txtNacionalidad.setAttribute("value", "your value");
-		sendKeys(txtNacionalidad,"MEXICO");
+		sendKeys(txtNacionalidad,strNPais);
 	}
 	
 	private void setPais()
-	{	HCommonHelper.waiter("low");	
+	{	
+		HCommonHelper.waiter("low");	
+		click(txtPais);
 		sendKeys(txtPais,"MEXICO");
 	}
 	private void setFecha()

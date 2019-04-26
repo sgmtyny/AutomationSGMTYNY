@@ -1,49 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
-=======
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
->>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
   <reporter-output>
   </reporter-output>
-<<<<<<< HEAD
-  <suite name="Default suite" duration-ms="121970" started-at="2019-04-24T15:41:38Z" finished-at="2019-04-24T15:43:40Z">
-=======
-  <suite name="Default suite" duration-ms="29021" started-at="2019-04-24T15:47:07Z" finished-at="2019-04-24T15:47:36Z">
->>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
+  <suite name="Default suite" duration-ms="6343" started-at="2019-04-26T18:18:55Z" finished-at="2019-04-26T18:19:01Z">
     <groups>
     </groups>
-<<<<<<< HEAD
-    <test name="Default test" duration-ms="121970" started-at="2019-04-24T15:41:38Z" finished-at="2019-04-24T15:43:40Z">
-      <class name="tests.TOportunidadesConfigurarProducto">
-        <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.TOportunidadesConfigurarProducto@7586beff]" name="setDriver" is-config="true" duration-ms="4662" started-at="2019-04-24T15:41:38Z" finished-at="2019-04-24T15:41:43Z">
-=======
-    <test name="Default test" duration-ms="29021" started-at="2019-04-24T15:47:07Z" finished-at="2019-04-24T15:47:36Z">
-      <class name="tests.TReportesClicks">
-        <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.TReportesClicks@63440df3]" name="setDriver" is-config="true" duration-ms="5543" started-at="2019-04-24T15:47:07Z" finished-at="2019-04-24T15:47:12Z">
->>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
+    <test name="Default test" duration-ms="6343" started-at="2019-04-26T18:18:55Z" finished-at="2019-04-26T18:19:01Z">
+      <class name="tests.TOportunidadesNuevo">
+        <test-method status="PASS" signature="setDriver()[pri:0, instance:tests.TOportunidadesNuevo@7586beff]" name="setDriver" is-config="true" duration-ms="4476" started-at="2019-04-26T18:18:55Z" finished-at="2019-04-26T18:18:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setDriver -->
-<<<<<<< HEAD
-        <test-method status="FAIL" signature="stepsOportunidadesConfigurarProducto()[pri:0, instance:tests.TOportunidadesConfigurarProducto@7586beff]" name="stepsOportunidadesConfigurarProducto" duration-ms="117269" started-at="2019-04-24T15:41:43Z" finished-at="2019-04-24T15:43:40Z">
-          <exception class="org.openqa.selenium.WebDriverException">
+        <test-method status="FAIL" signature="stepsOportunidades()[pri:0, instance:tests.TOportunidadesNuevo@7586beff]" name="stepsOportunidades" duration-ms="1844" started-at="2019-04-26T18:18:59Z" finished-at="2019-04-26T18:19:01Z">
+          <exception class="java.lang.Error">
             <message>
-              <![CDATA[Remote browser did not respond to getCurrentUrl
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'DT39306', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: driver.version: RemoteWebDriver]]>
+              <![CDATA[Unresolved compilation problem: 
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: Remote browser did not respond to getCurrentUrl
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'DT39306', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: driver.version: RemoteWebDriver
-at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:376)
-at pages.BasePage.waitForPage(BasePage.java:91)
-at pages.PageInicio.clickOpor(PageInicio.java:52)
-at pages.PageInicio.clickOportunidades(PageInicio.java:30)
-at tests.TOportunidadesConfigurarProducto.stepsOportunidadesConfigurarProducto(TOportunidadesConfigurarProducto.java:29)
+              <![CDATA[java.lang.Error: Unresolved compilation problem: 
+
+at helpers.HCommonHelper.getDateHour(HCommonHelper.java:61)
+at tests.Tlogin.stepsLogin(Tlogin.java:34)
+at tests.TOportunidadesNuevo.stepsOportunidades(TOportunidadesNuevo.java:20)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -71,27 +50,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
-=======
-        <test-method status="PASS" signature="stepsToClickOnReportsHyperlinks()[pri:0, instance:tests.TReportesClicks@63440df3]" name="stepsToClickOnReportsHyperlinks" duration-ms="23447" started-at="2019-04-24T15:47:12Z" finished-at="2019-04-24T15:47:36Z">
->>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
+          </exception> <!-- java.lang.Error -->
           <reporter-output>
           </reporter-output>
-<<<<<<< HEAD
-        </test-method> <!-- stepsOportunidadesConfigurarProducto -->
-        <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.TOportunidadesConfigurarProducto@7586beff]" name="quitDriver" is-config="true" duration-ms="0" started-at="2019-04-24T15:43:40Z" finished-at="2019-04-24T15:43:40Z">
-=======
-        </test-method> <!-- stepsToClickOnReportsHyperlinks -->
-        <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.TReportesClicks@63440df3]" name="quitDriver" is-config="true" duration-ms="0" started-at="2019-04-24T15:47:36Z" finished-at="2019-04-24T15:47:36Z">
->>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
+        </test-method> <!-- stepsOportunidades -->
+        <test-method status="PASS" signature="quitDriver()[pri:0, instance:tests.TOportunidadesNuevo@7586beff]" name="quitDriver" is-config="true" duration-ms="0" started-at="2019-04-26T18:19:01Z" finished-at="2019-04-26T18:19:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->
-<<<<<<< HEAD
-      </class> <!-- tests.TOportunidadesConfigurarProducto -->
-=======
-      </class> <!-- tests.TReportesClicks -->
->>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
+      </class> <!-- tests.TOportunidadesNuevo -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

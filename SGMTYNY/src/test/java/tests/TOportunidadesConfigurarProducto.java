@@ -4,6 +4,8 @@ import java.io.IOException;
 
 import org.testng.annotations.Test;
 
+import helpers.HCommonHelper;
+import helpers.HReporte;
 import pages.PageInicio;
 import pages.PageOportunidades;
 import pages.PageOportunidadesConfigurarProducto;
@@ -25,7 +27,7 @@ public class TOportunidadesConfigurarProducto  extends BaseTest{
 		strPaso="Creando el page Configurar producto";
 		PageOportunidadesConfigurarProducto configurarProducto = new PageOportunidadesConfigurarProducto(driver);
 		
-		
+		HReporte.tomarCaptura(driver, "TOportunidadesConfigurarProducto", HCommonHelper.getDateHour());
 		inicio.clickOportunidades();
 		oportunidades.clickOportunidad();
 		oportunidades.clickConfigurarProducto();		

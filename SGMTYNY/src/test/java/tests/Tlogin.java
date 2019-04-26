@@ -1,8 +1,11 @@
 package tests;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+
 import org.testng.annotations.Test;
 
+import helpers.HCommonHelper;
 import helpers.HReporte;
 import pages.PageInicio;
 import pages.PageLogin;
@@ -20,28 +23,22 @@ public class Tlogin extends BaseTest{
 	
 	@Test
 	public static void stepsLogin() throws IOException {
-	try {			
-		
 		//strPaso = "Creando el page login";
 		PageLogin login = new PageLogin(driver);
-		
-		
-		String paso[] = login.paso;
-		int pasos = login.pasos;
-		
-		
-		login.launchHome();
-		login.inputUsuario();	
-		login.inputContrasenia();
-		login.clickEntrar();
-		HReporte.crearHTML("Tlogin", paso, pasos);
-		
+		ArrayList<String> paso = login.paso;
+		ArrayList<String> status = login.status;
+		try {		
+				login.launchHome();
+				login.inputUsuario();	
+				login.inputContrasenia();
+				HReporte.tomarCaptura(driver, "Tlogin", HCommonHelper.getDateHour());
+				login.clickEntrar();			
+				HReporte.crearHTML("Tlogin", paso, status);		
 		}
 		
 		catch (Exception e) {
-		      System.out.println("Something went wrong.");
-		    }
-		//inicio.clickReferidos();
-		
+				HReporte.crearHTML("Tlogin", paso, status);
+				System.out.println("Something went wrong.");
+		    }		
 	}	
 }

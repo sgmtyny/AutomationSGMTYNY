@@ -102,17 +102,11 @@ public class BasePage {
 	protected void dragAndDrop(WebElement elementSource,WebElement elementTarget) {
 		action.dragAndDrop(elementSource, elementTarget).build().perform();
 	}
-<<<<<<< HEAD
 	protected void sendKeys(WebElement element,String text) {
-		//waitForElement(element); **No descomentar, por que cuando se descomenta, no funciona oportunidades nuevo :(
+		waitForElement(element); //**No descomentar, por que cuando se descomenta, no funciona oportunidades nuevo :(
 		element.sendKeys(text);			
-=======
-	protected void sendKeys(WebElement element,String text) {
-		//**No descomentar, por que cuando se descomenta, no funciona oportunidades nuevo :(
-		waitForElement(element);
-		element.sendKeys(text);	
->>>>>>> branch 'master' of https://github.com/sgmtyny/AutomationSGMTYNY.git
-	}	
+
+	}
 	//What this method does is returning only one element from a list of elements with same properties 
 	protected WebElement getElementThatSharesProperties(List<WebElement> elements,int elementPosition) {
 		if(elementPosition >= 0 && elementPosition < elements.size()) {

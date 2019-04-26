@@ -29,16 +29,11 @@ public class PageInicio extends BasePage{
 	public void clickTableros() {
 		clickTab();
 	}
-	private void clickTab() {
-		waitForPage();
-		click(btnTableros);
+	public void clickAsesores() {
+		clickBtnAsesores();
 	}	
 	public void clickReportes() {
 		clickReport();
-	}
-	private void clickReport() {
-		waitForPage();
-		click(btnReportes);
 	}
 	public void clickReferidos() {
 		clickRef();		
@@ -48,13 +43,25 @@ public class PageInicio extends BasePage{
 	}
 	public void clickAgregarNuevoReferido() {
 		clickBtnAgregarNuevoReferido();
-	}
-	private void clickBtnAgregarNuevoReferido() {
-		clickJs(btnNuevoReferido);
-	}
+	}	
 	public void clickArrowDownReferidos() {
 		clickBtnArrowDownReferidos();
 	}
+	
+	
+	
+	
+	private void clickBtnAgregarNuevoReferido() {
+		clickJs(btnNuevoReferido);
+	}
+	private void clickReport() {
+		waitForPage();
+		click(btnReportes);
+	}
+	private void clickTab() {
+		waitForPage();
+		click(btnTableros);
+	}	
 	private void clickBtnArrowDownReferidos() {
 		waitForPage();
 		click(arrowDownReferidos);
@@ -68,9 +75,7 @@ public class PageInicio extends BasePage{
 		waitForPage();		
 		click(btnOportunidades);
 	}
-	public void clickAsesores() {
-		clickBtnAsesores();
-	}
+	
 	private void clickBtnAsesores() {
 		waitForPage();
 		click(btnAsesores);

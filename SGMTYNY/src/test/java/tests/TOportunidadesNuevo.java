@@ -2,6 +2,9 @@ package tests;
 
 import java.io.IOException;
 import org.testng.annotations.Test;
+
+import helpers.HCommonHelper;
+import helpers.HReporte;
 import pages.PageLogin;
 import pages.*;
 
@@ -23,6 +26,7 @@ public class TOportunidadesNuevo extends BaseTest{
 		PageOportunidades oportunidades = new PageOportunidades(driver);	
 		PageOportunidadesNuevo oportunidadesNuev = new PageOportunidadesNuevo(driver);
 		
+		HReporte.tomarCaptura(driver, "TOportunidadesNuevo", HCommonHelper.getDateHour());
 		inicio.clickOportunidades();
 		oportunidades.clickNuevo();
 		oportunidadesNuev.putName();

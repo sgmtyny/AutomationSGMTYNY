@@ -14,6 +14,10 @@ import helpers.ExcelFile;
  */
 public class HCommonHelper {
 	private static Random random;
+	static DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH;mm;ss");
+	static Date date = new Date();
+	private static String actualDate;
+	
 	public static int getLenghtUrl(String url) {
 		return url.length();
 	}
@@ -52,6 +56,15 @@ public class HCommonHelper {
 		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 		strDate = dateFormat.format(date);
 		return strDate;
+	}
+	
+	public static String getDateHour()
+	{
+		actualDate = dateFormat.format(date);
+		actualDate = actualDate.replace(";","");
+		actualDate = actualDate.replace("-","");
+		actualDate = actualDate.replace(" ","");
+		return actualDate;
 	}
 	
 	public static void waiter(String strTime)
@@ -146,6 +159,7 @@ public class HCommonHelper {
 		return strState;		
 	}
 	
+		
 	public static String postalCode() {
 		String strPostalCode="";
 		strPostalCode = String.valueOf(getRandomNumberInRange(11111, 99999));
