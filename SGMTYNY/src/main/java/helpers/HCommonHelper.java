@@ -12,6 +12,8 @@ import java.util.Date;
 import java.util.Random;
 
 import helpers.ExcelFile;
+import pages.PageOportunidadesSolicitudCoberturas;
+import pages.PageOportunidadesSolicitudCuestionarioMedico;
 /**
  * @author Diego Mejía
  * @author Abraham Galindo
@@ -58,9 +60,36 @@ public class HCommonHelper {
 		String strDate="";
 		Date date = new Date();
 		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-		strDate = dateFormat.format(date);
+		strDate = dateFormat.format(date);					
+		String strDay = strDate.substring(0,2);
+		String strMonth = strDate.substring(3,5);
+		String strYear = strDate.substring(6,10);
+		int intDay = Integer.parseInt(strDay);
+		int intMonth = Integer.parseInt(strMonth);
+		int intYear = Integer.parseInt(strYear);		
+		
+		if ((PageOportunidadesSolicitudCuestionarioMedico.aniomenos)==true)
+		{
+			 intYear =intYear-1;
+		}
+		if ((PageOportunidadesSolicitudCuestionarioMedico.mesmas)==true)
+		{
+			intMonth =intMonth+1;
+		}
+		if(intDay<10)
+		{
+			strDay = "0" +String.valueOf(intDay);
+		}
+		if(intMonth<10)
+		{
+			strMonth = "0" +String.valueOf(intMonth);
+		}
+				
+		strDate = strDay +"-"+ strMonth +"-"+ String.valueOf(intYear);
 		return strDate;
 	}
+	
+	
 	
 	public static String getDateHour()
 	{

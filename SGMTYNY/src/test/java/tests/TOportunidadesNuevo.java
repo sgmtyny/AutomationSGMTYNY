@@ -19,14 +19,15 @@ public class TOportunidadesNuevo extends BaseTest{
 		strPaso = "Haciendo login";
 		Tlogin.stepsLogin();
 			
-		strPaso="Entrando a Oportunidades";
+	//	strPaso="Entrando a Oportunidades";
 		PageInicio inicio = new PageInicio(driver);
 		
-		strPaso = "Creando el page oportunidades";
+		//strPaso = "Creando el page oportunidades";
 		PageOportunidades oportunidades = new PageOportunidades(driver);	
+		//strPaso = "Creando el page oportunidades";
 		PageOportunidadesNuevo oportunidadesNuev = new PageOportunidadesNuevo(driver);
 		
-		HReporte.tomarCaptura(driver, "TOportunidadesNuevo", HCommonHelper.getDateHour());
+		//HReporte.tomarCaptura(driver, "TOportunidadesNuevo", HCommonHelper.getDateHour());
 		inicio.clickOportunidades();
 		oportunidades.clickNuevo();
 		oportunidadesNuev.putName();
@@ -38,8 +39,7 @@ public class TOportunidadesNuevo extends BaseTest{
 		oportunidadesNuev.selectActivityDat();
 		oportunidadesNuev.selectInteres();
 		oportunidadesNuev.inputNotes();
-		oportunidadesNuev.clickOpen();
-		
+		oportunidadesNuev.clickOpen();	
 		
 	}	
 }

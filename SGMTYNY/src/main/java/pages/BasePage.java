@@ -103,7 +103,7 @@ public class BasePage {
 		action.dragAndDrop(elementSource, elementTarget).build().perform();
 	}
 	protected void sendKeys(WebElement element,String text) {
-		waitForElement(element); //**No descomentar, por que cuando se descomenta, no funciona oportunidades nuevo :(
+		//waitForElement(element); //**No descomentar, por que cuando se descomenta, no funciona oportunidades nuevo :(
 		element.sendKeys(text);			
 
 	}

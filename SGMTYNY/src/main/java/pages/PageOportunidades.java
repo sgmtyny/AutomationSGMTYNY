@@ -89,7 +89,8 @@ public class PageOportunidades extends BasePage{
 	private void clickSolici()
 	{
 		try {
-			paso.add("Click en solicitud");			
+			paso.add("Click en solicitud");	
+			HCommonHelper.waiter("medium");
 			click(btnSolicitud);
 			status.add("OK");			
 		}

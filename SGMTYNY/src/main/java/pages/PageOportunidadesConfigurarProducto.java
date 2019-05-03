@@ -208,6 +208,9 @@ public class PageOportunidadesConfigurarProducto extends BasePage{
 			
 			@FindBy(xpath= "//*[@id=\"a2n0R000000XYm0QAG-46\"]/div[1]/div/child[1]/div/ng-form/div/label/span")
 			WebElement chbxDeducible;
+			@FindBy(xpath= "//*[@id=\"ApplicationInformation_nextBtn\"]/p")
+			WebElement btnDeducibleSig;
+			
 			
 			@FindBy(xpath= "//*[@id=\"Settlement\"]")
 			WebElement listLiquidacion;
@@ -353,7 +356,8 @@ public class PageOportunidadesConfigurarProducto extends BasePage{
 			}
 	}
 	private void iPRegion()
-	{
+	{	
+		//click(btnStates);
 		sendKeys(btnStates,strState);
 	}		
 	private void iPPostal() 
@@ -456,6 +460,7 @@ public class PageOportunidadesConfigurarProducto extends BasePage{
 				click(btnStarTemporal);
 				break;
 		}	
+		HCommonHelper.waiter("low");
 		click(btnProdSig);
 	}	
 	private void selectPlan() 
@@ -747,10 +752,11 @@ public class PageOportunidadesConfigurarProducto extends BasePage{
 	/************Configuracion de Plan*************/
 	private void dedu()
 	{
-		if((HCommonHelper.getRandomNumberInRange(0, 1))==0)
+		/*if((HCommonHelper.getRandomNumberInRange(0, 1))==0)
 		{
 			click(chbxDeducible);
-		}
+		}*/
+		click(btnDeducibleSig);
 	}
 	
 	private void liq() 
@@ -913,13 +919,13 @@ public class PageOportunidadesConfigurarProducto extends BasePage{
 		case "NUEVO PLENITUD":
 			plansig1();
 			dedu();
-			infoSig();
+			//infoSig();
 			primaFrec();
 			primaSig();
 			break;
 		case "ORVI 99":
 			personaSelect(); 
-			personaOcupacion();
+			//personaOcupacion();
 			personaSig();
 			configSig();			
 			primaFrec();
@@ -931,7 +937,7 @@ public class PageOportunidadesConfigurarProducto extends BasePage{
 			break;
 		case "STAR DOTAL":	
 			personaSelect(); 
-			personaOcupacion();
+			//personaOcupacion();
 			personaSig();
 			configSig();			
 			primaFrec();
@@ -939,7 +945,7 @@ public class PageOportunidadesConfigurarProducto extends BasePage{
 			break;
 		case "STAR TEMPORAL":	
 			personaSelect(); 
-			personaOcupacion();
+			//personaOcupacion();
 			personaSig();
 			configSig();			
 			primaFrec();
