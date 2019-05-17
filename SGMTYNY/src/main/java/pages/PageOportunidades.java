@@ -77,7 +77,7 @@ public class PageOportunidades extends BasePage{
 	{
 		try {
 			paso.add("Click Datos solicitante");
-			HCommonHelper.waiter("medium");
+			HCommonHelper.waiter("high");
 			click(btnDatosSolicitante);
 			status.add("OK");			
 		}

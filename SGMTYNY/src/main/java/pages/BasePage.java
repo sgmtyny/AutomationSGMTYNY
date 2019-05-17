@@ -104,6 +104,7 @@ public class BasePage {
 	}
 	protected void sendKeys(WebElement element,String text) {
 		//waitForElement(element); //**No descomentar, por que cuando se descomenta, no funciona oportunidades nuevo :(
+		//element.clear();
 		element.sendKeys(text);			
 
 	}
@@ -127,6 +128,10 @@ public class BasePage {
 		}
 	}
 	protected void clickJs(WebElement element) {
+		HCommonHelper.waiter("low");
+		js.executeScript("arguments[0].click();", element);
+	}
+	protected void sendKeysJs(WebElement element) {
 		HCommonHelper.waiter("low");
 		js.executeScript("arguments[0].click();", element);
 	}

@@ -524,13 +524,14 @@ public class PageOportunidadesSolicitudCuestionarioMedico extends BasePage {
 	}
 	public void continuar()
 	{
+		HCommonHelper.waiter("high");
 		clickContinuar();
 	}
 	
 	private void clickDelCorazonCirculacion()
 	{	HCommonHelper.waiter("high");
 		refreshPage();
-		HCommonHelper.waiter("medium");
+		HCommonHelper.waiter("high");
 		swithToFrame(frame);
 		if (strDelcorazonCirculacion.equals("NO"))
 		{

@@ -271,6 +271,31 @@ public class PageOportunidadesConfigurarProducto extends BasePage{
 	//"//div[@class = 'modal-footer slds-modal__footer']/descendant::span[contains(text(),'Guardar')]"
 	@FindBy(xpath="//div[@class = 'slds-modal__content slds-p-around--medium vloc-modal-content slds-is-relative']/descendant::span=contains(text(),'Nombre'" )	
 	WebElement txtConyNombre;
+	@FindBy(xpath="//*[@id=\"a2n0R000000bqP7QAI-5\"]/div[1]/div/child[39]/div/div[3]/div/div")
+	WebElement btnFiguraAd;
+	@FindBy(xpath="//*[@id=\"ChildFirstName\"]")
+	WebElement txtFANombre;
+	@FindBy(xpath="//*[@id=\"ChildPaternalLastName\"]")
+	WebElement txtFAApellidoP;
+	@FindBy(xpath="//*[@id=\"ChildMaternalLastName\"]")
+	WebElement txtFAApellidoM;
+	@FindBy(xpath="//*[@id=\"ChildBirthDate\"]")
+	WebElement txtFAFechaNac;
+	@FindBy(xpath="//*[@id=\"ChildGender|0\"]/div/div[1]/label[1]/span[1]")
+	WebElement radioFASexoH;
+	@FindBy(xpath="//*[@id=\"ChildGender|0\"]/div/div[1]/label[2]/span[1]")
+	WebElement radioFASexoM;
+	@FindBy(xpath="//*[@id=\"ChildSmoker|0\"]/div/div[1]/label[1]/span[1]")
+	WebElement radioFAFumasY;
+	@FindBy(xpath="//*[@id=\"ChildSmoker|0\"]/div/div[1]/label[2]/span[1]")
+	WebElement radioFAFumasN;
+	@FindBy(xpath="//*[@id=\"ChildPreferred|0\"]/div/div[1]/label[1]/span[1]")
+	WebElement radioFAPreferenteY;
+	@FindBy(xpath="//*[@id=\"ChildPreferred|0\"]/div/div[1]/label[2]/span[1]")
+	WebElement radioFAPreferenteN;
+	@FindBy(xpath="//*[@id=\"Role\"]")
+	WebElement txtFARol;
+	
 	@FindBy(xpath="//*[@id=\"GetCustomerInfo_nextBtn\"]/p")
 	WebElement btnSiguiente;
 	
@@ -310,6 +335,7 @@ public class PageOportunidadesConfigurarProducto extends BasePage{
 		iPIngresosAnual();
 		iPTrabajadorInd();
 //		iPconyuge();
+		iPFiguraAdicional();
 		iPsiguiente();
 	}	
 	
@@ -424,6 +450,26 @@ public class PageOportunidadesConfigurarProducto extends BasePage{
 	{
 		sendKeys(txtConyNombre, "Abraham");
 	}*/
+	
+	private void iPFiguraAdicional()
+	{
+		click(btnFiguraAd);
+		ipDatosFiguraAdicional();
+	}
+	
+	private void ipDatosFiguraAdicional()
+	{
+		/*sendKeys(txtFANombre, "Abraham");
+		sendKeys(txtFAApellidoP, "Galindo");
+		sendKeys(txtFAApellidoM, "Bautista");
+		sendKeys(txtFAFechaNac, "15-05-1989");*/
+		clickJs(radioFASexoH);
+		click(radioFAFumasY);
+		click(radioFAPreferenteN);
+		sendKeys(txtFARol, "MAdre");
+	}
+	
+	
 	private void iPsiguiente()
 	{
 		click(btnSiguiente);

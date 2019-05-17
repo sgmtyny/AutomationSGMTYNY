@@ -385,9 +385,9 @@ public class PageOportunidadesSolicitudDatosSolicitante extends BasePage {
 		sendKeys(txtFecha,strFecha);
 	}
 	private void clickDatosSolicitante()
-	{	HCommonHelper.waiter("low");
+	{	HCommonHelper.waiter("high");
 		refreshPage();
-		HCommonHelper.waiter("medium");
+		HCommonHelper.waiter("high");
 		swithToFrame(frame);
 		click(lnkDatosPSolicitante);
 	}

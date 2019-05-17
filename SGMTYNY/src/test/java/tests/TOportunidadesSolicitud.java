@@ -7,9 +7,16 @@ import org.testng.annotations.Test;
 import pages.PageInicio;
 import pages.PageOportunidades;
 import pages.PageOportunidadesConfigurarProducto;
+import pages.PageOportunidadesSolicitudAcuerdo;
+import pages.PageOportunidadesSolicitudAgentePersonaFisica;
 import pages.PageOportunidadesSolicitudCoberturas;
 import pages.PageOportunidadesSolicitudCuestionarioMedico;
 import pages.PageOportunidadesSolicitudDatosSolicitante;
+import pages.PageOportunidadesSolicitudDesignacionBeneficios;
+import pages.PageOportunidadesSolicitudFirmaAutografaDigital;
+import pages.PageOportunidadesSolicitudHistorialMedicoFamiliar;
+import pages.PageOportunidadesSolicitudInformacionCobranza;
+import pages.PageOportunidadesSolicitudOcupacionDeportes;
 
 public class TOportunidadesSolicitud  extends BaseTest{
 	@Test
@@ -28,6 +35,13 @@ public class TOportunidadesSolicitud  extends BaseTest{
 		PageOportunidadesSolicitudDatosSolicitante oportunidadesCDatosSolicitante = new PageOportunidadesSolicitudDatosSolicitante(driver);	
 		PageOportunidadesSolicitudCoberturas oportunidadesSCoberturas = new PageOportunidadesSolicitudCoberturas(driver);
 		PageOportunidadesSolicitudCuestionarioMedico oportunidadesSCuestionarioMedico = new PageOportunidadesSolicitudCuestionarioMedico(driver);
+		PageOportunidadesSolicitudOcupacionDeportes oportunidadesSOcupacion = new PageOportunidadesSolicitudOcupacionDeportes(driver);
+		PageOportunidadesSolicitudHistorialMedicoFamiliar oportunidadesSHMedicoFamiliar = new PageOportunidadesSolicitudHistorialMedicoFamiliar(driver);
+		PageOportunidadesSolicitudDesignacionBeneficios oportunidadesSDesignacionBeneficiarios = new PageOportunidadesSolicitudDesignacionBeneficios(driver);
+		PageOportunidadesSolicitudInformacionCobranza oportunidadesSInformacionCobranza = new PageOportunidadesSolicitudInformacionCobranza(driver);
+		PageOportunidadesSolicitudAgentePersonaFisica oportunidadesSAgente = new PageOportunidadesSolicitudAgentePersonaFisica(driver);
+		PageOportunidadesSolicitudAcuerdo oportunidadesSAcuerdo = new PageOportunidadesSolicitudAcuerdo(driver);
+		PageOportunidadesSolicitudFirmaAutografaDigital oportunidadesSFirma = new PageOportunidadesSolicitudFirmaAutografaDigital(driver);
 		
 		inicio.clickOportunidades();
 		oportunidades.clickOportunidad();
@@ -35,9 +49,9 @@ public class TOportunidadesSolicitud  extends BaseTest{
 		oportunidades.clickDatosDelSolicitante();
 		oportunidadesCDatosSolicitante.DatosPersonalesSolicitante();
 		oportunidadesCDatosSolicitante.DatosPersonalesPorAsegurarTitular();
-		oportunidadesSCoberturas.coberturasOpcionalesAlfaMedicalFlex();
+		/*oportunidadesSCoberturas.coberturasOpcionalesAlfaMedicalFlex();
 		oportunidadesSCoberturas.coberturasOpcionalesAlfaMedical();
-		oportunidadesSCoberturas.coberturaGeneral();
+		oportunidadesSCoberturas.coberturaGeneral();*/
 		oportunidadesSCoberturas.coberturaContinuar();
 		oportunidadesSCuestionarioMedico.aEnfermedadesCongenitas();
 		oportunidadesSCuestionarioMedico.bDefectoVisualAuditivo();
@@ -47,6 +61,13 @@ public class TOportunidadesSolicitud  extends BaseTest{
 		oportunidadesSCuestionarioMedico.fHanPracticado();
 		oportunidadesSCuestionarioMedico.gHabitosToxicologicos();
 		oportunidadesSCuestionarioMedico.continuar();
+		oportunidadesSOcupacion.cuestionario();
+		oportunidadesSHMedicoFamiliar.historialMediocFamiliarCuestionario();
+		oportunidadesSDesignacionBeneficiarios.listaAsegurados();
+		oportunidadesSInformacionCobranza.informacion();
+		oportunidadesSAgente.informacion();
+		oportunidadesSAcuerdo.informacion();
+		oportunidadesSFirma.informacion();
 	}
 
 }

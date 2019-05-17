@@ -97,7 +97,10 @@ public class PageOportunidadesSolicitudCoberturas extends BasePage {
 		}
 	}
 	public void coberturaContinuar()
-	{
+	{HCommonHelper.waiter("high");
+	refreshPage();
+	HCommonHelper.waiter("high");
+	swithToFrame(frame);
 		clickContinuar();
 	}
 	public void coberturaGeneral()

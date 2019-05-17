@@ -1,5 +1,7 @@
 package helpers;
 
+import java.io.IOException;
+
 import pages.PageOportunidadesSolicitudCuestionarioMedico;
 
 //import pages.getDefectoVisualAuditivo;
@@ -23,7 +25,7 @@ public class HOportunidadesSolicitudHelper {
 	static String[] arrCMedico = {"YES","NO"};
 	
 	static int intPais = 0;
-	static String strPais = "MEXICO";
+	static String strPais = "AFGANISTAN";
 	static String strNPais = "";
 	
 	static int intCivil = 0;
@@ -62,9 +64,144 @@ public class HOportunidadesSolicitudHelper {
 	static String strTiempoHospitalizacion = "2 AÑOS";
 	static String strInformacionExtra = "NO HAY INFORMACION EXTRA";
 	
+	static String[] arrCuestionario = {"YES","NO"}; 
+	static String[] arrCalidad = {"AFICIONADO","PROFESIONAL","INSTRUCTOR","OTRO"};
+	static String[] arrSolo = {"SOLO","GRUPO"}; 
+	static String[] arrAmateurProf = {"AMATEUR","PROFESIONAL"};
+	static String[] arrPista = {"CIRCUITOCERRADO", "CAMPOTRAVIESA", "CARRETERA", "CARRETERA"};
+	static int intCuestionario = 0;	
+	static String strCuestionario = "";
+	static String strEspecifica = "ESPECIFICACION";
+	static String strTipoDeporte = "PARACAIDISMO";
+	static String strOtro = "TODO EN UNO";
+	static String strLCapacitacion = "MEXICO";
+	static String strFrecuencia = "DIARIO";
+	static String strFechaPractica = "02/05/1990";
+	static String strLugarPractica = "MEXICO";
+	static String strNombreClub = "CLUB PARACAIDISMO";
+	static String strRazonSocial = "DELOITTE";
+	static String strMotivo = "PROMOCION";
+	static String strFechaAccidente = "30-04-2018";
+	static String strInfoExtra = "SIN INFO EXTRA";
+	static String strDescripcionAccidente = "CAIDA DE MOTO";
+	static String strEdoAccidente = "CURADO";
+	static String strModeloMoto   = "2018";
+	static String strMarcaMoto     = "ITALICA";
+	static String strFechaExpiracion  = "30-04-2018";
+	static String strNumeroLicenciaMoto = "30-04-2018";
+	static String strCCMoto = "220";
+	static String strTrabajo = "TRABAJO";
+	static String strSoloTransporte = "TRANSPORTE";
+	static String strSoloPaseo = "PASEO";
+	static String strFrecuenciaUsoMoto = "DIARIO";
+	static String strNombreClubMoto = "HARLEY";
+	static String strOtroPista = "CARRETERA";
+	static String strVelocidad = "200KM/H";
+	static String strEventosAnio = "12";
+	static String strMontoPatrocinioMoto = "80000";
+	static String strPatrocinadorMoto = "DELOITTE";
+	static String strAccidenteMotoDescripcion = "CAIDA";
+	static String strInfoExtraMoto = "NO HAY INFO EXTRA";
+	static String strVuelasCuales = "AVION DE PAPEL";
+
+	static String strCausaHMF = "ACCIDENTE";
+	static String strCompaniaHMF = "MONTERREY";
+	static String strMontoCobertura = "50000";
+	
+	static String strBeneficiarioNombreDB = "JUANITO";
+	static String strBeneficiarioAPDB = "PEREZ";
+	static String strBeneficiarioAMDB = "GOMEZ";
+	static String strIDNoFigura = "2";
+	static String strBeneficiarioFECHANDB = "05-06-1990";
+	static String strBeneficiarioRelacionDB = "HIJO";
+	static String strBeneficiarioPorcentajeDB = "100";	
+	static String strAFaltaNombreDB = "PEDRO";
+	static String strAFaltaAPDB = "PEREZ";
+	static String strAFaltaAMDB = "GOMEZ";
+	static String strAFaltaFECHANDB = "05-06-1980";
+	static String strAFaltaRelacionDB = "HIJO";
+	static String strCalleB = "INSURGENTES SUR";
+	static String strNoExtB = "3579";
+	static String strNoIntB = "3579";
+	static String strColoniaB = "COLONIA";
+	static String strDelegacionB = "DELEGACION";	
+	static String strCiudadB = "CMDX";
+	static String strEstadoB = "PUEBLA";
+	static String strPaisB = "MEXICO";
+	static String strCPB = "14000";
+	static String strPPENombre = "JUAN";
+	static String strPPEAP = "GOMEZ";
+	static String strPPEAM = "JIMENEZ";
+	static String strPPEFNacimiento = "05-06-1990";
+	static String strPPENacionalidad = "MEXICO";
+	static String strPPERelacion = "TIO";
+	static String strPPECSolicitante = "PRESIDENTE";
+	static String strPPECPAsegurar = "PRESIDENTE";
+	
+	static String[] arrConductoP = {"CARGOAUTOMATICO","MODODIRECTO","AGENTE"};
+	static String[] arrFormaP = {"MENSUAL","TRIMESTRAL","SEMESTRAL","ANUAL"};
+	static String[] arrDiaCobro = {"SUBSECUENTE1","SUBSECUENTE16","OTRO","NOAPLICA"};
+	static String[] arrTarjetas = {"CLABE","TARJETA","NOAPLICA"};
+	static String[] arrBanco = {"ABN Amro Bank","ACTINVER","Afirme"};
+	static String[] arrTipoTarjeta = {"DEBITO","CREDITO"};
+	static String[] arrEstatus = {"BORRADOR","COMPLETADA"};
+	static String strOtroDiaCobro = "15";
+	static String strFechaTentativaCI = "29-09-2020";
+	static String strCLABE = "123456789987654321";
+	static String strBanco = "ACTINVER";
+	static int intBanco = 0;
+	static String strNBanco="";
+	static String strNumTarjetaCredito = "1234567899876543";
+	static String strNumTarjetaDebito = "1234567899876543";
+	
+	static String strCANombre = "Juan";
+	static String strCAAP = "Perez";
+	static String strCAAM = "Gomez";
+	static String strCATMovil = "5522158197";
+	static String strCAEmail = "juan@alguno.com.mx";
+	static String strCAFechaNac = "15-05-1985";
+	static String strCARFCCURP = "RFC";
+	static String strCARFC = "GABA891118HN7";
+	static String strCACURP = "GAB891118HNPLL00";
+	static String strCANACIONALIDAD = "MEXICO";
+	static String strCACALLE = "INSURGENTES SUR";
+	static String strCAEXT = "3579";
+	static String strCAINT = "10";
+	static String strCAColonia = "COLONIA";
+	static String strCADelegacion = "TLALPAN";
+	static String strCACiudad = "CDMX";
+	static String strCAEdo = "PUEBLA";
+	static String strCACP = "73080";
+	static String strCANoSerie = "50";
+	
+	static String strLugar = "PUEBLA";
+	static String[][] strContenidoCelda;
+	
+	static boolean exist = ExcelFile.existeArchivo("PageOportunidadesSolicitud.xlsx");
+	
+	/****************Leer excel para extraccion de datos***********/
+	public static String[][] readExcelForOportunitySolicitud(String strHoja) 
+	{
+		String strArchivo="PageOportunidadesSolicitud.xlsx";			
+		
+		try {
+				strContenidoCelda = ExcelFile.readExcel(strArchivo,strHoja);			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
+		return strContenidoCelda;
+	}		
+	
+	
 	/*Datos Personales*/
 	public static String getPais()
 	{
+		String strHoja="DatosPSolicitante";
+		if(exist==true)
+		{
+			strPais = readExcelForOportunitySolicitud(strHoja)[1][0];
+		}		
 		intPais = arrPaises.length;
 		for (int i=0; i<intPais;i++)
 		{
@@ -74,10 +211,16 @@ public class HOportunidadesSolicitudHelper {
 				break;				
 			}
 		}
+		
 		return strNPais;
 	}	
 	public static String getECivil()
 	{
+		String strHoja="DatosPSolicitante";
+		if(exist==true)
+		{
+			NCivil = readExcelForOportunitySolicitud(strHoja)[1][5];
+		}	
 		intCivil = arrECivil.length;
 		for (int i=0; i<intCivil;i++)
 		{
@@ -91,6 +234,11 @@ public class HOportunidadesSolicitudHelper {
 	}	
 	public static String getEstado()
 	{
+		String strHoja="DatosPSolicitante";
+		if(exist==true)
+		{
+			strEstado = readExcelForOportunitySolicitud(strHoja)[1][12];
+		}	
 		intEstado = arrStates.length;
 		for (int i=0; i<intEstado;i++)
 		{
@@ -122,8 +270,7 @@ public class HOportunidadesSolicitudHelper {
 	public static String getCoberturaAlfaMedicalFlex()
 	{
 		intCobertura = HCommonHelper.getRandomNumberInRange(0, 6);
-		//strCobertura = arrCoberturaAMF[intCobertura];
-		strCobertura = "CVIH";
+		strCobertura = arrCoberturaAMF[intCobertura];
 		return strCobertura;
 	}	
 	public static String getIncrementoCHMQ()
@@ -165,7 +312,6 @@ public class HOportunidadesSolicitudHelper {
 		
 		return strCMedico;
 	}
-		
 	public static String getApartaroRespiratorio()
 	{
 		intCMedico = HCommonHelper.getRandomNumberInRange(0, 1);
@@ -327,8 +473,6 @@ public class HOportunidadesSolicitudHelper {
 		
 		return strCMedico;
 	}
-	
-	
 	public static String getCAsma()
 	{
 		intCMedico = HCommonHelper.getRandomNumberInRange(0, 1);
@@ -649,7 +793,6 @@ public class HOportunidadesSolicitudHelper {
 	{
 		return strDetalles;
 	}
-	
 	public static String getClaseG1()
 	{
 		return strClase;
@@ -671,4 +814,687 @@ public class HOportunidadesSolicitudHelper {
 		return strFechaInicio;
 	}
 	
+	
+	/*CUESTIONARIO DE DEPORTES*/
+	
+	public static String getExpuesto()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];			
+		return strCuestionario;
+	}
+	public static String getDeporteP()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getCalidad()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 3);
+		strCuestionario = arrCalidad[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getSolo()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrSolo[intCuestionario];			
+		return strCuestionario;
+	}	
+	public static String getCapacitacion()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];			
+		return strCuestionario;
+	}	
+	public static String getClub()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getLicencia()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getLVigente()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getPatrocinio()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getAccidente()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getCoberturaExtra()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getCuestionarioMoto()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getLicenciaMoto()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getPropietarioMoto()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getUsoTransporte()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getUsoRecreativo()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getParticipaCompetencias()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getAmateurProfesional()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrAmateurProf[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getPista()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 3);
+		strCuestionario = arrPista[intCuestionario];			
+		return strCuestionario;
+	}
+	public static String getPatrocinioMoto()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getAccidenteMoto()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getVuelas()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getVuelasCuales() 
+	{
+		return strVuelasCuales;
+	}
+	
+	public static String getInfoExtraMoto() 
+	{
+		return strInfoExtraMoto;
+	}
+	public static String getAccidentemotoDescripcion() 
+	{
+		return strAccidenteMotoDescripcion;
+	}
+	public static String getPatrocinadorMoto() 
+	{
+		return strPatrocinadorMoto;
+	}
+	public static String getMontoPatrocinioMoto() 
+	{
+		return strMontoPatrocinioMoto;
+	}
+	public static String getEventosAnio() 
+	{
+		return strEventosAnio;
+	}
+	public static String getVelocidad() 
+	{
+		return strVelocidad;
+	}
+	public static String getOtroPista() 
+	{
+		return strOtroPista;
+	}
+	public static String getNombreClubMoto() 
+	{
+		return strNombreClubMoto;
+	}
+	public static String getFrecuenciaUsoMoto() 
+	{
+		return strFrecuenciaUsoMoto;
+	}
+	public static String getSoloPaseo() 
+	{
+		return strSoloPaseo;
+	}
+	public static String getSoloTransporte() 
+	{
+		return strSoloTransporte;
+	}
+	public static String getTrabajoCotidiano() 
+	{
+		return strTrabajo;
+	}
+	public static String getCCMoto() 
+	{
+		return strCCMoto ;
+	}
+	public static String getModeloMoto() 
+	{
+		return strModeloMoto;
+	}
+	public static String getMarcaMoto() 
+	{
+		return strMarcaMoto;
+	}
+	public static String getFechaExpiracionMoto() 
+	{
+		return strFechaExpiracion;
+	}
+	public static String geNumeroLicMoto() 
+	{
+		return strNumeroLicenciaMoto;
+	}
+	public static String getInfoExtra() 
+	{
+		return strInfoExtra;
+	}
+
+	public static String getDescripcionAccidente() 
+	{
+		return strDescripcionAccidente;
+	}
+
+	public static String getEdoAccidente() 
+	{
+		return strEdoAccidente;
+	}
+
+	public static String getFechaAccidente() 
+	{
+		return strFechaAccidente;
+	}
+	
+	
+	public static String getRazonSocial() 
+	{
+		return strRazonSocial;
+	}
+	public static String getMotivo() 
+	{
+		return strMotivo;
+	}
+	public static String getNombreClub() 
+	{
+		return strNombreClub;
+	}
+	public static String getLCapacitacion() 
+	{
+		return strLCapacitacion;
+	}
+	public static String getFrecuencia() 
+	{
+		return strFrecuencia;
+	}
+	public static String getFechaPractica() 
+	{
+		return strFechaPractica;
+	}
+	public static String getLugarPractica() 
+	{
+		return strLugarPractica;
+	}
+	public static String getOtro() 
+	{
+		return strOtro;
+	}
+	public static String getEspecifica2() 
+	{
+		return strEspecifica;
+	}
+	public static String getTipoDeporte() 
+	{
+		return strTipoDeporte;
+	}
+	public static String getEspecifica1() 
+	{
+		return strEspecifica;
+	}
+	
+	
+	/*******HISTORIAL MEDICO FAMILIAR*************/
+	public static String getDiabetes()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getAntiguedad()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getPolizaGastos()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	
+	
+	
+	
+	public static String getCausa2HMF()
+	{
+		return strCausaHMF;
+	}
+	public static String getCompania2HMF()
+	{
+		return strCompaniaHMF;
+	}
+	public static String gerFecha2HMF()
+	{
+		return strFechaInicio;
+	}
+	public static String getMontoHMF()
+	{
+		return strMontoCobertura;
+	}
+	public static String getEdoActualHMF()
+	{
+		return strEdoActual;
+	}
+	public static String getFecha1HMF()
+	{
+		return strFechaInicio;
+	}
+	public static String getDetalles1HMF()
+	{
+		return strDetalles;
+	}
+	
+	
+	//*********************DESIGNACION BENEFICIARIOS******************//
+	public static String getAddBeneficiariosDB()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getAFaltaDe()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getPPE()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getPPESolicitante()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getPPEPAsegurar()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getTPAsegurar()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getTSolicitante()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	
+	
+	public static String getBeneficiarioNombreDB()
+	{
+		return strBeneficiarioNombreDB;
+	}
+	public static String getBeneficiarioAPDB()
+	{
+		return strBeneficiarioAPDB;
+	}
+	public static String getBeneficiarioAMDB()
+	{
+		return strBeneficiarioAMDB;
+	}
+	public static String getBeneficiarioFECHANDB()
+	{
+		return strBeneficiarioFECHANDB;
+	}
+	public static String getBeneficiarioRelacionDB()
+	{
+		return strBeneficiarioRelacionDB;
+	}
+	public static String getBeneficiarioPorcentajeDB()
+	{
+		return strBeneficiarioPorcentajeDB;
+	}
+	public static String getAFaltaNombreDB()
+	{
+		return strAFaltaNombreDB;
+	}
+	public static String getAFaltaAPDB()
+	{
+		return strAFaltaAPDB;
+	}
+	public static String getAFaltaAMDB()
+	{
+		return strAFaltaAMDB;
+	}
+	public static String getAFaltaFECHANDB()
+	{
+		return strAFaltaFECHANDB;
+	}
+	public static String getAFaltaRelacionDB()
+	{
+		return strAFaltaRelacionDB;
+	}
+	public static String getCalleB()
+	{
+		return strCalleB;
+	}
+	
+	public static String getNoExtB()
+	{
+		return strNoExtB;
+	}
+	public static String getNoIntB()
+	{
+		return strNoIntB;
+	}
+	public static String getColoniaB()
+	{
+		return strColoniaB;
+	}
+	public static String getDelegacionB()
+	{
+		return strDelegacionB;
+	}
+	public static String getCiudadB()
+	{
+		return strCiudadB;
+	}
+	public static String getEstadoB()
+	{
+		return strEstadoB;
+	}
+	public static String getPaisB()
+	{
+		return strPaisB;
+	}
+	public static String getCPB()
+	{
+		return strCPB;
+	}
+	public static String getIDFigura()
+	{
+		return strIDNoFigura;
+	}
+	public static String getPPEAP()
+	{
+		return strPPEAP;
+	}
+	public static String getPPEAM()
+	{
+		return strPPEAM;
+	}
+	public static String getPPEFNacimiento()
+	{
+		return strPPEFNacimiento;
+	}
+	public static String getPPENacionalidad()
+	{
+		return strPPENacionalidad;
+	}
+	public static String getPPERelacion()
+	{
+		return strPPERelacion;
+	}
+	public static String getPPECSolicitante()
+	{
+		return strPPECSolicitante;
+	}
+	public static String getPPECPAsegura()
+	{
+		return strPPECPAsegurar;
+	}
+	public static String getPPENombre()
+	{
+		return strPPENombre;
+	}
+	
+	/*************INFORMACION COBRANZA*************/
+	public static String geteConductoPago()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 2);
+		strCuestionario = arrConductoP[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String geteFormaPago()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 3);
+		strCuestionario = arrFormaP[intCuestionario];			
+		return strCuestionario;
+	}
+	public static String geteCobroInicial()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];	
+		return strCuestionario;
+	}
+	public static String getDiaCobro()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 3);
+		strCuestionario = arrDiaCobro[intCuestionario];	
+		return strCuestionario;
+	}
+	public static String getTarjeta()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 2);
+		strCuestionario = arrTarjetas[intCuestionario];	
+		return strCuestionario;
+	}
+	public static String getTipoTarjeta()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrTipoTarjeta[intCuestionario];	
+		return strCuestionario;
+	}
+	public static String getBanco()
+	{
+		intBanco = arrBanco.length;
+		for (int i=0; i<intBanco;i++)
+		{
+			if (strBanco.equals(arrBanco[i]))
+			{
+				strNBanco = String.valueOf(i+2);
+				break;				
+			}
+		}
+		return strNBanco;
+	}	
+	public static String getCuentahabiente()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0,1);
+		strCuestionario = arrCuestionario[intCuestionario];	
+		return strCuestionario;
+	}
+	
+	
+	
+	public static String getCANoSerie()
+	{
+		return strCANoSerie;
+	}
+	public static String getCACP()
+	{
+		return strCACP;
+	}
+	public static String getCAEdo()
+	{
+		return strCAEdo;
+	}
+	public static String getCACiudad()
+	{
+		return strCACiudad;
+	}
+	public static String getCADelegacion()
+	{
+		return strCADelegacion;
+	}
+	public static String getCAColonia()
+	{
+		return strCAColonia;
+	}
+	public static String getCAInt()
+	{
+		return strCAINT;
+	}
+	public static String getCAExt()
+	{
+		return strCAEXT;
+	}
+	public static String getCACalle()
+	{
+		return strCACALLE;
+	}
+	public static String getCANacionalidad()
+	{
+		return strCANACIONALIDAD;
+	}
+	public static String getCACURP()
+	{
+		return strCACURP;
+	}
+	public static String getCARFC()
+	{
+		return strCARFC;
+	}
+	public static String getCARFCCURP()
+	{
+		return strCARFCCURP;
+	}
+	public static String getCAFechaNac()
+	{
+		return strCAFechaNac;
+	}
+	public static String getCAEmail()
+	{
+		return strCAEmail;
+	}
+	public static String getCAMovil()
+	{
+		return strCATMovil;
+	}
+	public static String getCAAM()
+	{
+		return strCAAM;
+	}
+	public static String getCAAP()
+	{
+		return strCAAP;
+	}
+	public static String getCANombre()
+	{
+		return strCANombre;
+	}
+	public static String getNumTarjetaDebito()
+	{
+		return strNumTarjetaDebito;
+	}
+	public static String getNumTarjetaCredito()
+	{
+		return strNumTarjetaCredito;
+	}
+	public static String getDiaCobroOtro()
+	{
+		return strOtroDiaCobro;
+	}
+	public static String getFechaTentativa()
+	{
+		return strFechaTentativaCI;
+	}
+	public static String getCLABE()
+	{
+		return strCLABE;
+	}
+	
+	/*******ACUERDO*************/
+	public static String getSolicitante()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getPAsegurarT()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getPAsegurar()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getConsentimiento()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrCuestionario[intCuestionario];		
+		return strCuestionario;
+	}
+	public static String getLugar()
+	{
+		return strLugar;
+	}
+	
+	public static String getEstatus()
+	{
+		intCuestionario = HCommonHelper.getRandomNumberInRange(0, 1);
+		strCuestionario = arrEstatus[intCuestionario];		
+		return strCuestionario;
+	}
 }

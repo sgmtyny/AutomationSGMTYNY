@@ -109,7 +109,7 @@ public class HCommonHelper {
 			}else if (strTime == "medium") {
 				intTime=3000;
 			}else if(strTime == "high") {
-				intTime=6000;
+				intTime=9000;
 			}			
 		Thread.sleep(intTime);		
 			
