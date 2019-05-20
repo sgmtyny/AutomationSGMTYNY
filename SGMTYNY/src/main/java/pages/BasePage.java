@@ -15,6 +15,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import helpers.*;
+
+
+
 ;/**
  * @author Diego Mejia
  * @date 27/03/2019
@@ -73,7 +76,8 @@ public class BasePage {
 		WebElement body = driver.findElement(By.tagName("body").className("desktop"));
 		List<WebElement> frames = body.findElements(By.tagName("iframe"));
 		for(WebElement f : frames) {
-			if(f.getAttribute("title").equals(frame.getAttribute("title"))) {				
+			if(f.getAttribute("title").equals(frame.getAttribute("title"))) {	
+				//driver.switchTo().
 					driver.switchTo().frame(f);
 					System.out.println("True");						
 			}else{
@@ -81,6 +85,24 @@ public class BasePage {
 			}
 		}
 	}
+	
+	protected void swithToOtro(WebElement frame) {
+		
+		WebElement body = driver.findElement(By.tagName("body").xpath("/html/body"));//.className("slds-brand-band slds-brand-band_cover slds-brand-band_medium slds-template_default  forceBrandBand"));
+//		body.findElement(By.xpath("//*[@id='ChildGender|0']/div/div[1]/label[1]/span[1]")).click();
+		List<WebElement> frames = body.findElements(By.tagName("iframe"));
+		for(WebElement f : frames) {
+			if(f.getAttribute("title").equals(frame.getAttribute("title"))) {	
+				//driver.switchTo().
+					driver.switchTo().frame(f);
+					System.out.println("True");						
+			}else{
+				System.out.println("False");
+			}
+		}
+	}
+	
+	
 	protected void waitForPage() {
 		Boolean BUrl = false;
 		String tempUrl;
@@ -127,13 +149,27 @@ public class BasePage {
 			System.out.println("no fue posible dar click " + e);	
 		}
 	}
+	
+	protected void clickRaro(String strElement)
+	{
+		
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("document.getElementById('"+strElement+"').click();");
+		/*WebDriverWait wait = new WebDriverWait(driver, 120);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(strElement))).click();*/
+		//new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeSelected(strElement));
+		
+		//new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(By.xpath(strElement))).click();
+	}
+	
 	protected void clickJs(WebElement element) {
 		HCommonHelper.waiter("low");
 		js.executeScript("arguments[0].click();", element);
 	}
-	protected void sendKeysJs(WebElement element) {
+	protected void sendKeysJs(String element) {
 		HCommonHelper.waiter("low");
-		js.executeScript("arguments[0].click();", element);
+		js.executeScript("document.getElementById('"+ element +"').value='Abraham';");
+		//js.executeScript("arguments[0].click();", element);
 	}
 	protected static void checkOptionalYesOrNot(WebElement element) {
 			String option = HCommonHelper.randomOptionCheckOrNot();

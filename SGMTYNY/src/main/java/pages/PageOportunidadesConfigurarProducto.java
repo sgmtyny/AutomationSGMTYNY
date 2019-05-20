@@ -1,6 +1,7 @@
 package pages;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.apache.xpath.axes.WalkingIterator;
 import org.openqa.selenium.WebDriver;
@@ -271,34 +272,38 @@ public class PageOportunidadesConfigurarProducto extends BasePage{
 	//"//div[@class = 'modal-footer slds-modal__footer']/descendant::span[contains(text(),'Guardar')]"
 	@FindBy(xpath="//div[@class = 'slds-modal__content slds-p-around--medium vloc-modal-content slds-is-relative']/descendant::span=contains(text(),'Nombre'" )	
 	WebElement txtConyNombre;
-	@FindBy(xpath="//*[@id=\"a2n0R000000bqP7QAI-5\"]/div[1]/div/child[39]/div/div[3]/div/div")
+	@FindBy(xpath = "//*[@id=\"a2n0R000000bqRDQAY-5\"]/div[1]/div/child[39]/div/div[3]/div/div")
+					
 	WebElement btnFiguraAd;
-	@FindBy(xpath="//*[@id=\"ChildFirstName\"]")
-	WebElement txtFANombre;
+	@FindBy(xpath="//*[@id=\"ChildFirstName\"][1]")
+	List<WebElement> txtFANombres;
 	@FindBy(xpath="//*[@id=\"ChildPaternalLastName\"]")
-	WebElement txtFAApellidoP;
+	List<WebElement> txtFAApellidoPs;
 	@FindBy(xpath="//*[@id=\"ChildMaternalLastName\"]")
-	WebElement txtFAApellidoM;
+	List<WebElement> txtFAApellidoM;
 	@FindBy(xpath="//*[@id=\"ChildBirthDate\"]")
-	WebElement txtFAFechaNac;
-	@FindBy(xpath="//*[@id=\"ChildGender|0\"]/div/div[1]/label[1]/span[1]")
-	WebElement radioFASexoH;
-	@FindBy(xpath="//*[@id=\"ChildGender|0\"]/div/div[1]/label[2]/span[1]")
-	WebElement radioFASexoM;
+	List<WebElement> txtFAFechaNac;
+	
+	@FindBy(xpath="//*[@id='ChildGender|0']/div/div[1]/label[1]/span[1]")
+	List<WebElement> radioFASexoM;
 	@FindBy(xpath="//*[@id=\"ChildSmoker|0\"]/div/div[1]/label[1]/span[1]")
-	WebElement radioFAFumasY;
+	List<WebElement> radioFAFumasY;
 	@FindBy(xpath="//*[@id=\"ChildSmoker|0\"]/div/div[1]/label[2]/span[1]")
-	WebElement radioFAFumasN;
+	List<WebElement> radioFAFumasN;
 	@FindBy(xpath="//*[@id=\"ChildPreferred|0\"]/div/div[1]/label[1]/span[1]")
-	WebElement radioFAPreferenteY;
+	List<WebElement> radioFAPreferenteY;
 	@FindBy(xpath="//*[@id=\"ChildPreferred|0\"]/div/div[1]/label[2]/span[1]")
-	WebElement radioFAPreferenteN;
+	List<WebElement> radioFAPreferenteN;
 	@FindBy(xpath="//*[@id=\"Role\"]")
-	WebElement txtFARol;
+	List<WebElement> txtFARol;
 	
 	@FindBy(xpath="//*[@id=\"GetCustomerInfo_nextBtn\"]/p")
 	WebElement btnSiguiente;
 	
+	@FindBy(xpath= "//*[@id=\"ChildGender|0\"]/div/div[1]/label[1]/span[1]")
+	WebElement pruebatxt;
+	@FindBy(xpath = "//input[@type='radio' and @value='H']//following-sibling::span[contains(text(),'Masculino')]")
+	List<WebElement> radios;
 	
 	String strBaseEn = HOportunidadesConfigurarProductoHelper.conBaseEn();
 	String strIgualAsegurado = HOportunidadesConfigurarProductoHelper.igualAsegurado();
@@ -459,14 +464,25 @@ public class PageOportunidadesConfigurarProducto extends BasePage{
 	
 	private void ipDatosFiguraAdicional()
 	{
-		/*sendKeys(txtFANombre, "Abraham");
-		sendKeys(txtFAApellidoP, "Galindo");
-		sendKeys(txtFAApellidoM, "Bautista");
-		sendKeys(txtFAFechaNac, "15-05-1989");*/
-		clickJs(radioFASexoH);
-		click(radioFAFumasY);
+		
+		swithToOtro(frame);	
+		
+		
+		
+		sendKeys(getElementThatSharesProperties(txtFANombres,1), "Abraham");
+		sendKeys(getElementThatSharesProperties(txtFAApellidoPs,1), "Galindo");
+		sendKeys(getElementThatSharesProperties(txtFAApellidoM,1), "Bautista");
+		sendKeys(getElementThatSharesProperties(txtFAFechaNac,1), "15-05-1989");
+		
+		click(getElementThatSharesProperties(radios,2));
+		//click(radioFASexoM);//clickRaro(radioFASexoM);
+		//clickJs(radioFASexoH);
+		click(getElementThatSharesProperties(radioFAFumasY,2));
+		click(getElementThatSharesProperties(radioFAPreferenteN,2));
+		sendKeys(getElementThatSharesProperties(txtFARol,1), "Madre");
+		/*click(radioFAFumasY);
 		click(radioFAPreferenteN);
-		sendKeys(txtFARol, "MAdre");
+		sendKeys(txtFARol, "MAdre");*/
 	}
 	
 	
